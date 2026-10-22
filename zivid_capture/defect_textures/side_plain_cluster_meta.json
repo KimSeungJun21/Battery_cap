@@ -1,0 +1,30 @@
+{
+  "name": "side_plain_cluster",
+  "defect_type": "scratch",
+  "seed": 332931391,
+  "patch_mm": 14.547035026550294,
+  "resolution_px": 256,
+  "mm_per_px": 0.056824355572462085,
+  "patch_center_mm": [
+    0.0,
+    -0.055611610412597656
+  ],
+  "footprint_area_mm2": 15.72849497830491,
+  "max_normal_tilt_deg": 31.818384170532227,
+  "p95_normal_tilt_deg": 27.018512725830078,
+  "alpha_threshold": 0.1,
+  "base_albedo_source": "sampled",
+  "base_roughness": 0.38,
+  "debug_visible": false,
+  "base_metallic": 0.0,
+  "normal_strength": 1.0,
+  "length_mm": 9.0,
+  "width_mm": 0.55,
+  "depth_um": 50.0,
+  "textures": {
+    "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/side_plain_cluster_albedo.png",
+    "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/side_plain_cluster_roughness.png",
+    "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/side_plain_cluster_normal.png",
+    "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/side_plain_cluster_opacity.png"
+  }
+}

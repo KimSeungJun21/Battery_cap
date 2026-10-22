@@ -1,0 +1,218 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "rb5_850e"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp3n0thslp/rb5_850e.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_rb5_850e_qs8hh6vu/usdex_rb5_850e/rb5_850e.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_rb5_850e_qs8hh6vu/temp_rb5_850e/rb5_850e.usd
+
+
+Generated from Composed Stage of root layer /home/seungjun/isaac_ws/rbpodo_ros2/rbpodo_description/meshes/rb5_850e_u/collision/rb5_850e_3/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "rb5_850e"
+{
+    over "Physics"
+    {
+        def MjcActuator "base_actuator"
+        {
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            custom rel mjc:target
+            prepend rel mjc:target = </rb5_850e/Physics/base>
+        }
+
+        def MjcActuator "shoulder_actuator"
+        {
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            custom rel mjc:target
+            prepend rel mjc:target = </rb5_850e/Physics/shoulder>
+        }
+
+        def MjcActuator "elbow_actuator"
+        {
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            custom rel mjc:target
+            prepend rel mjc:target = </rb5_850e/Physics/elbow>
+        }
+
+        def MjcActuator "wrist1_actuator"
+        {
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            custom rel mjc:target
+            prepend rel mjc:target = </rb5_850e/Physics/wrist1>
+        }
+
+        def MjcActuator "wrist2_actuator"
+        {
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            custom rel mjc:target
+            prepend rel mjc:target = </rb5_850e/Physics/wrist2>
+        }
+
+        def MjcActuator "wrist3_actuator"
+        {
+            uniform double mjc:forceRange:max = 10
+            uniform double mjc:forceRange:min = -10
+            custom rel mjc:target
+            prepend rel mjc:target = </rb5_850e/Physics/wrist3>
+        }
+
+        over "root_joint"
+        {
+        }
+
+        over "base" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "shoulder" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "elbow" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "wrist1" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "wrist2" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "wrist3" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+    }
+
+    over "Geometry"
+    {
+        over "link0"
+        {
+            over "link1"
+            {
+                over "link2"
+                {
+                    over "link3"
+                    {
+                        over "link4"
+                        {
+                            over "link5"
+                            {
+                                over "link6"
+                                {
+                                    over "tcp"
+                                    {
+                                    }
+
+                                    over "link6"
+                                    {
+                                    }
+
+                                    over "link6_1"
+                                    {
+                                    }
+                                }
+
+                                over "link5"
+                                {
+                                }
+
+                                over "link5_1"
+                                {
+                                }
+                            }
+
+                            over "link4"
+                            {
+                            }
+
+                            over "link4_1"
+                            {
+                            }
+                        }
+
+                        over "link3"
+                        {
+                        }
+
+                        over "link3_1"
+                        {
+                        }
+                    }
+
+                    over "link2"
+                    {
+                    }
+
+                    over "link2_1"
+                    {
+                    }
+                }
+
+                over "link1"
+                {
+                }
+
+                over "link1_1"
+                {
+                }
+            }
+
+            over "link0"
+            {
+                over "tn__1_YfX2cu2ah7"
+                {
+                }
+
+                over "tn__RB5850EEVersion_RB5850E_BASE_pa0k0Y3AN"
+                {
+                }
+            }
+
+            over "link0_1"
+            {
+            }
+        }
+    }
+
+    over "Materials"
+    {
+    }
+
+    over "VisualMaterials"
+    {
+    }
+}
+

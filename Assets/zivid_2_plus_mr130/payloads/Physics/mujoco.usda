@@ -1,0 +1,53 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    doc = """Generated from Composed Stage of root layer /tmp/tmp8to7h1xh/zivid_camera_robot.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_zivid_2_plus_mr130_ix6ztjv9/usdex_zivid_2_plus_mr130/zivid_camera_robot.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_zivid_2_plus_mr130_ix6ztjv9/temp_zivid_2_plus_mr130/zivid_2_plus_mr130.usd
+
+
+Generated from Composed Stage of root layer /home/seungjun/isaac_ws/Assets/zivid_2_plus_mr130/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "zivid_camera_robot"
+{
+    over "Geometry"
+    {
+        over "zivid_base_link"
+        {
+            over "zivid_2_plus"
+            {
+            }
+
+            over "zivid_2_plus_convex_hull"
+            {
+            }
+
+            over "zivid_optical_frame"
+            {
+            }
+        }
+    }
+
+    over "Physics"
+    {
+    }
+
+    over "Materials"
+    {
+        over "zivid_gray"
+        {
+        }
+    }
+}
+

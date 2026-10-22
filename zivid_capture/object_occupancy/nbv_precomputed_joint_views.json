@@ -1,0 +1,3597 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-29T16:58:38.327188",
+  "requested_success_limit": 200,
+  "successful_view_count": 36,
+  "attempt_count": 115,
+  "elapsed_s": 40.412280610999005,
+  "joint_source": "planned_trajectory_final_state",
+  "attempts": [
+    {
+      "pose_name": "mandatory_top_frontal",
+      "rotation_xyz_deg": [
+        40.421,
+        0.158,
+        -0.245
+      ],
+      "success": true,
+      "reason": "user_joint_states_no_preflight",
+      "pivot_camera_distance_m": 0.5741128759510364,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.4566,
+        0.6885,
+        0.4563,
+        1.1489,
+        1.6436,
+        -0.0924
+      ],
+      "planning_time_s": 0.0,
+      "trajectory_duration_s": 0.0,
+      "ik_time_s": 0.0,
+      "joint_source": "user_joint_states"
+    },
+    {
+      "pose_name": "mandatory_minus_x_end",
+      "rotation_xyz_deg": [
+        0.589,
+        -43.218,
+        -92.579
+      ],
+      "success": true,
+      "reason": "user_joint_states_no_preflight",
+      "pivot_camera_distance_m": 0.5367578852993499,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.3633,
+        -0.1638,
+        1.8868,
+        -0.8925,
+        1.4297,
+        -1.7581
+      ],
+      "planning_time_s": 0.0,
+      "trajectory_duration_s": 0.0,
+      "ik_time_s": 0.0,
+      "joint_source": "user_joint_states"
+    },
+    {
+      "pose_name": "mandatory_plus_x_end",
+      "rotation_xyz_deg": [
+        -0.106,
+        41.68,
+        91.508
+      ],
+      "success": true,
+      "reason": "user_joint_states_no_preflight",
+      "pivot_camera_distance_m": 0.5426177706749767,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.3566,
+        -0.196,
+        1.8889,
+        -0.8418,
+        1.4274,
+        1.4281
+      ],
+      "planning_time_s": 0.0,
+      "trajectory_duration_s": 0.0,
+      "ik_time_s": 0.0,
+      "joint_source": "user_joint_states"
+    },
+    {
+      "pose_name": "local_x_pos_15deg",
+      "rotation_xyz_deg": [
+        15.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.013325189079871135,
+          -0.6729685933337586,
+          0.6922460832200967
+        ],
+        "orientation_xyzw": [
+          0.7995189930920441,
+          0.0009276165074649088,
+          -0.0018364971783878174,
+          0.6006372836336529
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "local_x_pos_15deg",
+      "rotation_xyz_deg": [
+        15.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.012113471805666548,
+          -0.6491942371514252,
+          0.6739892562952736
+        ],
+        "orientation_xyzw": [
+          0.7995189930920441,
+          0.0009276165074649088,
+          -0.0018364971783878174,
+          0.6006372836336529
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "local_x_pos_15deg",
+      "rotation_xyz_deg": [
+        15.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.010579564690315013,
+          -0.6190983931065168,
+          0.6508780262089398
+        ],
+        "orientation_xyzw": [
+          0.7995189930920441,
+          0.0009276165074649088,
+          -0.0018364971783878174,
+          0.6006372836336529
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.4151064007867629,
+        0.6114163840700509,
+        0.22849925505921098,
+        1.0410415048323078,
+        1.618197199616222,
+        -0.186555156836891
+      ],
+      "planning_time_s": 0.010663206,
+      "trajectory_duration_s": 0.261368408,
+      "ik_time_s": 0.0011396020017855335,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_x_neg_15deg",
+      "rotation_xyz_deg": [
+        -15.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.013325189079871135,
+          -0.5944151844105616,
+          0.6973854162217684
+        ],
+        "orientation_xyzw": [
+          0.6168196758332024,
+          0.0004206882954086133,
+          -0.002014004873195198,
+          0.7871018068272694
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.393533242383418,
+        0.2835598606299865,
+        0.7360598010793269,
+        0.35650484813341465,
+        1.5288676196536708,
+        -0.21597888445821914
+      ],
+      "planning_time_s": 0.020364009,
+      "trajectory_duration_s": 0.10582823300000001,
+      "ik_time_s": 0.0010102819978783373,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_x_pos_30deg",
+      "rotation_xyz_deg": [
+        30.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.013325189079871135,
+          -0.7085768010469674,
+          0.67469129319704
+        ],
+        "orientation_xyzw": [
+          0.8710778948099657,
+          0.0011593916033694356,
+          -0.001699707439880246,
+          0.4911405786321949
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "local_x_pos_30deg",
+      "rotation_xyz_deg": [
+        30.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.012113471805666548,
+          -0.684802444864634,
+          0.6564344662722169
+        ],
+        "orientation_xyzw": [
+          0.8710778948099657,
+          0.0011593916033694356,
+          -0.001699707439880246,
+          0.4911405786321949
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "local_x_pos_30deg",
+      "rotation_xyz_deg": [
+        30.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.010579564690315013,
+          -0.6547066008197255,
+          0.6333232361858829
+        ],
+        "orientation_xyzw": [
+          0.8710778948099657,
+          0.0011593916033694356,
+          -0.001699707439880246,
+          0.4911405786321949
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "local_x_neg_30deg",
+      "rotation_xyz_deg": [
+        -30.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.013325189079871135,
+          -0.5568232682030431,
+          0.6846197221494686
+        ],
+        "orientation_xyzw": [
+          0.5088052962644021,
+          0.0001542088615121803,
+          -0.002051685623622422,
+          0.8608791653298522
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.3865212965818279,
+        1.1617101497070172,
+        -1.1408802125876185,
+        1.0901936570008905,
+        1.4767516912752259,
+        -0.18466537585918652
+      ],
+      "planning_time_s": 0.021372708999999997,
+      "trajectory_duration_s": 0.6974765190000001,
+      "ik_time_s": 0.0011762809990614187,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_x_pos_45deg",
+      "rotation_xyz_deg": [
+        45.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.013325189079871135,
+          -0.7384281745142787,
+          0.6485185858205429
+        ],
+        "orientation_xyzw": [
+          0.9277324122392703,
+          0.0013713291874962307,
+          -0.001533835235828392,
+          0.37324032216044606
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "local_x_pos_45deg",
+      "rotation_xyz_deg": [
+        45.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.012113471805666548,
+          -0.7146538183319453,
+          0.6302617588957198
+        ],
+        "orientation_xyzw": [
+          0.9277324122392703,
+          0.0013713291874962307,
+          -0.001533835235828392,
+          0.37324032216044606
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "local_x_pos_45deg",
+      "rotation_xyz_deg": [
+        45.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.010579564690315013,
+          -0.6845579742870368,
+          0.6071505288093858
+        ],
+        "orientation_xyzw": [
+          0.9277324122392703,
+          0.0013713291874962307,
+          -0.001533835235828392,
+          0.37324032216044606
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "local_x_neg_45deg",
+      "rotation_xyz_deg": [
+        -45.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.013325189079871135,
+          -0.52381627022837,
+          0.6625595046981252
+        ],
+        "orientation_xyzw": [
+          0.3920851170090387,
+          -0.00011490912875950013,
+          -0.002054261464194747,
+          0.9199266426328445
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.3601029421959971,
+        1.3342055142582514,
+        -1.4532386527438994,
+        0.9193678864491317,
+        1.4473219835484332,
+        -0.13930278004543595
+      ],
+      "planning_time_s": 0.012259777,
+      "trajectory_duration_s": 0.796953729,
+      "ik_time_s": 0.0010105119981744792,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_x_pos_60deg",
+      "rotation_xyz_deg": [
+        60.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.013325189079871135,
+          -0.7604883919656222,
+          0.6155115878458697
+        ],
+        "orientation_xyzw": [
+          0.9685131708791425,
+          0.0015598029490206855,
+          -0.0013417186856320455,
+          0.24895382029476462
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "local_x_pos_60deg",
+      "rotation_xyz_deg": [
+        60.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.012113471805666548,
+          -0.7367140357832889,
+          0.5972547609210466
+        ],
+        "orientation_xyzw": [
+          0.9685131708791425,
+          0.0015598029490206855,
+          -0.0013417186856320455,
+          0.24895382029476462
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "local_x_pos_60deg",
+      "rotation_xyz_deg": [
+        60.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.010579564690315013,
+          -0.7066181917383803,
+          0.5741435308347127
+        ],
+        "orientation_xyzw": [
+          0.9685131708791425,
+          0.0015598029490206855,
+          -0.0013417186856320455,
+          0.24895382029476462
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "local_x_neg_60deg",
+      "rotation_xyz_deg": [
+        -60.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.013325189079871135,
+          -0.49764356285187283,
+          0.632708131230814
+        ],
+        "orientation_xyzw": [
+          0.26865625269511934,
+          -0.00038206099197927594,
+          -0.00202168832156582,
+          0.9632339200285386
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.3335596040569986,
+        0.2958742809922571,
+        0.7058686430106306,
+        2.6799313090993135,
+        -1.3633490319526724,
+        2.9719384968369575
+      ],
+      "planning_time_s": 0.021727740000000002,
+      "trajectory_duration_s": 1.066157501,
+      "ik_time_s": 0.0009648910017858725,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_y_pos_15deg",
+      "rotation_xyz_deg": [
+        0.0,
+        15.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.0259214994266197,
+          -0.6340301918849618,
+          0.6945877559064759
+        ],
+        "orientation_xyzw": [
+          0.7079158703565951,
+          0.09202381103085748,
+          -0.09515751262259974,
+          0.6937807913830574
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "local_y_pos_15deg",
+      "rotation_xyz_deg": [
+        0.0,
+        15.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.027133216700824303,
+          -0.6102558357026284,
+          0.6763309289816528
+        ],
+        "orientation_xyzw": [
+          0.7079158703565951,
+          0.09202381103085748,
+          -0.09515751262259974,
+          0.6937807913830574
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.2946540954625168,
+        0.45987596747540416,
+        0.44143126330132576,
+        0.8004883563750057,
+        1.3042322794809214,
+        -0.31412537153260844
+      ],
+      "planning_time_s": 0.002212213,
+      "trajectory_duration_s": 0.19355655600000002,
+      "ik_time_s": 0.0015870220013312064,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_y_neg_15deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -15.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.05263190949657734,
+          -0.6340301918849618,
+          0.6950437435353892
+        ],
+        "orientation_xyzw": [
+          0.7084227985686513,
+          -0.09067550622798395,
+          0.09130701057101674,
+          0.6939582990778648
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.5195408863106847,
+        0.8870535384683096,
+        -0.395410342444155,
+        1.0391883450196602,
+        1.8342773387769677,
+        -0.05456641918024914
+      ],
+      "planning_time_s": 0.020667418,
+      "trajectory_duration_s": 0.460065732,
+      "ik_time_s": 0.0009599109980626963,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_y_pos_30deg",
+      "rotation_xyz_deg": [
+        0.0,
+        30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.06243355905939715,
+          -0.6340301918849618,
+          0.6792150574460187
+        ],
+        "orientation_xyzw": [
+          0.6894390041662554,
+          0.18179309950522268,
+          -0.1867449898805801,
+          0.6758338828891524
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.237039566633776,
+        0.8674574748683963,
+        -0.33907171097420147,
+        1.209872004583131,
+        1.0691395960518217,
+        -0.379723252720846
+      ],
+      "planning_time_s": 0.121696878,
+      "trajectory_duration_s": 0.44212349300000003,
+      "ik_time_s": 0.0010478410003997851,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_y_neg_30deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.08931997378452716,
+          -0.6340301918849618,
+          0.6800959579004899
+        ],
+        "orientation_xyzw": [
+          0.6904441869081126,
+          -0.18047949904034102,
+          0.1829935968170774,
+          0.6761858610728946
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.6051606346791731,
+        0.9417098783281583,
+        -0.4655042107344904,
+        1.1177473584683693,
+        2.104142464796369,
+        0.037009913961195864
+      ],
+      "planning_time_s": 0.020616648999999997,
+      "trajectory_duration_s": 0.48238862000000005,
+      "ik_time_s": 0.0012149120011599734,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_y_pos_45deg",
+      "rotation_xyz_deg": [
+        0.0,
+        45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.09372275329351892,
+          -0.6340301918849618,
+          0.6549161545744271
+        ],
+        "orientation_xyzw": [
+          0.6591656454660267,
+          0.26845185764448415,
+          -0.27513720858621094,
+          0.6463232692824621
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "local_y_pos_45deg",
+      "rotation_xyz_deg": [
+        0.0,
+        45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.09493447056772347,
+          -0.6102558357026284,
+          0.636659327649604
+        ],
+        "orientation_xyzw": [
+          0.6591656454660267,
+          0.26845185764448415,
+          -0.27513720858621094,
+          0.6463232692824621
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.875 < 1.000",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "local_y_pos_45deg",
+      "rotation_xyz_deg": [
+        0.0,
+        45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.09646837768307504,
+          -0.5801599916577199,
+          0.61354809756327
+        ],
+        "orientation_xyzw": [
+          0.6591656454660267,
+          0.26845185764448415,
+          -0.27513720858621094,
+          0.6463232692824621
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.875 < 1.000",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "local_y_neg_45deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.12088915099238978,
+          -0.6340301918849618,
+          0.656161935944241
+        ],
+        "orientation_xyzw": [
+          0.6606518837822825,
+          -0.2671954375857474,
+          0.2715491118861877,
+          0.6468436955108284
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.875 < 1.000",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "local_y_neg_45deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.11967743371818523,
+          -0.6102558357026284,
+          0.6379051090194179
+        ],
+        "orientation_xyzw": [
+          0.6606518837822825,
+          -0.2671954375857474,
+          0.2715491118861877,
+          0.6468436955108284
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.875 < 1.000",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "local_y_neg_45deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.11814352660283367,
+          -0.5801599916577199,
+          0.6147938789330839
+        ],
+        "orientation_xyzw": [
+          0.6606518837822825,
+          -0.2671954375857474,
+          0.2715491118861877,
+          0.6468436955108284
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.7058299053432031,
+        0.3095831451318952,
+        0.9214737547875622,
+        0.554926088285971,
+        2.3121746016066123,
+        0.2396828383254157
+      ],
+      "planning_time_s": 0.020611849,
+      "trajectory_duration_s": 0.298907853,
+      "ik_time_s": 0.000895100998604903,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_y_pos_60deg",
+      "rotation_xyz_deg": [
+        0.0,
+        60.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.11765677524976786,
+          -0.6340301918849618,
+          0.6233469773665645
+        ],
+        "orientation_xyzw": [
+          0.617613779816631,
+          0.35051733007053226,
+          -0.35882175337048605,
+          0.6057538853436847
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "local_y_pos_60deg",
+      "rotation_xyz_deg": [
+        0.0,
+        60.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.11886849252397241,
+          -0.6102558357026284,
+          0.6050901504417414
+        ],
+        "orientation_xyzw": [
+          0.617613779816631,
+          0.35051733007053226,
+          -0.35882175337048605,
+          0.6057538853436847
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "local_y_pos_60deg",
+      "rotation_xyz_deg": [
+        0.0,
+        60.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.12040239963932398,
+          -0.5801599916577199,
+          0.5819789203554074
+        ],
+        "orientation_xyzw": [
+          0.617613779816631,
+          0.35051733007053226,
+          -0.35882175337048605,
+          0.6057538853436847
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.875 < 1.000",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "local_y_neg_60deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -60.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.14518805386398137,
+          -0.6340301918849618,
+          0.6248727417101192
+        ],
+        "orientation_xyzw": [
+          0.619555643757631,
+          -0.34933958811349086,
+          0.3554583463632881,
+          0.6064338549796184
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "local_y_neg_60deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -60.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.14397633658977682,
+          -0.6102558357026284,
+          0.6066159147852961
+        ],
+        "orientation_xyzw": [
+          0.619555643757631,
+          -0.34933958811349086,
+          0.3554583463632881,
+          0.6064338549796184
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "local_y_neg_60deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -60.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.14244242947442526,
+          -0.5801599916577199,
+          0.5835046846989622
+        ],
+        "orientation_xyzw": [
+          0.619555643757631,
+          -0.34933958811349086,
+          0.3554583463632881,
+          0.6064338549796184
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "local_x_pos_90deg",
+      "rotation_xyz_deg": [
+        90.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.013325189079871135,
+          -0.7758552957764575,
+          0.5383046641639511
+        ],
+        "orientation_xyzw": [
+          0.9999458748965968,
+          0.0018539163013924261,
+          -0.0008922940202529865,
+          -0.01019872948011346
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "local_x_pos_90deg",
+      "rotation_xyz_deg": [
+        90.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.012113471805666548,
+          -0.7520809395941241,
+          0.520047837239128
+        ],
+        "orientation_xyzw": [
+          0.9999458748965968,
+          0.0018539163013924261,
+          -0.0008922940202529865,
+          -0.01019872948011346
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "local_x_pos_90deg",
+      "rotation_xyz_deg": [
+        90.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.010579564690315013,
+          -0.7219850955492156,
+          0.49693660715279403
+        ],
+        "orientation_xyzw": [
+          0.9999458748965968,
+          0.0018539163013924261,
+          -0.0008922940202529865,
+          -0.01019872948011346
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "local_x_neg_90deg",
+      "rotation_xyz_deg": [
+        -90.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.013325189079871135,
+          -0.4723482300886087,
+          0.5581615220688083
+        ],
+        "orientation_xyzw": [
+          0.010198729480113522,
+          -0.0008922940202529864,
+          -0.0018539163013924261,
+          0.9999458748965968
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.2934332976073142,
+        -0.021702895879664317,
+        1.965794902602872,
+        -1.9192439447989764,
+        1.2648845157837691,
+        -0.03578184087922209
+      ],
+      "planning_time_s": 0.020631199,
+      "trajectory_duration_s": 0.8321464970000001,
+      "ik_time_s": 0.0009942920005414635,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_y_pos_90deg",
+      "rotation_xyz_deg": [
+        0.0,
+        90.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.13754744330958196,
+          -0.6340301918849618,
+          0.5473521926619085
+        ],
+        "orientation_xyzw": [
+          -0.5036991970275323,
+          -0.4953543838488113,
+          0.5064454073491779,
+          -0.4943927615676719
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.500 < 1.000",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "local_y_pos_90deg",
+      "rotation_xyz_deg": [
+        0.0,
+        90.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.1387591605837865,
+          -0.6102558357026284,
+          0.5290953657370854
+        ],
+        "orientation_xyzw": [
+          -0.5036991970275323,
+          -0.4953543838488113,
+          0.5064454073491779,
+          -0.4943927615676719
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.625 < 1.000",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "local_y_pos_90deg",
+      "rotation_xyz_deg": [
+        0.0,
+        90.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.14029306769913807,
+          -0.5801599916577199,
+          0.5059841356507514
+        ],
+        "orientation_xyzw": [
+          -0.5036991970275323,
+          -0.4953543838488113,
+          0.5064454073491779,
+          -0.4943927615676719
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "local_y_neg_90deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -90.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.16595962237826672,
+          -0.6340301918849618,
+          0.549113993570851
+        ],
+        "orientation_xyzw": [
+          0.5064454073491779,
+          -0.4943927615676719,
+          0.5036991970275323,
+          0.4953543838488114
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.500 < 1.000",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "local_y_neg_90deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -90.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.16474790510406218,
+          -0.6102558357026284,
+          0.5308571666460279
+        ],
+        "orientation_xyzw": [
+          0.5064454073491779,
+          -0.4943927615676719,
+          0.5036991970275323,
+          0.4953543838488114
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.500 < 1.000",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "local_y_neg_90deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -90.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.1632139979887106,
+          -0.5801599916577199,
+          0.5077459365596939
+        ],
+        "orientation_xyzw": [
+          0.5064454073491779,
+          -0.4943927615676719,
+          0.5036991970275323,
+          0.4953543838488114
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.500 < 1.000",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "local_x_pos_120deg",
+      "rotation_xyz_deg": [
+        120.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.013325189079871135,
+          -0.7505599630131935,
+          0.46375805500194545
+        ],
+        "orientation_xyzw": [
+          0.9632339200285387,
+          0.0020216883215658198,
+          -0.00038206099197927616,
+          -0.26865625269511906
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.4533166087619638,
+        1.0632086215828171,
+        0.6418801574483484,
+        -1.1382865541525597,
+        -1.6668858658966188,
+        -3.04408035184998
+      ],
+      "planning_time_s": 0.011733917,
+      "trajectory_duration_s": 1.093879593,
+      "ik_time_s": 0.006109778998506954,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_x_neg_120deg",
+      "rotation_xyz_deg": [
+        -120.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.013325189079871135,
+          -0.4877151338994441,
+          0.48095459838688975
+        ],
+        "orientation_xyzw": [
+          -0.24895382029476446,
+          -0.0013417186856320453,
+          -0.0015598029490206855,
+          0.9685131708791425
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.3422628321312882,
+        -0.11839296943888938,
+        1.8065952846807705,
+        0.963031414297464,
+        -1.399422165669848,
+        -3.0659863756000663
+      ],
+      "planning_time_s": 0.020612898,
+      "trajectory_duration_s": 1.008731918,
+      "ik_time_s": 0.003082524002820719,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_x_pos_150deg",
+      "rotation_xyz_deg": [
+        150.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.013325189079871135,
+          -0.6913802576620232,
+          0.41184646408329073
+        ],
+        "orientation_xyzw": [
+          -0.8608791653298525,
+          -0.0020516856236224234,
+          -0.00015420886151218085,
+          0.5088052962644019
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.4441296314697645,
+        0.7970752448367289,
+        1.2930664656672166,
+        -1.0471882829575838,
+        -1.642733215276066,
+        -3.0363667868181463
+      ],
+      "planning_time_s": 0.02145669,
+      "trajectory_duration_s": 1.086219513,
+      "ik_time_s": 0.016443312997580506,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_x_neg_150deg",
+      "rotation_xyz_deg": [
+        -150.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.013325189079871135,
+          -0.5396267248180989,
+          0.42177489303571936
+        ],
+        "orientation_xyzw": [
+          -0.4911405786321949,
+          -0.001699707439880246,
+          -0.0011593916033694356,
+          0.8710778948099657
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.3872925367768534,
+        0.1062732546481147,
+        1.981520310728321,
+        -0.0013944266344938373,
+        -1.4832091317783207,
+        -2.9792558251522903
+      ],
+      "planning_time_s": 0.021026729,
+      "trajectory_duration_s": 1.035383818,
+      "ik_time_s": 0.010244203996990109,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_x_pos_180deg",
+      "rotation_xyz_deg": [
+        180.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.013325189079871135,
+          -0.6141733339801045,
+          0.39647956027245523
+        ],
+        "orientation_xyzw": [
+          -0.6998569181840234,
+          -0.0019418639409999614,
+          -0.0006799696359337746,
+          0.714280099733774
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.4060631286624257,
+        0.9339197984195625,
+        0.9502577248633449,
+        2.809320666235068,
+        1.5716870271980552,
+        0.13804922719155246
+      ],
+      "planning_time_s": 0.010957665,
+      "trajectory_duration_s": 0.799368383,
+      "ik_time_s": 0.001281091997952899,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_x_neg_180deg",
+      "rotation_xyz_deg": [
+        -180.0,
+        0.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.013325189079871135,
+          -0.6141733339801044,
+          0.39647956027245523
+        ],
+        "orientation_xyzw": [
+          -0.6998569181840234,
+          -0.0019418639409999614,
+          -0.000679969635933775,
+          0.714280099733774
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.40223720023847,
+        0.46194700325467086,
+        1.7985404057308703,
+        -0.6462553816613161,
+        -1.54243441931285,
+        -2.9508979469759
+      ],
+      "planning_time_s": 0.020838258999999998,
+      "trajectory_duration_s": 1.054277221,
+      "ik_time_s": 0.0010529220016906038,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_y_pos_120deg",
+      "rotation_xyz_deg": [
+        0.0,
+        120.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.11677587479529666,
+          -0.6340301918849618,
+          0.47159344452264024
+        ],
+        "orientation_xyzw": [
+          -0.35545834636328805,
+          -0.6064338549796185,
+          0.6195556437576307,
+          -0.34933958811349103
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "local_y_pos_120deg",
+      "rotation_xyz_deg": [
+        0.0,
+        120.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.11798759206950121,
+          -0.6102558357026284,
+          0.4533366175978171
+        ],
+        "orientation_xyzw": [
+          -0.35545834636328805,
+          -0.6064338549796185,
+          0.6195556437576307,
+          -0.34933958811349103
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "local_y_pos_120deg",
+      "rotation_xyz_deg": [
+        0.0,
+        120.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.11952149918485278,
+          -0.5801599916577199,
+          0.43022538751148304
+        ],
+        "orientation_xyzw": [
+          -0.35545834636328805,
+          -0.6064338549796185,
+          0.6195556437576307,
+          -0.34933958811349103
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "local_y_neg_120deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -120.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.14606895431845268,
+          -0.6340301918849618,
+          0.47311920886619496
+        ],
+        "orientation_xyzw": [
+          0.358821753370486,
+          -0.6057538853436848,
+          0.6176137798166307,
+          0.3505173300705325
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.625 < 1.000",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "local_y_neg_120deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -120.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.14485723704424813,
+          -0.6102558357026284,
+          0.45486238194137185
+        ],
+        "orientation_xyzw": [
+          0.358821753370486,
+          -0.6057538853436848,
+          0.6176137798166307,
+          0.3505173300705325
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "local_y_neg_120deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -120.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.14332332992889657,
+          -0.5801599916577199,
+          0.4317511518550379
+        ],
+        "orientation_xyzw": [
+          0.358821753370486,
+          -0.6057538853436848,
+          0.6176137798166307,
+          0.3505173300705325
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "local_y_pos_150deg",
+      "rotation_xyz_deg": [
+        0.0,
+        150.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.060907794715842345,
+          -0.6340301918849618,
+          0.41637022833226944
+        ],
+        "orientation_xyzw": [
+          -0.1829935968170773,
+          -0.6761858610728948,
+          0.6904441869081124,
+          -0.1804794990403411
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.875 < 1.000",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "local_y_pos_150deg",
+      "rotation_xyz_deg": [
+        0.0,
+        150.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.06211951199004695,
+          -0.6102558357026284,
+          0.39811340140744633
+        ],
+        "orientation_xyzw": [
+          -0.1829935968170773,
+          -0.6761858610728948,
+          0.6904441869081124,
+          -0.1804794990403411
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.2189175950676416,
+        0.4622488040096321,
+        1.7900616354031396,
+        -0.8644170579549563,
+        -1.0913153268964577,
+        0.39445107627460496
+      ],
+      "planning_time_s": 0.020985889,
+      "trajectory_duration_s": 0.910608721,
+      "ik_time_s": 0.0012884520001534838,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_y_neg_150deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -150.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.09084573812808197,
+          -0.6340301918849618,
+          0.41725112878674064
+        ],
+        "orientation_xyzw": [
+          0.18674498988057997,
+          -0.6758338828891525,
+          0.6894390041662553,
+          0.1817930995052227
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.607640085955524,
+        0.46005097376016724,
+        1.6816555829769937,
+        -0.5603750400796726,
+        -2.0653163898588467,
+        -0.07569703247119385
+      ],
+      "planning_time_s": 0.021079659,
+      "trajectory_duration_s": 1.220800142,
+      "ik_time_s": 0.011259664999670349,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_y_pos_180deg",
+      "rotation_xyz_deg": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.015086989988813651,
+          -0.6340301918849618,
+          0.39647956027245523
+        ],
+        "orientation_xyzw": [
+          0.0019418639409999178,
+          -0.6998569181840234,
+          0.714280099733774,
+          0.0006799696359337319
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.4301635595756756,
+        0.4989903738521942,
+        1.7214908541831762,
+        -0.6239723169313437,
+        -1.544173408248603,
+        0.15036857305576726
+      ],
+      "planning_time_s": 0.021291919,
+      "trajectory_duration_s": 1.05483104,
+      "ik_time_s": 0.0014525420010613743,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "local_y_neg_180deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -180.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.015086989988813687,
+          -0.6340301918849618,
+          0.39647956027245523
+        ],
+        "orientation_xyzw": [
+          0.0019418639410000052,
+          -0.6998569181840234,
+          0.714280099733774,
+          0.0006799696359338176
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.4344225751111404,
+        0.4985160626946659,
+        1.7226827159500162,
+        -0.6768181735040613,
+        -1.5825420415337963,
+        0.1271069193469022
+      ],
+      "planning_time_s": 0.010631884,
+      "trajectory_duration_s": 1.06705035,
+      "ik_time_s": 0.002962113998364657,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "diag_x_pos_30_y_pos_30",
+      "rotation_xyz_deg": [
+        30.0,
+        30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.04978589267776515,
+          -0.7085768010469674,
+          0.6573086566758513
+        ],
+        "orientation_xyzw": [
+          0.8409567186499148,
+          0.12823642186516143,
+          -0.22709334025794528,
+          0.47410529661171
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "diag_x_pos_30_y_pos_30",
+      "rotation_xyz_deg": [
+        30.0,
+        30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.05099760995196975,
+          -0.684802444864634,
+          0.6390518297510281
+        ],
+        "orientation_xyzw": [
+          0.8409567186499148,
+          0.12823642186516143,
+          -0.22709334025794528,
+          0.47410529661171
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "diag_x_pos_30_y_pos_30",
+      "rotation_xyz_deg": [
+        30.0,
+        30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.05253151706732129,
+          -0.6547066008197255,
+          0.6159405996646943
+        ],
+        "orientation_xyzw": [
+          0.8409567186499148,
+          0.12823642186516143,
+          -0.22709334025794528,
+          0.47410529661171
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "diag_x_pos_30_y_neg_30",
+      "rotation_xyz_deg": [
+        30.0,
+        -30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.07667230740289521,
+          -0.7085768010469674,
+          0.6581895571303225
+        ],
+        "orientation_xyzw": [
+          0.8418365519630018,
+          -0.12599664928020696,
+          0.22380975763131328,
+          0.4747054418670779
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "diag_x_pos_30_y_neg_30",
+      "rotation_xyz_deg": [
+        30.0,
+        -30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.07546059012869061,
+          -0.684802444864634,
+          0.6399327302054993
+        ],
+        "orientation_xyzw": [
+          0.8418365519630018,
+          -0.12599664928020696,
+          0.22380975763131328,
+          0.4747054418670779
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "diag_x_pos_30_y_neg_30",
+      "rotation_xyz_deg": [
+        30.0,
+        -30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.07392668301333907,
+          -0.6547066008197255,
+          0.6168215001191655
+        ],
+        "orientation_xyzw": [
+          0.8418365519630018,
+          -0.12599664928020696,
+          0.22380975763131328,
+          0.4747054418670779
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "diag_x_neg_30_y_pos_30",
+      "rotation_xyz_deg": [
+        -30.0,
+        30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.05475010715397946,
+          -0.5568232682030431,
+          0.6659069283683234
+        ],
+        "orientation_xyzw": [
+          0.4909371609004902,
+          0.22296087784130464,
+          -0.13367027705354056,
+          0.831505506915998
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "diag_x_neg_30_y_pos_30",
+      "rotation_xyz_deg": [
+        -30.0,
+        30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.055961824428184065,
+          -0.5330489120207097,
+          0.6476501014435003
+        ],
+        "orientation_xyzw": [
+          0.4909371609004902,
+          0.22296087784130464,
+          -0.13367027705354056,
+          0.831505506915998
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.132962613224564,
+        1.2539388543533057,
+        -1.331851187215296,
+        1.3475748748577807,
+        0.9062626013340961,
+        -0.22419231400658193
+      ],
+      "planning_time_s": 0.020743098,
+      "trajectory_duration_s": 0.7582953,
+      "ik_time_s": 0.0009939509982359596,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "diag_x_neg_30_y_neg_30",
+      "rotation_xyz_deg": [
+        -30.0,
+        -30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.08163652187910952,
+          -0.5568232682030431,
+          0.6667878288227946
+        ],
+        "orientation_xyzw": [
+          0.49199919152840327,
+          -0.2226629691973502,
+          0.1297067247909748,
+          0.8315853312965639
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.5907476287271725,
+        0.10912223549847153,
+        1.202732646156196,
+        -0.2654164332178104,
+        2.0281589890092073,
+        -0.19861728217748134
+      ],
+      "planning_time_s": 0.021220918999999998,
+      "trajectory_duration_s": 0.305449837,
+      "ik_time_s": 0.0015380629993160255,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "diag_x_pos_45_y_pos_30",
+      "rotation_xyz_deg": [
+        45.0,
+        30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.036699538989516584,
+          -0.7384281745142787,
+          0.6346424272019884
+        ],
+        "orientation_xyzw": [
+          0.895723711096286,
+          0.09792630605387048,
+          -0.24159638811398487,
+          0.3601675404763979
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "diag_x_pos_45_y_pos_30",
+      "rotation_xyz_deg": [
+        45.0,
+        30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.03791125626372119,
+          -0.7146538183319453,
+          0.6163856002771653
+        ],
+        "orientation_xyzw": [
+          0.895723711096286,
+          0.09792630605387048,
+          -0.24159638811398487,
+          0.3601675404763979
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "diag_x_pos_45_y_pos_30",
+      "rotation_xyz_deg": [
+        45.0,
+        30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.03944516337907272,
+          -0.6845579742870368,
+          0.5932743701908313
+        ],
+        "orientation_xyzw": [
+          0.895723711096286,
+          0.09792630605387048,
+          -0.24159638811398487,
+          0.3601675404763979
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "diag_x_pos_45_y_neg_30",
+      "rotation_xyz_deg": [
+        45.0,
+        -30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.06358595371464665,
+          -0.7384281745142787,
+          0.6355233276564596
+        ],
+        "orientation_xyzw": [
+          0.8965176826384494,
+          -0.09527710149677723,
+          0.23863324597886718,
+          0.36087739269805585
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "diag_x_pos_45_y_neg_30",
+      "rotation_xyz_deg": [
+        45.0,
+        -30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.062374236440442044,
+          -0.7146538183319453,
+          0.6172665007316365
+        ],
+        "orientation_xyzw": [
+          0.8965176826384494,
+          -0.09527710149677723,
+          0.23863324597886718,
+          0.36087739269805585
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "diag_x_pos_45_y_neg_30",
+      "rotation_xyz_deg": [
+        45.0,
+        -30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.06084032932509051,
+          -0.6845579742870368,
+          0.5941552706453026
+        ],
+        "orientation_xyzw": [
+          0.8965176826384494,
+          -0.09527710149677723,
+          0.23863324597886718,
+          0.36087739269805585
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "diag_x_neg_45_y_pos_30",
+      "rotation_xyz_deg": [
+        -45.0,
+        30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.043719998428307705,
+          -0.52381627022837,
+          0.6468022196424511
+        ],
+        "orientation_xyzw": [
+          0.37819345863204795,
+          0.23798354151545545,
+          -0.10346335978540562,
+          0.8886106430814379
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.875 < 1.000",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "diag_x_neg_45_y_pos_30",
+      "rotation_xyz_deg": [
+        -45.0,
+        30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.04493171570251231,
+          -0.5000419140460366,
+          0.628545392717628
+        ],
+        "orientation_xyzw": [
+          0.37819345863204795,
+          0.23798354151545545,
+          -0.10346335978540562,
+          0.8886106430814379
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.149010621920354,
+        -0.11389323224847817,
+        1.580012515075249,
+        -0.4957724633025026,
+        0.8713379346662665,
+        -0.05528544677254149
+      ],
+      "planning_time_s": 0.020647388,
+      "trajectory_duration_s": 0.37881194500000004,
+      "ik_time_s": 0.0008656019999762066,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "diag_x_neg_45_y_neg_30",
+      "rotation_xyz_deg": [
+        -45.0,
+        -30.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.07060641315343777,
+          -0.52381627022837,
+          0.6476831200969224
+        ],
+        "orientation_xyzw": [
+          0.3792568226131556,
+          -0.23820552890574584,
+          0.09949483138097341,
+          0.8885511617394797
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.544271865211658,
+        1.3881238683815922,
+        -1.4881946210094756,
+        0.8473527454926554,
+        1.8957934175958784,
+        -0.3862272781137044
+      ],
+      "planning_time_s": 0.011836826,
+      "trajectory_duration_s": 0.808086203,
+      "ik_time_s": 0.001034382003126666,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "diag_x_pos_30_y_pos_45",
+      "rotation_xyz_deg": [
+        30.0,
+        45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.0758362519642447,
+          -0.7085768010469674,
+          0.6370296532451529
+        ],
+        "orientation_xyzw": [
+          0.8041205883608371,
+          0.18902250057726308,
+          -0.3349174035581967,
+          0.4533110482258024
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "diag_x_pos_30_y_pos_45",
+      "rotation_xyz_deg": [
+        30.0,
+        45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.07704796923844925,
+          -0.684802444864634,
+          0.6187728263203298
+        ],
+        "orientation_xyzw": [
+          0.8041205883608371,
+          0.18902250057726308,
+          -0.3349174035581967,
+          0.4533110482258024
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "diag_x_pos_30_y_pos_45",
+      "rotation_xyz_deg": [
+        30.0,
+        45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.07858187635380082,
+          -0.6547066008197255,
+          0.5956615962339957
+        ],
+        "orientation_xyzw": [
+          0.8041205883608371,
+          0.18902250057726308,
+          -0.3349174035581967,
+          0.4533110482258024
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "diag_x_pos_30_y_neg_45",
+      "rotation_xyz_deg": [
+        30.0,
+        -45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.10300264966311556,
+          -0.7085768010469674,
+          0.6382754346149668
+        ],
+        "orientation_xyzw": [
+          0.8054214881150569,
+          -0.1868802242322261,
+          0.3317767537282717,
+          0.4541984081422678
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "diag_x_pos_30_y_neg_45",
+      "rotation_xyz_deg": [
+        30.0,
+        -45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.10179093238891102,
+          -0.684802444864634,
+          0.6200186076901437
+        ],
+        "orientation_xyzw": [
+          0.8054214881150569,
+          -0.1868802242322261,
+          0.3317767537282717,
+          0.4541984081422678
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "diag_x_pos_30_y_neg_45",
+      "rotation_xyz_deg": [
+        30.0,
+        -45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.10025702527355945,
+          -0.6547066008197255,
+          0.5969073776038096
+        ],
+        "orientation_xyzw": [
+          0.8054214881150569,
+          -0.1868802242322261,
+          0.3317767537282717,
+          0.4541984081422678
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "diag_x_neg_30_y_pos_45",
+      "rotation_xyz_deg": [
+        -30.0,
+        45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.0828567114030358,
+          -0.5568232682030431,
+          0.644050112683944
+        ],
+        "orientation_xyzw": [
+          0.4692896531554405,
+          0.3295866642509044,
+          -0.19660686753481016,
+          0.795289627637226
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "diag_x_neg_30_y_pos_45",
+      "rotation_xyz_deg": [
+        -30.0,
+        45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.08406842867724035,
+          -0.5330489120207097,
+          0.6257932857591209
+        ],
+        "orientation_xyzw": [
+          0.4692896531554405,
+          0.3295866642509044,
+          -0.19660686753481016,
+          0.795289627637226
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "diag_x_neg_30_y_pos_45",
+      "rotation_xyz_deg": [
+        -30.0,
+        45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.08560233579259191,
+          -0.5029530679758013,
+          0.602682055672787
+        ],
+        "orientation_xyzw": [
+          0.4692896531554405,
+          0.3295866642509044,
+          -0.19660686753481016,
+          0.795289627637226
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "diag_x_neg_30_y_neg_45",
+      "rotation_xyz_deg": [
+        -30.0,
+        -45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.11002310910190666,
+          -0.5568232682030431,
+          0.6452958940537579
+        ],
+        "orientation_xyzw": [
+          0.4708599453486045,
+          -0.3293017234291384,
+          0.1928158468251853,
+          0.7954076539900752
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "diag_x_neg_30_y_neg_45",
+      "rotation_xyz_deg": [
+        -30.0,
+        -45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.10881139182770211,
+          -0.5330489120207097,
+          0.6270390671289348
+        ],
+        "orientation_xyzw": [
+          0.4708599453486045,
+          -0.3293017234291384,
+          0.1928158468251853,
+          0.7954076539900752
+        ]
+      },
+      "success": false,
+      "reason": "invalid_preflight:ValueError:endpoint_visibility_failed: 0.750 < 1.000",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "diag_x_neg_30_y_neg_45",
+      "rotation_xyz_deg": [
+        -30.0,
+        -45.0,
+        0.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.10727748471235055,
+          -0.5029530679758013,
+          0.6039278370426009
+        ],
+        "orientation_xyzw": [
+          0.4708599453486045,
+          -0.3293017234291384,
+          0.1928158468251853,
+          0.7954076539900752
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.6950383713516366,
+        1.4935855444120203,
+        -1.6111327118864467,
+        1.049815940426854,
+        2.2971333474232,
+        -0.32675203558695093
+      ],
+      "planning_time_s": 0.021050249,
+      "trajectory_duration_s": 0.847238461,
+      "ik_time_s": 0.0024689330020919442,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "tilt_x_pos_30_z_pos_45",
+      "rotation_xyz_deg": [
+        30.0,
+        0.0,
+        45.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.04614967344227308,
+          -0.6832117445393349,
+          0.67469129319704
+        ],
+        "orientation_xyzw": [
+          0.8043273582797142,
+          0.33441821681575273,
+          0.1863810374897821,
+          0.454405178061145
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "tilt_x_pos_30_z_pos_45",
+      "rotation_xyz_deg": [
+        30.0,
+        0.0,
+        45.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.047361390716477686,
+          -0.6594373883570015,
+          0.6564344662722169
+        ],
+        "orientation_xyzw": [
+          0.8043273582797142,
+          0.33441821681575273,
+          0.1863810374897821,
+          0.454405178061145
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "tilt_x_pos_30_z_pos_45",
+      "rotation_xyz_deg": [
+        30.0,
+        0.0,
+        45.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.04889529783182922,
+          -0.6293415443120929,
+          0.6333232361858829
+        ],
+        "orientation_xyzw": [
+          0.8043273582797142,
+          0.33441821681575273,
+          0.1863810374897821,
+          0.454405178061145
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "tilt_x_pos_30_z_neg_45",
+      "rotation_xyz_deg": [
+        30.0,
+        0.0,
+        -45.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.073316071141144,
+          -0.6844575259091487,
+          0.67469129319704
+        ],
+        "orientation_xyzw": [
+          0.8052147181961796,
+          -0.33227594047071574,
+          -0.1895216873197071,
+          0.45310427830692523
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "tilt_x_pos_30_z_neg_45",
+      "rotation_xyz_deg": [
+        30.0,
+        0.0,
+        -45.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.07210435386693939,
+          -0.6606831697268153,
+          0.6564344662722169
+        ],
+        "orientation_xyzw": [
+          0.8052147181961796,
+          -0.33227594047071574,
+          -0.1895216873197071,
+          0.45310427830692523
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "tilt_x_pos_30_z_neg_45",
+      "rotation_xyz_deg": [
+        30.0,
+        0.0,
+        -45.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.07057044675158786,
+          -0.6305873256819068,
+          0.6333232361858829
+        ],
+        "orientation_xyzw": [
+          0.8052147181961796,
+          -0.33227594047071574,
+          -0.1895216873197071,
+          0.45310427830692523
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "tilt_x_neg_30_z_pos_45",
+      "rotation_xyz_deg": [
+        -30.0,
+        0.0,
+        45.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.06115627870068127,
+          -0.5759057923963804,
+          0.6846197221494686
+        ],
+        "orientation_xyzw": [
+          0.470015786075598,
+          0.19485382759088068,
+          0.327548683485209,
+          0.7961337869102325
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.5359283656543872,
+        1.14988917808748,
+        -1.0351381079411532,
+        1.0744859021166409,
+        1.8586340079485135,
+        0.6957638060150798
+      ],
+      "planning_time_s": 0.010838764999999998,
+      "trajectory_duration_s": 0.663800689,
+      "ik_time_s": 0.0014688219998788554,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "tilt_x_neg_30_z_neg_45",
+      "rotation_xyz_deg": [
+        -30.0,
+        0.0,
+        -45.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.03398988100181033,
+          -0.5771515737661943,
+          0.6846197221494686
+        ],
+        "orientation_xyzw": [
+          0.47013381242844715,
+          -0.19456888676911477,
+          -0.3313397041948338,
+          0.7945634947170687
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.244318660096061,
+        0.17722856251651672,
+        0.9768287357080946,
+        0.22911520163489016,
+        1.139577313534785,
+        -1.0954460851578243
+      ],
+      "planning_time_s": 0.020581508,
+      "trajectory_duration_s": 0.35479049100000004,
+      "ik_time_s": 0.0011122210016765166,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "tilt_y_pos_30_z_pos_45",
+      "rotation_xyz_deg": [
+        0.0,
+        30.0,
+        45.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.047006785132836015,
+          -0.5769298071429371,
+          0.6792150574460187
+        ],
+        "orientation_xyzw": [
+          0.5673893775652201,
+          0.43179180830537495,
+          0.08610055606295164,
+          0.6958533054834022
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.2321150566868204,
+        0.14717000608153985,
+        1.0453214099400148,
+        0.11526994875666664,
+        1.1330671326160482,
+        0.48546430016944736
+      ],
+      "planning_time_s": 0.020831619000000003,
+      "trajectory_duration_s": 0.27428679,
+      "ik_time_s": 0.0008427309985563625,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "tilt_y_pos_30_z_neg_45",
+      "rotation_xyz_deg": [
+        0.0,
+        30.0,
+        -45.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.032965866255253745,
+          -0.6853146375997117,
+          0.6792150574460187
+        ],
+        "orientation_xyzw": [
+          0.7065277921631139,
+          -0.09588196073604899,
+          -0.4311603039623421,
+          0.5529248780744336
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "tilt_y_pos_30_z_neg_45",
+      "rotation_xyz_deg": [
+        0.0,
+        30.0,
+        -45.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.03417758352945835,
+          -0.6615402814173783,
+          0.6609582305211956
+        ],
+        "orientation_xyzw": [
+          0.7065277921631139,
+          -0.09588196073604899,
+          -0.4311603039623421,
+          0.5529248780744336
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "tilt_y_pos_30_z_neg_45",
+      "rotation_xyz_deg": [
+        0.0,
+        30.0,
+        -45.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.035711490644809885,
+          -0.6314444373724697,
+          0.6378470004348616
+        ],
+        "orientation_xyzw": [
+          0.7065277921631139,
+          -0.09588196073604899,
+          -0.4311603039623421,
+          0.5529248780744336
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "tilt_y_neg_30_z_pos_45",
+      "rotation_xyz_deg": [
+        0.0,
+        -30.0,
+        45.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.06029916701011834,
+          -0.6842357592858913,
+          0.6800959579004899
+        ],
+        "orientation_xyzw": [
+          0.7069537667900923,
+          0.09748023610125857,
+          0.4278291649120393,
+          0.5546856594879752
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "tilt_y_neg_30_z_pos_45",
+      "rotation_xyz_deg": [
+        0.0,
+        -30.0,
+        45.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.05908744973591373,
+          -0.6604614031035579,
+          0.6618391309756668
+        ],
+        "orientation_xyzw": [
+          0.7069537667900923,
+          0.09748023610125857,
+          0.4278291649120393,
+          0.5546856594879752
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "tilt_y_neg_30_z_pos_45",
+      "rotation_xyz_deg": [
+        0.0,
+        -30.0,
+        45.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.0575535426205622,
+          -0.6303655590586494,
+          0.638727900889333
+        ],
+        "orientation_xyzw": [
+          0.7069537667900923,
+          0.09748023610125857,
+          0.4278291649120393,
+          0.5546856594879752
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    },
+    {
+      "pose_name": "tilt_y_neg_30_z_neg_45",
+      "rotation_xyz_deg": [
+        0.0,
+        -30.0,
+        -45.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.07434008588770061,
+          -0.5780086854567572,
+          0.6800959579004899
+        ],
+        "orientation_xyzw": [
+          0.5688207384615128,
+          -0.43096286650378157,
+          -0.08970108755219866,
+          0.6947428949495603
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.5534949010502668,
+        0.18077363242591277,
+        1.0274845222594042,
+        -0.0041744573241961815,
+        1.9246884151218986,
+        -0.8947281790533879
+      ],
+      "planning_time_s": 0.010654034,
+      "trajectory_duration_s": 0.29086759100000004,
+      "ik_time_s": 0.0011150419995828997,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "tilt_x_pos_45_z_pos_90",
+      "rotation_xyz_deg": [
+        45.0,
+        0.0,
+        90.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          0.10012032204740312,
+          -0.6232208624780619,
+          0.6485185858205429
+        ],
+        "orientation_xyzw": [
+          0.655036203653224,
+          0.6569755559886592,
+          0.26283617751542593,
+          0.2650053481083801
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.145842881094738,
+        0.49592672813939154,
+        0.5033896764940932,
+        0.937783760393666,
+        0.8543751551511432,
+        0.9691052977411675
+      ],
+      "planning_time_s": 0.020728178,
+      "trajectory_duration_s": 0.42831253300000005,
+      "ik_time_s": 0.0009078010007215198,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "tilt_x_neg_45_z_pos_90",
+      "rotation_xyz_deg": [
+        -45.0,
+        0.0,
+        90.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.11449158223850558,
+          -0.6232208624780619,
+          0.6625595046981252
+        ],
+        "orientation_xyzw": [
+          0.2773272980635783,
+          0.27716479201524613,
+          0.6490337849881957,
+          0.6519389494115204
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.686506209277174,
+        0.42870155291612083,
+        0.6290213007980228,
+        0.569870308880835,
+        2.3226376816680596,
+        1.7037658274723366
+      ],
+      "planning_time_s": 0.020949159000000002,
+      "trajectory_duration_s": 0.662280855,
+      "ik_time_s": 0.00082665100126178,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "tilt_y_pos_45_z_pos_90",
+      "rotation_xyz_deg": [
+        0.0,
+        45.0,
+        90.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.004277660581913761,
+          -0.5161729201046719,
+          0.6549161545744271
+        ],
+        "orientation_xyzw": [
+          0.27627636887169466,
+          0.6559246267967755,
+          0.2624681806002406,
+          0.6515709524963352
+        ]
+      },
+      "success": true,
+      "reason": "preflight_ok",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0,
+      "joint_names": [
+        "base",
+        "shoulder",
+        "elbow",
+        "wrist1",
+        "wrist2",
+        "wrist3"
+      ],
+      "positions": [
+        -1.3392193076051093,
+        1.3736752998781852,
+        -1.5302843934568087,
+        0.9133719981142937,
+        1.4290485215804485,
+        1.4170246229698662
+      ],
+      "planning_time_s": 0.010569582999999999,
+      "trajectory_duration_s": 0.821490589,
+      "ik_time_s": 0.000984431000688346,
+      "joint_source": "planned_trajectory_final_state",
+      "in_frame_fraction": 1.0
+    },
+    {
+      "pose_name": "tilt_y_neg_45_z_pos_90",
+      "rotation_xyz_deg": [
+        0.0,
+        -45.0,
+        90.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.004277660581913775,
+          -0.7307848243905806,
+          0.656161935944241
+        ],
+        "orientation_xyzw": [
+          0.6560871328451077,
+          0.27821572120712973,
+          0.6494017819033809,
+          0.2653733450235654
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.42,
+      "variant_index": 0
+    },
+    {
+      "pose_name": "tilt_y_neg_45_z_pos_90",
+      "rotation_xyz_deg": [
+        0.0,
+        -45.0,
+        90.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.003065943307709188,
+          -0.7070104682082472,
+          0.6379051090194179
+        ],
+        "orientation_xyzw": [
+          0.6560871328451077,
+          0.27821572120712973,
+          0.6494017819033809,
+          0.2653733450235654
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.45,
+      "variant_index": 1
+    },
+    {
+      "pose_name": "tilt_y_neg_45_z_pos_90",
+      "rotation_xyz_deg": [
+        0.0,
+        -45.0,
+        90.0
+      ],
+      "target_tcp_pose": {
+        "position": [
+          -0.0015320361923576529,
+          -0.6769146241633387,
+          0.6147938789330839
+        ],
+        "orientation_xyzw": [
+          0.6560871328451077,
+          0.27821572120712973,
+          0.6494017819033809,
+          0.2653733450235654
+        ]
+      },
+      "success": false,
+      "reason": "ik_no_ik_solution",
+      "pivot_camera_distance_m": 0.48797685684620895,
+      "variant_index": 2
+    }
+  ]
+}

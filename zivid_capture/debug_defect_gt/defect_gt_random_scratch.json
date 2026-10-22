@@ -1,0 +1,1524 @@
+{
+  "scenario": "random_scratch",
+  "target_object_type": "batterycap",
+  "long_axis_index": 0,
+  "theta_zero_axis_index": 2,
+  "theta_ninety_axis_index": 1,
+  "decal_offset_m": 0.0002,
+  "alpha_threshold": 0.1,
+  "class_label": "defect",
+  "defects": [
+    {
+      "name": "batterycap_mainboard2_top_00_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": true,
+      "notes": "batterycap mainboard2_top; source=rand_00_scratch. 무작위 배치 (seed=20260917). theta=222.0 axial=0.57",
+      "prim_path": "/World/BatteryCap/Defects/batterycap_mainboard2_top_00_scratch",
+      "seed": 2001196391,
+      "placement": {
+        "theta_deg": 0.0,
+        "axial_ratio": 0.22,
+        "tangent_deg": -53.945319894228135,
+        "jitter_mm": 0.3,
+        "target_mesh_path_suffix": "/mainboard2",
+        "long_axis_index": 0,
+        "theta_zero_axis_index": 2,
+        "theta_ninety_axis_index": 1
+      },
+      "object_frame": {
+        "surface_point": [
+          -0.08110394609675807,
+          -0.0002033525702056398,
+          0.5010000000474977
+        ],
+        "decal_origin": [
+          -0.08110394609675807,
+          -0.0002033525702056398,
+          0.5012000000474977
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "tangent": [
+          0.588557068158125,
+          -0.8084556744318838,
+          0.0
+        ],
+        "bitangent": [
+          0.8084556744318838,
+          0.588557068158125,
+          -0.0
+        ],
+        "quad_corners": [
+          [
+            -0.09526965543985028,
+            0.002026419318381439,
+            0.5012000000474977
+          ],
+          [
+            -0.08333371798534514,
+            -0.014369061913297848,
+            0.5012000000474977
+          ],
+          [
+            -0.06693823675366586,
+            -0.002433124458792719,
+            0.5012000000474977
+          ],
+          [
+            -0.078874174208171,
+            0.013962356772886568,
+            0.5012000000474977
+          ]
+        ],
+        "transform": [
+          [
+            0.588557068158125,
+            0.8084556744318838,
+            0.0,
+            -0.08110394609675807
+          ],
+          [
+            -0.8084556744318838,
+            0.588557068158125,
+            0.0,
+            -0.0002033525702056398
+          ],
+          [
+            0.0,
+            -0.0,
+            1.0,
+            0.5012000000474977
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 0,
+        "max_conform_shift_mm": 1.1102230246251565e-12,
+        "clearance_min_mm": 0.19999999999886775,
+        "clearance_max_mm": 0.20000000000020002
+      },
+      "size": {
+        "length_mm": 11.8,
+        "width_mm": 0.58,
+        "depth_um": 50.0,
+        "patch_mm": 20.280000190734864,
+        "footprint_area_mm2": 57.18336259906479
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "constant+debug_neon",
+        "background": "unknown",
+        "background_clutter": null,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 12.099454879760742,
+        "p95_normal_tilt_deg": 9.157352447509766
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_00_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_00_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_00_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_00_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_00_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "batterycap_rightcap_top_00_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": true,
+      "notes": "batterycap rightcap_top; source=rand_01_scratch. 무작위 배치 (seed=20260917). theta=351.9 axial=0.71",
+      "prim_path": "/World/BatteryCap/Defects/batterycap_rightcap_top_00_scratch",
+      "seed": 2026612402,
+      "placement": {
+        "theta_deg": 0.0,
+        "axial_ratio": 0.5,
+        "tangent_deg": -33.37890896394313,
+        "jitter_mm": 0.0,
+        "target_mesh_path_suffix": "/Rightblackcap/rightcap",
+        "long_axis_index": 0,
+        "theta_zero_axis_index": 2,
+        "theta_ninety_axis_index": 1
+      },
+      "object_frame": {
+        "surface_point": [
+          0.125,
+          0.0,
+          0.5025000000237507
+        ],
+        "decal_origin": [
+          0.125,
+          1.8668916282621827e-22,
+          0.5027000000237507
+        ],
+        "normal": [
+          0.0,
+          9.334458141310913e-19,
+          1.0
+        ],
+        "tangent": [
+          0.8350504430727194,
+          -0.5501733886004077,
+          5.135570466353688e-19
+        ],
+        "bitangent": [
+          0.5501733886004077,
+          0.8350504430727194,
+          -7.794743406745431e-19
+        ],
+        "quad_corners": [
+          [
+            0.1146800824540352,
+            -0.002122334055818722,
+            0.5027000000237507
+          ],
+          [
+            0.12712233405581871,
+            -0.010319917545964796,
+            0.5027000000237507
+          ],
+          [
+            0.1353199175459648,
+            0.002122334055818722,
+            0.5027000000237507
+          ],
+          [
+            0.12287766594418127,
+            0.010319917545964796,
+            0.5027000000237507
+          ]
+        ],
+        "transform": [
+          [
+            0.8350504430727194,
+            0.5501733886004077,
+            0.0,
+            0.125
+          ],
+          [
+            -0.5501733886004077,
+            0.8350504430727194,
+            9.334458141310913e-19,
+            1.8668916282621827e-22
+          ],
+          [
+            5.135570466353688e-19,
+            -7.794743406745431e-19,
+            1.0,
+            0.5027000000237507
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 6,
+        "max_conform_shift_mm": 0.9999999892884581,
+        "clearance_min_mm": 0.19996355574103397,
+        "clearance_max_mm": 0.2095379254838381
+      },
+      "size": {
+        "length_mm": 6.0,
+        "width_mm": 0.65,
+        "depth_um": 50.0,
+        "patch_mm": 14.9,
+        "footprint_area_mm2": 40.5631674194336
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "constant+debug_neon",
+        "background": "unknown",
+        "background_clutter": null,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 13.701375961303711,
+        "p95_normal_tilt_deg": 9.418533325195312
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightcap_top_00_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightcap_top_00_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightcap_top_00_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightcap_top_00_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightcap_top_00_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "batterycap_leftcap_top_00_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": true,
+      "notes": "batterycap leftcap_top; source=rand_02_scratch. 무작위 배치 (seed=20260917). theta=93.7 axial=0.32",
+      "prim_path": "/World/BatteryCap/Defects/batterycap_leftcap_top_00_scratch",
+      "seed": 1350386757,
+      "placement": {
+        "theta_deg": 0.0,
+        "axial_ratio": 0.5,
+        "tangent_deg": -1.2778204166388036,
+        "jitter_mm": 0.0,
+        "target_mesh_path_suffix": "/Leftblackcap/leftcap",
+        "long_axis_index": 0,
+        "theta_zero_axis_index": 2,
+        "theta_ninety_axis_index": 1
+      },
+      "object_frame": {
+        "surface_point": [
+          -0.125,
+          0.0,
+          0.5025000000237507
+        ],
+        "decal_origin": [
+          -0.125,
+          1.8668916282621827e-22,
+          0.5027000000237507
+        ],
+        "normal": [
+          0.0,
+          9.334458141310913e-19,
+          1.0
+        ],
+        "tangent": [
+          0.9997513168360548,
+          -0.02230032476387669,
+          2.0816144804604614e-20
+        ],
+        "bitangent": [
+          0.02230032476387669,
+          0.9997513168360548,
+          -9.332136818726618e-19
+        ],
+        "quad_corners": [
+          [
+            -0.1325223000821755,
+            -0.00719403930165123,
+            0.5027000000237507
+          ],
+          [
+            -0.11780596069834877,
+            -0.007522300082175496,
+            0.5027000000237507
+          ],
+          [
+            -0.11747769991782452,
+            0.00719403930165123,
+            0.5027000000237507
+          ],
+          [
+            -0.13219403930165122,
+            0.007522300082175496,
+            0.5027000000237507
+          ]
+        ],
+        "transform": [
+          [
+            0.9997513168360548,
+            0.02230032476387669,
+            0.0,
+            -0.125
+          ],
+          [
+            -0.02230032476387669,
+            0.9997513168360548,
+            9.334458141310913e-19,
+            1.8668916282621827e-22
+          ],
+          [
+            2.0816144804604614e-20,
+            -9.332136818726618e-19,
+            1.0,
+            0.5027000000237507
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 0,
+        "max_conform_shift_mm": 0.9999999892893463,
+        "clearance_min_mm": 0.1999490454506203,
+        "clearance_max_mm": 0.2083522621453282
+      },
+      "size": {
+        "length_mm": 6.0,
+        "width_mm": 0.62,
+        "depth_um": 50.0,
+        "patch_mm": 14.719999999999999,
+        "footprint_area_mm2": 37.96236249999999
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "constant+debug_neon",
+        "background": "unknown",
+        "background_clutter": null,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 15.533080101013184,
+        "p95_normal_tilt_deg": 9.730237007141113
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftcap_top_00_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftcap_top_00_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftcap_top_00_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftcap_top_00_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftcap_top_00_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "batterycap_rightsidewall_outer_00_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": false,
+      "notes": "batterycap rightsidewall_outer; source=rand_03_scratch. 무작위 배치 (seed=20260917). theta=51.5 axial=0.40",
+      "prim_path": "/World/BatteryCap/Defects/batterycap_rightsidewall_outer_00_scratch",
+      "seed": 553226412,
+      "placement": {
+        "theta_deg": 0.0,
+        "axial_ratio": 0.72,
+        "tangent_deg": -84.56535027230868,
+        "jitter_mm": 0.0,
+        "target_mesh_path_suffix": "/rightsidewall",
+        "long_axis_index": 2,
+        "theta_zero_axis_index": 0,
+        "theta_ninety_axis_index": 1
+      },
+      "object_frame": {
+        "surface_point": [
+          0.14399999999999968,
+          0.0,
+          0.47896
+        ],
+        "decal_origin": [
+          0.1441999999999997,
+          0.0,
+          0.47896
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "tangent": [
+          0.0,
+          0.9955048703807221,
+          0.09471036399603655
+        ],
+        "bitangent": [
+          0.0,
+          -0.09471036399603655,
+          0.9955048703807221
+        ],
+        "quad_corners": [
+          [
+            0.1441999999999997,
+            -0.007314451391843647,
+            0.4701074522968607
+          ],
+          [
+            0.1441999999999997,
+            0.008852547703139282,
+            0.47164554860815633
+          ],
+          [
+            0.1441999999999997,
+            0.007314451391843647,
+            0.4878125477031393
+          ],
+          [
+            0.1441999999999997,
+            -0.008852547703139282,
+            0.48627445139184367
+          ]
+        ],
+        "transform": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.1441999999999997
+          ],
+          [
+            0.9955048703807221,
+            -0.09471036399603655,
+            0.0,
+            0.0
+          ],
+          [
+            0.09471036399603655,
+            0.9955048703807221,
+            0.0,
+            0.47896
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 0,
+        "max_conform_shift_mm": 0.0,
+        "clearance_min_mm": 0.20000000000000573,
+        "clearance_max_mm": 0.20000000000000573
+      },
+      "size": {
+        "length_mm": 8.0,
+        "width_mm": 0.54,
+        "depth_um": 50.0,
+        "patch_mm": 16.240000000000002,
+        "footprint_area_mm2": 38.85075058593751
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "constant+debug_neon",
+        "background": "unknown",
+        "background_clutter": null,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 13.805646896362305,
+        "p95_normal_tilt_deg": 10.206932067871094
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightsidewall_outer_00_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightsidewall_outer_00_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightsidewall_outer_00_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightsidewall_outer_00_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightsidewall_outer_00_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "batterycap_leftsidewall_outer_00_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": false,
+      "notes": "batterycap leftsidewall_outer; source=rand_04_scratch. 무작위 배치 (seed=20260917). theta=118.2 axial=0.70",
+      "prim_path": "/World/BatteryCap/Defects/batterycap_leftsidewall_outer_00_scratch",
+      "seed": 966416389,
+      "placement": {
+        "theta_deg": 180.0,
+        "axial_ratio": 0.72,
+        "tangent_deg": -10.551017039066494,
+        "jitter_mm": 0.0,
+        "target_mesh_path_suffix": "/leftsidewall",
+        "long_axis_index": 2,
+        "theta_zero_axis_index": 0,
+        "theta_ninety_axis_index": 1
+      },
+      "object_frame": {
+        "surface_point": [
+          -0.1439999999999999,
+          1.2246467991472272e-19,
+          0.47896
+        ],
+        "decal_origin": [
+          -0.1441999999999999,
+          1.2246467991472272e-19,
+          0.47896
+        ],
+        "normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "tangent": [
+          0.0,
+          -0.18311095835442706,
+          0.9830922525025428
+        ],
+        "bitangent": [
+          0.0,
+          0.9830922525025428,
+          0.18311095835442706
+        ],
+        "quad_corners": [
+          [
+            -0.1441999999999999,
+            -0.006663844180253805,
+            0.46924552725356145
+          ],
+          [
+            -0.1441999999999999,
+            -0.00971447274643856,
+            0.4856238441802538
+          ],
+          [
+            -0.1441999999999999,
+            0.006663844180253805,
+            0.48867447274643855
+          ],
+          [
+            -0.1441999999999999,
+            0.00971447274643856,
+            0.4722961558197462
+          ]
+        ],
+        "transform": [
+          [
+            0.0,
+            0.0,
+            -1.0,
+            -0.1441999999999999
+          ],
+          [
+            -0.18311095835442706,
+            0.9830922525025428,
+            0.0,
+            1.2246467991472272e-19
+          ],
+          [
+            0.9830922525025428,
+            0.18311095835442706,
+            0.0,
+            0.47896
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 0,
+        "max_conform_shift_mm": 2.220446049250313e-13,
+        "clearance_min_mm": 0.19999999999978368,
+        "clearance_max_mm": 0.19999999999978368
+      },
+      "size": {
+        "length_mm": 8.0,
+        "width_mm": 0.61,
+        "depth_um": 50.0,
+        "patch_mm": 16.66,
+        "footprint_area_mm2": 45.3755294555664
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "constant+debug_neon",
+        "background": "unknown",
+        "background_clutter": null,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 14.195154190063477,
+        "p95_normal_tilt_deg": 9.386811256408691
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftsidewall_outer_00_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftsidewall_outer_00_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftsidewall_outer_00_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftsidewall_outer_00_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftsidewall_outer_00_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "batterycap_mainboard2_top_01_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": true,
+      "notes": "batterycap mainboard2_top; source=rand_05_scratch. 무작위 배치 (seed=20260917). theta=336.2 axial=0.31",
+      "prim_path": "/World/BatteryCap/Defects/batterycap_mainboard2_top_01_scratch",
+      "seed": 1754402165,
+      "placement": {
+        "theta_deg": 0.0,
+        "axial_ratio": 0.42,
+        "tangent_deg": -39.731784753765524,
+        "jitter_mm": 0.3,
+        "target_mesh_path_suffix": "/mainboard2",
+        "long_axis_index": 0,
+        "theta_zero_axis_index": 2,
+        "theta_ninety_axis_index": 1
+      },
+      "object_frame": {
+        "surface_point": [
+          -0.023067967043943403,
+          3.755673915649344e-05,
+          0.5
+        ],
+        "decal_origin": [
+          -0.023067967043943403,
+          3.755673915649344e-05,
+          0.5002
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "tangent": [
+          0.7690450811194722,
+          -0.6391945425345436,
+          0.0
+        ],
+        "bitangent": [
+          0.6391945425345436,
+          0.7690450811194722,
+          -0.0
+        ],
+        "quad_corners": [
+          [
+            -0.03964294765609152,
+            -0.0014907841222784384,
+            0.5002
+          ],
+          [
+            -0.021539626182508473,
+            -0.016537423872991626,
+            0.5002
+          ],
+          [
+            -0.0064929864317952845,
+            0.0015658976005914248,
+            0.5002
+          ],
+          [
+            -0.024596307905378333,
+            0.01661253735130461,
+            0.5002
+          ]
+        ],
+        "transform": [
+          [
+            0.7690450811194722,
+            0.6391945425345436,
+            0.0,
+            -0.023067967043943403
+          ],
+          [
+            -0.6391945425345436,
+            0.7690450811194722,
+            0.0,
+            3.755673915649344e-05
+          ],
+          [
+            0.0,
+            -0.0,
+            1.0,
+            0.5002
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 6,
+        "max_conform_shift_mm": 1.0000000474996718,
+        "clearance_min_mm": 0.1999999999966473,
+        "clearance_max_mm": 0.2000000000095259
+      },
+      "size": {
+        "length_mm": 13.14,
+        "width_mm": 0.9,
+        "depth_um": 50.0,
+        "patch_mm": 23.540000343322752,
+        "footprint_area_mm2": 106.45320201874037
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "constant+debug_neon",
+        "background": "unknown",
+        "background_clutter": null,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 9.400819778442383,
+        "p95_normal_tilt_deg": 6.449303150177002
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_01_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_01_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_01_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_01_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_01_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "batterycap_mainboard2_top_02_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": true,
+      "notes": "batterycap mainboard2_top; source=rand_06_scratch. 무작위 배치 (seed=20260917). theta=77.0 axial=0.69",
+      "prim_path": "/World/BatteryCap/Defects/batterycap_mainboard2_top_02_scratch",
+      "seed": 1609734587,
+      "placement": {
+        "theta_deg": 0.0,
+        "axial_ratio": 0.62,
+        "tangent_deg": -75.7298646219479,
+        "jitter_mm": 0.3,
+        "target_mesh_path_suffix": "/mainboard2",
+        "long_axis_index": 0,
+        "theta_zero_axis_index": 2,
+        "theta_ninety_axis_index": 1
+      },
+      "object_frame": {
+        "surface_point": [
+          0.03483508401556195,
+          -0.00017064447769115073,
+          0.5010000000474975
+        ],
+        "decal_origin": [
+          0.03483508401556195,
+          -0.00017064447769115073,
+          0.5012000000474974
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "tangent": [
+          0.24649389332524946,
+          -0.9691443445397392,
+          0.0
+        ],
+        "bitangent": [
+          0.9691443445397392,
+          0.24649389332524946,
+          -0.0
+        ],
+        "quad_corners": [
+          [
+            0.02366336870232854,
+            0.006470513113836155,
+            0.5012000000474974
+          ],
+          [
+            0.028193926424034642,
+            -0.01134235979092456,
+            0.5012000000474974
+          ],
+          [
+            0.04600679932879536,
+            -0.006811802069218458,
+            0.5012000000474974
+          ],
+          [
+            0.04147624160708926,
+            0.011001070835542257,
+            0.5012000000474974
+          ]
+        ],
+        "transform": [
+          [
+            0.24649389332524946,
+            0.9691443445397392,
+            0.0,
+            0.03483508401556195
+          ],
+          [
+            -0.9691443445397392,
+            0.24649389332524946,
+            0.0,
+            -0.00017064447769115073
+          ],
+          [
+            0.0,
+            -0.0,
+            1.0,
+            0.5012000000474974
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 0,
+        "max_conform_shift_mm": 1.0000000474978954,
+        "clearance_min_mm": 0.19999999999886775,
+        "clearance_max_mm": 0.20000000000197637
+      },
+      "size": {
+        "length_mm": 9.66,
+        "width_mm": 0.62,
+        "depth_um": 50.0,
+        "patch_mm": 18.37999984741211,
+        "footprint_area_mm2": 52.8984670294052
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "constant+debug_neon",
+        "background": "unknown",
+        "background_clutter": null,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 12.74372673034668,
+        "p95_normal_tilt_deg": 9.064311027526855
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_02_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_02_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_02_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_02_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_02_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "batterycap_mainboard2_top_03_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": true,
+      "notes": "batterycap mainboard2_top; source=rand_07_scratch. 무작위 배치 (seed=20260917). theta=278.0 axial=0.25",
+      "prim_path": "/World/BatteryCap/Defects/batterycap_mainboard2_top_03_scratch",
+      "seed": 1119904274,
+      "placement": {
+        "theta_deg": 0.0,
+        "axial_ratio": 0.82,
+        "tangent_deg": 61.85999436641953,
+        "jitter_mm": 0.3,
+        "target_mesh_path_suffix": "/mainboard2",
+        "long_axis_index": 0,
+        "theta_zero_axis_index": 2,
+        "theta_ninety_axis_index": 1
+      },
+      "object_frame": {
+        "surface_point": [
+          0.09296326583875393,
+          0.00016403957634318213,
+          0.5010000000474975
+        ],
+        "decal_origin": [
+          0.09296326583875393,
+          0.00016403957634318213,
+          0.5012000000474974
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "tangent": [
+          0.4716276938182947,
+          0.8817977763771221,
+          0.0
+        ],
+        "bitangent": [
+          -0.8817977763771221,
+          0.4716276938182947,
+          0.0
+        ],
+        "quad_corners": [
+          [
+            0.09770688274966628,
+            -0.015488325676692305,
+            0.5012000000474974
+          ],
+          [
+            0.10861563109178941,
+            0.0049076564872555396,
+            0.5012000000474974
+          ],
+          [
+            0.08821964892784158,
+            0.01581640482937867,
+            0.5012000000474974
+          ],
+          [
+            0.07731090058571845,
+            -0.004579577334569174,
+            0.5012000000474974
+          ]
+        ],
+        "transform": [
+          [
+            0.4716276938182947,
+            -0.8817977763771221,
+            0.0,
+            0.09296326583875393
+          ],
+          [
+            0.8817977763771221,
+            0.4716276938182947,
+            0.0,
+            0.00016403957634318213
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.5012000000474974
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 2,
+        "max_conform_shift_mm": 4.440892098500626e-13,
+        "clearance_min_mm": 0.19999999999975593,
+        "clearance_max_mm": 0.2000000000006441
+      },
+      "size": {
+        "length_mm": 14.23,
+        "width_mm": 0.65,
+        "depth_um": 50.0,
+        "patch_mm": 23.129999542236327,
+        "footprint_area_mm2": 75.88700844644981
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "constant+debug_neon",
+        "background": "unknown",
+        "background_clutter": null,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 10.520368576049805,
+        "p95_normal_tilt_deg": 8.059171676635742
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_03_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_03_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_03_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_03_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_03_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "batterycap_rightsidewall_outer_01_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": false,
+      "notes": "batterycap rightsidewall_outer; source=rand_08_scratch. 무작위 배치 (seed=20260917). theta=285.7 axial=0.70",
+      "prim_path": "/World/BatteryCap/Defects/batterycap_rightsidewall_outer_01_scratch",
+      "seed": 1688863156,
+      "placement": {
+        "theta_deg": 0.0,
+        "axial_ratio": 0.48,
+        "tangent_deg": 37.26094040344269,
+        "jitter_mm": 0.0,
+        "target_mesh_path_suffix": "/rightsidewall",
+        "long_axis_index": 2,
+        "theta_zero_axis_index": 0,
+        "theta_ninety_axis_index": 1
+      },
+      "object_frame": {
+        "surface_point": [
+          0.14399999999999968,
+          0.0,
+          0.46263999999999994
+        ],
+        "decal_origin": [
+          0.1441999999999997,
+          0.0,
+          0.46263999999999994
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "tangent": [
+          0.0,
+          -0.6054459704547278,
+          0.7958864095209398
+        ],
+        "bitangent": [
+          0.0,
+          -0.7958864095209397,
+          -0.6054459704547277
+        ],
+        "quad_corners": [
+          [
+            0.1441999999999997,
+            0.011294738982603882,
+            0.4611050500611263
+          ],
+          [
+            0.1441999999999997,
+            0.001534949938873668,
+            0.4739347389826038
+          ],
+          [
+            0.1441999999999997,
+            -0.011294738982603882,
+            0.4641749499388736
+          ],
+          [
+            0.1441999999999997,
+            -0.001534949938873668,
+            0.4513452610173961
+          ]
+        ],
+        "transform": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.1441999999999997
+          ],
+          [
+            -0.6054459704547278,
+            -0.7958864095209397,
+            0.0,
+            0.0
+          ],
+          [
+            0.7958864095209398,
+            -0.6054459704547277,
+            0.0,
+            0.46263999999999994
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 6,
+        "max_conform_shift_mm": 0.0,
+        "clearance_min_mm": 0.20000000000000573,
+        "clearance_max_mm": 0.20000000000000573
+      },
+      "size": {
+        "length_mm": 8.0,
+        "width_mm": 0.52,
+        "depth_um": 50.0,
+        "patch_mm": 16.12,
+        "footprint_area_mm2": 36.99404223632813
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "constant+debug_neon",
+        "background": "unknown",
+        "background_clutter": null,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 13.736123085021973,
+        "p95_normal_tilt_deg": 10.663010597229004
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightsidewall_outer_01_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightsidewall_outer_01_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightsidewall_outer_01_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightsidewall_outer_01_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightsidewall_outer_01_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "batterycap_leftsidewall_outer_01_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": false,
+      "notes": "batterycap leftsidewall_outer; source=rand_09_scratch. 무작위 배치 (seed=20260917). theta=178.5 axial=0.18",
+      "prim_path": "/World/BatteryCap/Defects/batterycap_leftsidewall_outer_01_scratch",
+      "seed": 587475401,
+      "placement": {
+        "theta_deg": 180.0,
+        "axial_ratio": 0.48,
+        "tangent_deg": 62.750652866663756,
+        "jitter_mm": 0.0,
+        "target_mesh_path_suffix": "/leftsidewall",
+        "long_axis_index": 2,
+        "theta_zero_axis_index": 0,
+        "theta_ninety_axis_index": 1
+      },
+      "object_frame": {
+        "surface_point": [
+          -0.1439999999999999,
+          1.2246467991472272e-19,
+          0.46263999999999994
+        ],
+        "decal_origin": [
+          -0.1441999999999999,
+          1.2246467991472272e-19,
+          0.46263999999999994
+        ],
+        "normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "tangent": [
+          0.0,
+          0.8890223587514954,
+          0.45786378502773883
+        ],
+        "bitangent": [
+          0.0,
+          0.45786378502773883,
+          -0.8890223587514954
+        ],
+        "quad_corners": [
+          [
+            -0.1441999999999999,
+            -0.010896308903174005,
+            0.46612807286142516
+          ],
+          [
+            -0.1441999999999999,
+            0.0034880728614251903,
+            0.47353630890317394
+          ],
+          [
+            -0.1441999999999999,
+            0.010896308903174005,
+            0.4591519271385747
+          ],
+          [
+            -0.1441999999999999,
+            -0.0034880728614251903,
+            0.45174369109682594
+          ]
+        ],
+        "transform": [
+          [
+            0.0,
+            0.0,
+            -1.0,
+            -0.1441999999999999
+          ],
+          [
+            0.8890223587514954,
+            0.45786378502773883,
+            0.0,
+            1.2246467991472272e-19
+          ],
+          [
+            0.45786378502773883,
+            -0.8890223587514954,
+            0.0,
+            0.46263999999999994
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 4,
+        "max_conform_shift_mm": 2.220446049250313e-13,
+        "clearance_min_mm": 0.19999999999978368,
+        "clearance_max_mm": 0.19999999999978368
+      },
+      "size": {
+        "length_mm": 8.0,
+        "width_mm": 0.53,
+        "depth_um": 50.0,
+        "patch_mm": 16.18,
+        "footprint_area_mm2": 37.68538668212891
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "constant+debug_neon",
+        "background": "unknown",
+        "background_clutter": null,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 13.687296867370605,
+        "p95_normal_tilt_deg": 10.31762981414795
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftsidewall_outer_01_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftsidewall_outer_01_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftsidewall_outer_01_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftsidewall_outer_01_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftsidewall_outer_01_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "batterycap_mainboard2_top_04_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": true,
+      "notes": "batterycap mainboard2_top; source=rand_10_scratch. 무작위 배치 (seed=20260917). theta=353.4 axial=0.55",
+      "prim_path": "/World/BatteryCap/Defects/batterycap_mainboard2_top_04_scratch",
+      "seed": 101799546,
+      "placement": {
+        "theta_deg": 0.0,
+        "axial_ratio": 0.2,
+        "tangent_deg": 48.24835168751753,
+        "jitter_mm": 0.3,
+        "target_mesh_path_suffix": "/mainboard2",
+        "long_axis_index": 0,
+        "theta_zero_axis_index": 2,
+        "theta_ninety_axis_index": 1
+      },
+      "object_frame": {
+        "surface_point": [
+          -0.08727898295076919,
+          7.106339484064018e-05,
+          0.5010000000474972
+        ],
+        "decal_origin": [
+          -0.08727898295076919,
+          7.106339484064018e-05,
+          0.5012000000474972
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "tangent": [
+          0.6659031286618953,
+          0.7460382183496361,
+          0.0
+        ],
+        "bitangent": [
+          -0.7460382183496361,
+          0.6659031286618953,
+          0.0
+        ],
+        "quad_corners": [
+          [
+            -0.08640751383360198,
+            -0.015283799050146846,
+            0.5012000000474972
+          ],
+          [
+            -0.0719241205057817,
+            0.000942532512007834,
+            0.5012000000474972
+          ],
+          [
+            -0.0881504520679364,
+            0.015425925839828127,
+            0.5012000000474972
+          ],
+          [
+            -0.10263384539575668,
+            -0.0008004057223265524,
+            0.5012000000474972
+          ]
+        ],
+        "transform": [
+          [
+            0.6659031286618953,
+            -0.7460382183496361,
+            0.0,
+            -0.08727898295076919
+          ],
+          [
+            0.7460382183496361,
+            0.6659031286618953,
+            0.0,
+            7.106339484064018e-05
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.5012000000474972
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 2,
+        "max_conform_shift_mm": 1.7763568394002505e-12,
+        "clearance_min_mm": 0.19999999999842366,
+        "clearance_max_mm": 0.20000000000175433
+      },
+      "size": {
+        "length_mm": 12.31,
+        "width_mm": 0.74,
+        "depth_um": 50.0,
+        "patch_mm": 21.750000419616697,
+        "footprint_area_mm2": 79.3586628063518
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "constant+debug_neon",
+        "background": "unknown",
+        "background_clutter": null,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 10.673131942749023,
+        "p95_normal_tilt_deg": 7.573689937591553
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_04_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_04_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_04_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_04_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_mainboard2_top_04_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "batterycap_rightcap_top_01_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": true,
+      "notes": "batterycap rightcap_top; source=rand_11_scratch. 무작위 배치 (seed=20260917). theta=219.8 axial=0.33",
+      "prim_path": "/World/BatteryCap/Defects/batterycap_rightcap_top_01_scratch",
+      "seed": 399535264,
+      "placement": {
+        "theta_deg": 0.0,
+        "axial_ratio": 0.44,
+        "tangent_deg": -80.66099279611042,
+        "jitter_mm": 0.0,
+        "target_mesh_path_suffix": "/Rightblackcap/rightcap",
+        "long_axis_index": 0,
+        "theta_zero_axis_index": 2,
+        "theta_ninety_axis_index": 1
+      },
+      "object_frame": {
+        "surface_point": [
+          0.12320000004023314,
+          0.0,
+          0.5025000000237487
+        ],
+        "decal_origin": [
+          0.12320000004023314,
+          2.0968164422421068e-22,
+          0.5027000000237487
+        ],
+        "normal": [
+          0.0,
+          1.0484082211210533e-18,
+          1.0
+        ],
+        "tangent": [
+          0.16227563905742345,
+          -0.9867454671639009,
+          1.0345120599285682e-18
+        ],
+        "bitangent": [
+          0.9867454671639009,
+          0.16227563905742345,
+          -1.7013111407547544e-19
+        ],
+        "quad_corners": [
+          [
+            0.11443296899976445,
+            0.0062907047884524225,
+            0.5027000000237487
+          ],
+          [
+            0.11690929525178072,
+            -0.008767031040468705,
+            0.5027000000237487
+          ],
+          [
+            0.13196703108070185,
+            -0.0062907047884524225,
+            0.5027000000237487
+          ],
+          [
+            0.12949070482868558,
+            0.008767031040468705,
+            0.5027000000237487
+          ]
+        ],
+        "transform": [
+          [
+            0.16227563905742345,
+            0.9867454671639009,
+            0.0,
+            0.12320000004023314
+          ],
+          [
+            -0.9867454671639009,
+            0.16227563905742345,
+            1.0484082211210533e-18,
+            2.0968164422421068e-22
+          ],
+          [
+            1.0345120599285682e-18,
+            -1.7013111407547544e-19,
+            1.0,
+            0.5027000000237487
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 0,
+        "max_conform_shift_mm": 0.999999989292677,
+        "clearance_min_mm": 0.199915645299531,
+        "clearance_max_mm": 0.21006320387451094
+      },
+      "size": {
+        "length_mm": 6.0,
+        "width_mm": 0.71,
+        "depth_um": 50.0,
+        "patch_mm": 15.26,
+        "footprint_area_mm2": 45.73778911132813
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "constant+debug_neon",
+        "background": "unknown",
+        "background_clutter": null,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 15.52431583404541,
+        "p95_normal_tilt_deg": 8.980047225952148
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightcap_top_01_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightcap_top_01_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightcap_top_01_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightcap_top_01_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_rightcap_top_01_scratch_emissive.png"
+      }
+    }
+  ]
+}

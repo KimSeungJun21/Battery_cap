@@ -1,0 +1,73 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "rb5_850e_u"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp_42bbnon/rb5_850e_u.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_rb5_850e_u_epick_mcy9l6e0/usdex_rb5_850e_u_epick/rb5_850e_u.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_rb5_850e_u_epick_mcy9l6e0/temp_rb5_850e_u_epick/rb5_850e_u_epick.usd
+
+
+Generated from Composed Stage of root layer /home/seungjun/isaac_ws/Assets/urdf/rb5_850e_u_epick/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "rb5_850e_u"
+{
+    over "Physics"
+    {
+        over "base" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 179.90875
+        }
+
+        over "shoulder" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 179.90875
+        }
+
+        over "elbow" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 179.90875
+        }
+
+        over "wrist1" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 179.90875
+        }
+
+        over "wrist2" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 179.90875
+        }
+
+        over "wrist3" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 179.90875
+        }
+    }
+}
+

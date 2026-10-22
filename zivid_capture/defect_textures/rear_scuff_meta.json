@@ -1,0 +1,30 @@
+{
+  "name": "rear_scuff",
+  "defect_type": "scuff",
+  "seed": 332931391,
+  "patch_mm": 17.25,
+  "resolution_px": 256,
+  "mm_per_px": 0.0673828125,
+  "patch_center_mm": [
+    0.0,
+    0.0
+  ],
+  "footprint_area_mm2": 82.90395641326904,
+  "max_normal_tilt_deg": 4.710936546325684,
+  "p95_normal_tilt_deg": 2.307407855987549,
+  "alpha_threshold": 0.1,
+  "base_albedo_source": "sampled",
+  "base_roughness": 0.38,
+  "debug_visible": false,
+  "base_metallic": 0.0,
+  "normal_strength": 1.0,
+  "length_mm": 12.0,
+  "width_mm": 8.0,
+  "depth_um": 2.0,
+  "textures": {
+    "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/rear_scuff_albedo.png",
+    "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/rear_scuff_roughness.png",
+    "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/rear_scuff_normal.png",
+    "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/rear_scuff_opacity.png"
+  }
+}

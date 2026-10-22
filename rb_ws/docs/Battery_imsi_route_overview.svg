@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1237" viewBox="0 0 1800 1237">
+  <defs>
+    <style>
+      .bg { fill: #08111f; }
+      .title { fill: #f1f5f9; font: 700 30px 'Noto Sans CJK KR', sans-serif; }
+      .subtitle { fill: #94a3b8; font: 400 16px 'Noto Sans CJK KR', sans-serif; }
+      .section { font: 700 18px 'Noto Sans CJK KR', sans-serif; }
+      .box { stroke-width: 2; rx: 15; ry: 15; }
+      .box-blue { fill: #10283d; stroke: #38bdf8; }
+      .box-green { fill: #123829; stroke: #34d399; }
+      .box-amber { fill: #322813; stroke: #fbbf24; }
+      .box-purple { fill: #2d2147; stroke: #a78bfa; }
+      .box-orange { fill: #3b2315; stroke: #fb923c; }
+      .box-cyan { fill: #102d35; stroke: #22d3ee; }
+      .label { fill: #e5edf7; font: 600 16px 'Noto Sans CJK KR', sans-serif; text-anchor: middle; }
+      .small { fill: #cbd5e1; font: 400 13px 'Noto Sans CJK KR', sans-serif; text-anchor: middle; }
+      .tiny { fill: #b9c9dc; font: 400 12px 'Noto Sans CJK KR', sans-serif; text-anchor: middle; }
+      .arrow { fill: none; stroke: #71859c; stroke-width: 3; marker-end: url(#arrow); }
+      .arrow-green { fill: none; stroke: #34d399; stroke-width: 4; marker-end: url(#arrowGreen); }
+      .arrow-cyan { fill: none; stroke: #22d3ee; stroke-width: 3; marker-end: url(#arrowCyan); }
+      .divider { stroke: #223249; stroke-width: 1.5; stroke-dasharray: 8 8; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#71859c"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#34d399"/>
+    </marker>
+    <marker id="arrowCyan" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#22d3ee"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1800" height="1237"/>
+
+  <text class="title" x="55" y="52">Battery_rb_imsi — camera candidate → motion plan → graph → beam search</text>
+  <text class="subtitle" x="55" y="82">코드 흐름과 2026-09-28 최신 cache 스냅샷 · 로봇은 preflight 동안 움직이지 않음</text>
+
+  <text class="section" x="55" y="125" fill="#7dd3fc">A. 사전 계산</text>
+
+  <g transform="translate(55,145)">
+    <rect class="box box-blue" width="245" height="135"/>
+    <text class="label" x="122.5" y="34">① pose 후보 생성</text>
+    <text class="small" x="122.5" y="68"><tspan x="122.5">카메라에 대한 물체/TCP</tspan><tspan x="122.5" dy="22">후보 56개</tspan></text>
+  </g>
+  <path class="arrow" d="M300 212 H330"/>
+
+  <g transform="translate(330,145)">
+    <rect class="box box-blue" width="245" height="135"/>
+    <text class="label" x="122.5" y="34">② MoveIt preflight</text>
+    <text class="small" x="122.5" y="64"><tspan x="122.5">후보별 IK</tspan><tspan x="122.5" dy="21">→ plan-only motion plan</tspan><tspan x="122.5" dy="21">→ 끝점 화각 guard</tspan></text>
+  </g>
+  <path class="arrow" d="M575 212 H605"/>
+
+  <g transform="translate(605,145)">
+    <rect class="box box-green" width="245" height="135"/>
+    <text class="label" x="122.5" y="34">③ 성공 후보 cache</text>
+    <text class="small" x="122.5" y="66"><tspan x="122.5">성공 38 / 실패 18</tspan><tspan x="122.5" dy="22">궤적 전체가 아닌</tspan><tspan x="122.5" dy="22">최종 관절 상태 qᵢ 저장</tspan></text>
+  </g>
+  <path class="arrow" d="M850 212 H880"/>
+
+  <g transform="translate(880,145)">
+    <rect class="box box-amber" width="270" height="135"/>
+    <text class="label" x="135" y="34">④ graph node 구성</text>
+    <text class="small" x="135" y="64"><tspan x="135">visibility / 화각 / local-Z 필터</tspan><tspan x="135" dy="21">Vᵢ = (후보명, qᵢ, surfel Bᵢ)</tspan><tspan x="135" dy="21">최종 37 nodes</tspan></text>
+  </g>
+  <path class="arrow" d="M1150 212 H1180"/>
+
+  <g transform="translate(1180,145)">
+    <rect class="box box-amber" width="260" height="135"/>
+    <text class="label" x="130" y="34">⑤ graph edge 구성</text>
+    <text class="small" x="130" y="66"><tspan x="130">현재 q → qᵢ 시작 비용</tspan><tspan x="130" dy="22">qᵢ → qⱼ 후보쌍 비용</tspan><tspan x="130" dy="22">관절 차이 기반 추정값</tspan></text>
+  </g>
+  <path class="arrow" d="M1440 212 H1470"/>
+
+  <g transform="translate(1470,145)">
+    <rect class="box box-purple" width="275" height="135"/>
+    <text class="label" x="137.5" y="34">⑥ 초기 Beam search</text>
+    <text class="small" x="137.5" y="64"><tspan x="137.5">beam 512 / branch 15</tspan><tspan x="137.5" dy="21">최소 view 수 우선</tspan><tspan x="137.5" dy="21">같은 depth에서 최저 cost</tspan></text>
+  </g>
+
+  <line class="divider" x1="55" y1="315" x2="1745" y2="315"/>
+  <text class="section" x="55" y="355" fill="#6ee7b7">B. 최신 초기 계획 결과</text>
+
+  <g transform="translate(55,380)">
+    <rect class="box box-green" width="225" height="105"/>
+    <text class="label" x="112.5" y="30">1</text>
+    <text class="small" x="112.5" y="58"><tspan x="112.5">tilt_x_pos_30</tspan><tspan x="112.5" dy="20">z_neg_45</tspan></text>
+  </g>
+  <path class="arrow-green" d="M280 432 H305"/>
+
+  <g transform="translate(305,380)">
+    <rect class="box box-green" width="225" height="105"/>
+    <text class="label" x="112.5" y="30">2</text>
+    <text class="small" x="112.5" y="58"><tspan x="112.5">tilt_x_pos_45</tspan><tspan x="112.5" dy="20">z_pos_90</tspan></text>
+  </g>
+  <path class="arrow-green" d="M530 432 H555"/>
+
+  <g transform="translate(555,380)">
+    <rect class="box box-green" width="225" height="105"/>
+    <text class="label" x="112.5" y="30">3</text>
+    <text class="small" x="112.5" y="58"><tspan x="112.5">tilt_x_neg_30</tspan><tspan x="112.5" dy="20">z_neg_45</tspan></text>
+  </g>
+  <path class="arrow-green" d="M780 432 H805"/>
+
+  <g transform="translate(805,380)">
+    <rect class="box box-green" width="225" height="105"/>
+    <text class="label" x="112.5" y="30">4</text>
+    <text class="small" x="112.5" y="58"><tspan x="112.5">local_x_pos</tspan><tspan x="112.5" dy="20">120deg</tspan></text>
+  </g>
+  <path class="arrow-green" d="M1030 432 H1055"/>
+
+  <g transform="translate(1055,380)">
+    <rect class="box box-green" width="285" height="105"/>
+    <text class="label" x="142.5" y="30">4 views · cost 12.454</text>
+    <text class="small" x="142.5" y="60"><tspan x="142.5">예측 top 82.98%</tspan><tspan x="142.5" dy="21">예측 side 92.58%</tspan></text>
+  </g>
+  <path class="arrow" d="M1340 432 H1365"/>
+
+  <g transform="translate(1365,365)">
+    <rect class="box box-amber" width="380" height="135"/>
+    <text class="label" x="190" y="34">seed route 완료 ≠ 검사 종료</text>
+    <text class="small" x="190" y="64"><tspan x="190">reachable-capped planner 목표는 완료</tspan><tspan x="190" dy="22">실제 종료: top ≥ 90% AND side ≥ 90%</tspan><tspan x="190" dy="22">top 미달이므로 residual NBV 계속</tspan></text>
+  </g>
+
+  <line class="divider" x1="55" y1="535" x2="1745" y2="535"/>
+  <text class="section" x="55" y="575" fill="#67e8f9">C. 실행 중 receding-horizon 루프</text>
+
+  <g transform="translate(55,600)">
+    <rect class="box box-cyan" width="255" height="130"/>
+    <text class="label" x="127.5" y="34">⑦ 실측 상태 반영</text>
+    <text class="small" x="127.5" y="67"><tspan x="127.5">observed surfel mask</tspan><tspan x="127.5" dy="22">현재 관절 q</tspan><tspan x="127.5" dy="22">남은 후보 gain 갱신</tspan></text>
+  </g>
+  <path class="arrow-cyan" d="M310 665 H335"/>
+
+  <g transform="translate(335,600)">
+    <rect class="box box-cyan" width="275" height="130"/>
+    <text class="label" x="137.5" y="34">⑧ 짧게 commit / 재계획</text>
+    <text class="small" x="137.5" y="67"><tspan x="137.5">유효한 앞 2개는 유지</tspan><tspan x="137.5" dy="22">없으면 runtime Beam search</tspan><tspan x="137.5" dy="22">beam 128 / branch 10</tspan></text>
+  </g>
+  <path class="arrow-cyan" d="M610 665 H635"/>
+
+  <g transform="translate(635,600)">
+    <rect class="box box-blue" width="285" height="130"/>
+    <text class="label" x="142.5" y="34">⑨ 선택 후보로 이동</text>
+    <text class="small" x="142.5" y="65"><tspan x="142.5">cached qᵢ를 joint goal로 전송</tspan><tspan x="142.5" dy="21">현재 q→qᵢ trajectory 재계획</tspan><tspan x="142.5" dy="21">Isaac에 direct stream</tspan></text>
+  </g>
+  <path class="arrow-cyan" d="M920 665 H945"/>
+
+  <g transform="translate(945,600)">
+    <rect class="box box-green" width="250" height="130"/>
+    <text class="label" x="125" y="34">⑩ 정지점 검증</text>
+    <text class="small" x="125" y="67"><tspan x="125">joint error ≤ 0.05 rad</tspan><tspan x="125" dy="22">실제 object in-frame</tspan><tspan x="125" dy="22">grip 유지</tspan></text>
+  </g>
+  <path class="arrow-cyan" d="M1195 665 H1220"/>
+
+  <g transform="translate(1220,600)">
+    <rect class="box box-green" width="250" height="130"/>
+    <text class="label" x="125" y="34">⑪ Zivid 촬영</text>
+    <text class="small" x="125" y="67"><tspan x="125">실측 surfel / coverage</tspan><tspan x="125" dy="22">empirical visibility</tspan><tspan x="125" dy="22">cache 갱신</tspan></text>
+  </g>
+  <path class="arrow-cyan" d="M1470 665 H1505"/>
+
+  <g transform="translate(1505,590)">
+    <path d="M120 0 L240 75 L120 150 L0 75 Z" fill="#173a2c" stroke="#34d399" stroke-width="2"/>
+    <text class="label" x="120" y="64"><tspan x="120">⑫ top/side</tspan><tspan x="120" dy="22">모두 90%?</tspan></text>
+  </g>
+
+  <path class="arrow-green" d="M1625 740 V790 H1725"/>
+  <g transform="translate(1620,790)">
+    <rect class="box box-green" width="125" height="58"/>
+    <text class="label" x="62.5" y="36">검사 종료</text>
+  </g>
+  <text class="tiny" x="1695" y="773">예</text>
+
+  <path class="arrow-cyan" d="M1505 665 H1485 V785 H182 V745"/>
+  <text class="tiny" x="830" y="806">아니오 · 실측 mask를 반영해 다음 cycle 재계획</text>
+
+  <line class="divider" x1="55" y1="875" x2="1745" y2="875"/>
+  <text class="section" x="55" y="915" fill="#fbbf24">D. 꼭 구분할 점</text>
+
+  <g transform="translate(55,940)">
+    <rect class="box box-amber" width="520" height="150"/>
+    <text class="label" x="260" y="36">Graph edge cost</text>
+    <text class="small" x="260" y="70"><tspan x="260">maxₖ(|Δqₖ| / vₖ,max) + 0.95 s</tspan><tspan x="260" dy="24">+ 0.35 s/rad · Σₖ|Δqₖ|</tspan><tspan x="260" dy="24">현재/후보 관절 상태 사이의 추정 이동비용</tspan></text>
+  </g>
+
+  <g transform="translate(605,940)">
+    <rect class="box box-purple" width="520" height="150"/>
+    <text class="label" x="260" y="36">Beam search state</text>
+    <text class="small" x="260" y="70"><tspan x="260">S = (covered bits, last node, route, cost)</tspan><tspan x="260" dy="24">gain / edge cost 상위 branch만 확장</tspan><tspan x="260" dy="24">같은 (covered,last)는 더 싼 상태만 유지</tspan></text>
+  </g>
+
+  <g transform="translate(1155,940)">
+    <rect class="box box-orange" width="590" height="150"/>
+    <text class="label" x="295" y="36">“모션 플랜 graph”의 정확한 의미</text>
+    <text class="small" x="295" y="68"><tspan x="295">후보쌍마다 MoveIt plan을 한 graph는 아님</tspan><tspan x="295" dy="23">preflight plan으로 얻은 cached 끝점 qᵢ 사이 edge를 추정</tspan><tspan x="295" dy="23">실제 선택 후 현재 상태에서 trajectory를 다시 계획·stream</tspan></text>
+  </g>
+</svg>

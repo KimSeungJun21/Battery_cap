@@ -1,0 +1,31 @@
+{
+  "name": "batterycap_leftcap_top_00_scratch",
+  "defect_type": "scratch",
+  "seed": 1350386757,
+  "patch_mm": 14.719999999999999,
+  "resolution_px": 256,
+  "mm_per_px": 0.057499999999999996,
+  "patch_center_mm": [
+    0.0,
+    0.02810204029083252
+  ],
+  "footprint_area_mm2": 37.96236249999999,
+  "max_normal_tilt_deg": 15.533080101013184,
+  "p95_normal_tilt_deg": 9.730237007141113,
+  "alpha_threshold": 0.1,
+  "base_albedo_source": "constant+debug_neon",
+  "base_roughness": 0.38,
+  "debug_visible": true,
+  "base_metallic": 0.0,
+  "normal_strength": 1.0,
+  "length_mm": 6.0,
+  "width_mm": 3.7199999999999998,
+  "depth_um": 50.0,
+  "textures": {
+    "albedo": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftcap_top_00_scratch_albedo.png",
+    "roughness": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftcap_top_00_scratch_roughness.png",
+    "normal": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftcap_top_00_scratch_normal.png",
+    "opacity": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftcap_top_00_scratch_opacity.png",
+    "emissive": "/home/seungjun/isaac_ws/zivid_capture/debug_defect_textures/batterycap_leftcap_top_00_scratch_emissive.png"
+  }
+}

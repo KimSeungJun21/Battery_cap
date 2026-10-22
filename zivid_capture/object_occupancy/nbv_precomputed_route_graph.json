@@ -1,0 +1,106 @@
+{
+  "schema_version": 3,
+  "created_at": "2026-09-29T16:58:38.450395",
+  "score_basis": "unknown_voxel_entropy",
+  "candidate_count": 24,
+  "top_view_max_weight": 3.0,
+  "candidate_local_view_z": {
+    "mandatory_top_frontal": 0.9960309549352113,
+    "mandatory_minus_x_end": 0.04575318631660372,
+    "mandatory_plus_x_end": 0.05240020082135259,
+    "local_x_pos_15deg": 0.7920957983357363,
+    "local_x_neg_15deg": 0.3814188349638973,
+    "local_x_neg_30deg": 0.12939423595394378,
+    "local_x_neg_45deg": -0.13144474043006674,
+    "local_y_pos_15deg": 0.5764696703688444,
+    "local_y_neg_15deg": 0.5969623578557789,
+    "local_y_pos_30deg": 0.5061209095927253,
+    "local_y_neg_30deg": 0.5457097417801274,
+    "local_x_pos_120deg": 0.38342876309234913,
+    "local_x_pos_150deg": -0.12928782186594634,
+    "diag_x_neg_30_y_pos_30": 0.041764337996163,
+    "diag_x_neg_30_y_neg_30": 0.07591233577532912,
+    "diag_x_neg_45_y_pos_30": -0.2028775462420173,
+    "diag_x_neg_45_y_neg_30": -0.17516058400554846,
+    "tilt_x_neg_30_z_pos_45": 0.26078273569719906,
+    "tilt_x_neg_30_z_neg_45": 0.2306736405103907,
+    "tilt_y_pos_30_z_pos_45": 0.2328600242399777,
+    "tilt_y_neg_30_z_neg_45": 0.25925665609017584,
+    "tilt_x_pos_45_z_pos_90": 0.4034713197641695,
+    "tilt_x_neg_45_z_pos_90": 0.4593335072739857,
+    "tilt_y_pos_45_z_pos_90": -0.1286850503836588
+  },
+  "beam_width": 512,
+  "branch_width": 15,
+  "reachable_target_ratio": 0.98,
+  "requested_goal_counts": {
+    "voxel_entropy": 1631
+  },
+  "planner_goal_counts": {
+    "voxel_entropy": 1599
+  },
+  "goal_counts": {
+    "voxel_entropy": 1599
+  },
+  "reachable_counts": {
+    "voxel_entropy": 1631
+  },
+  "group_totals": {
+    "voxel_entropy": 1631
+  },
+  "node_entropy_bits": {
+    "mandatory_top_frontal": 407,
+    "mandatory_minus_x_end": 484,
+    "mandatory_plus_x_end": 460,
+    "local_x_pos_15deg": 951,
+    "local_x_neg_15deg": 1434,
+    "local_x_neg_30deg": 1517,
+    "local_x_neg_45deg": 1473,
+    "local_y_pos_15deg": 1240,
+    "local_y_neg_15deg": 1346,
+    "local_y_pos_30deg": 1306,
+    "local_y_neg_30deg": 1309,
+    "local_x_pos_120deg": 1413,
+    "local_x_pos_150deg": 1539,
+    "diag_x_neg_30_y_pos_30": 1325,
+    "diag_x_neg_30_y_neg_30": 1411,
+    "diag_x_neg_45_y_pos_30": 1344,
+    "diag_x_neg_45_y_neg_30": 1398,
+    "tilt_x_neg_30_z_pos_45": 1401,
+    "tilt_x_neg_30_z_neg_45": 1399,
+    "tilt_y_pos_30_z_pos_45": 1302,
+    "tilt_y_neg_30_z_neg_45": 1328,
+    "tilt_x_pos_45_z_pos_90": 1232,
+    "tilt_x_neg_45_z_pos_90": 1114,
+    "tilt_y_pos_45_z_pos_90": 744
+  },
+  "voxel_count": 32768,
+  "grid_shape": [
+    32,
+    32,
+    32
+  ],
+  "initial_plan": {
+    "route": [
+      "mandatory_top_frontal",
+      "mandatory_minus_x_end",
+      "mandatory_plus_x_end",
+      "local_x_neg_30deg"
+    ],
+    "cost": 1.5479239437727466,
+    "selection_cost": 1.1466998303541014,
+    "complete": true,
+    "coverage_counts": {
+      "voxel_entropy": 1617
+    },
+    "mandatory": [
+      "mandatory_top_frontal",
+      "mandatory_minus_x_end",
+      "mandatory_plus_x_end"
+    ],
+    "mandatory_coverage_counts": {
+      "voxel_entropy": 934
+    }
+  },
+  "graph_path": "/home/seungjun/isaac_ws/zivid_capture/object_occupancy/nbv_precomputed_route_graph.npz"
+}

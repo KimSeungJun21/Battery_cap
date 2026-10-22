@@ -1,0 +1,849 @@
+{
+  "capture_dir": "/home/seungjun/isaac_ws/zivid_capture",
+  "output_root": "/home/seungjun/isaac_ws/zivid_capture/seungjun",
+  "out_dir": "/home/seungjun/isaac_ws/zivid_capture/seungjun/2026-09-22_18-48-11",
+  "started_at": "2026-09-22T18:48:11.994559+09:00",
+  "frames": [
+    {
+      "frame_id": 0,
+      "has_rgb": true,
+      "rgb_path": "/home/seungjun/isaac_ws/zivid_capture/rgb_000000.png",
+      "rgb_mtime": 1790070263.3012407,
+      "rgb_rejected_stale_seconds": null,
+      "mask_path": "/home/seungjun/isaac_ws/zivid_capture/defect_mask_000000.png",
+      "mask_pixels": 602,
+      "identity_exact": true,
+      "overview": "frame_000000_overview.png",
+      "overview_copy": "overviews/frame_000000_overview.png",
+      "min_pixels": 30,
+      "skipped_below_min_pixels": [
+        {
+          "name": "batterycap_mainboard2_top_01_scratch",
+          "pixels": 8
+        }
+      ],
+      "defects": [
+        {
+          "name": "batterycap_mainboard2_top_03_scratch",
+          "pixels": 156,
+          "bbox_xyxy": [
+            909,
+            742,
+            947,
+            784
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000000_01_batterycap_mainboard2_top_03_scratch.png",
+          "crop_mask": "frame_000000_01_batterycap_mainboard2_top_03_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_mainboard2_top_04_scratch",
+          "pixels": 144,
+          "bbox_xyxy": [
+            1707,
+            749,
+            1741,
+            780
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000000_02_batterycap_mainboard2_top_04_scratch.png",
+          "crop_mask": "frame_000000_02_batterycap_mainboard2_top_04_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_mainboard2_top_00_scratch",
+          "pixels": 104,
+          "bbox_xyxy": [
+            1678,
+            748,
+            1717,
+            780
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000000_03_batterycap_mainboard2_top_00_scratch.png",
+          "crop_mask": "frame_000000_03_batterycap_mainboard2_top_00_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_rightcap_top_00_scratch",
+          "pixels": 66,
+          "bbox_xyxy": [
+            774,
+            748,
+            797,
+            761
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000000_04_batterycap_rightcap_top_00_scratch.png",
+          "crop_mask": "frame_000000_04_batterycap_rightcap_top_00_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_rightcap_top_01_scratch",
+          "pixels": 65,
+          "bbox_xyxy": [
+            791,
+            743,
+            796,
+            765
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000000_05_batterycap_rightcap_top_01_scratch.png",
+          "crop_mask": "frame_000000_05_batterycap_rightcap_top_01_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_leftcap_top_00_scratch",
+          "pixels": 59,
+          "bbox_xyxy": [
+            1878,
+            756,
+            1907,
+            761
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000000_06_batterycap_leftcap_top_00_scratch.png",
+          "crop_mask": "frame_000000_06_batterycap_leftcap_top_00_scratch_mask.png"
+        }
+      ]
+    },
+    {
+      "frame_id": 1,
+      "has_rgb": true,
+      "rgb_path": "/home/seungjun/isaac_ws/zivid_capture/rgb_000001.png",
+      "rgb_mtime": 1790070267.458949,
+      "rgb_rejected_stale_seconds": null,
+      "mask_path": "/home/seungjun/isaac_ws/zivid_capture/defect_mask_000001.png",
+      "mask_pixels": 281,
+      "identity_exact": true,
+      "overview": "frame_000001_overview.png",
+      "overview_copy": "overviews/frame_000001_overview.png",
+      "min_pixels": 30,
+      "skipped_below_min_pixels": [],
+      "defects": []
+    },
+    {
+      "frame_id": 2,
+      "has_rgb": true,
+      "rgb_path": "/home/seungjun/isaac_ws/zivid_capture/rgb_000002.png",
+      "rgb_mtime": 1790070272.1915765,
+      "rgb_rejected_stale_seconds": null,
+      "mask_path": "/home/seungjun/isaac_ws/zivid_capture/defect_mask_000002.png",
+      "mask_pixels": 604,
+      "identity_exact": true,
+      "overview": "frame_000002_overview.png",
+      "overview_copy": "overviews/frame_000002_overview.png",
+      "min_pixels": 30,
+      "skipped_below_min_pixels": [
+        {
+          "name": "batterycap_mainboard2_top_00_scratch",
+          "pixels": 24
+        }
+      ],
+      "defects": [
+        {
+          "name": "batterycap_mainboard2_top_03_scratch",
+          "pixels": 157,
+          "bbox_xyxy": [
+            1159,
+            1242,
+            1207,
+            1251
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000002_01_batterycap_mainboard2_top_03_scratch.png",
+          "crop_mask": "frame_000002_01_batterycap_mainboard2_top_03_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_rightcap_top_01_scratch",
+          "pixels": 98,
+          "bbox_xyxy": [
+            1155,
+            1357,
+            1181,
+            1374
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000002_02_batterycap_rightcap_top_01_scratch.png",
+          "crop_mask": "frame_000002_02_batterycap_rightcap_top_01_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_mainboard2_top_02_scratch",
+          "pixels": 79,
+          "bbox_xyxy": [
+            1177,
+            1022,
+            1211,
+            1048
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000002_03_batterycap_mainboard2_top_02_scratch.png",
+          "crop_mask": "frame_000002_03_batterycap_mainboard2_top_02_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_rightcap_top_00_scratch",
+          "pixels": 78,
+          "bbox_xyxy": [
+            1159,
+            1359,
+            1177,
+            1388
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000002_04_batterycap_rightcap_top_00_scratch.png",
+          "crop_mask": "frame_000002_04_batterycap_rightcap_top_00_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_rightsidewall_outer_00_scratch",
+          "pixels": 62,
+          "bbox_xyxy": [
+            1224,
+            1504,
+            1257,
+            1517
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000002_05_batterycap_rightsidewall_outer_00_scratch.png",
+          "crop_mask": "frame_000002_05_batterycap_rightsidewall_outer_00_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_rightsidewall_outer_01_scratch",
+          "pixels": 60,
+          "bbox_xyxy": [
+            1269,
+            1538,
+            1309,
+            1545
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000002_06_batterycap_rightsidewall_outer_01_scratch.png",
+          "crop_mask": "frame_000002_06_batterycap_rightsidewall_outer_01_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_mainboard2_top_04_scratch",
+          "pixels": 46,
+          "bbox_xyxy": [
+            1211,
+            683,
+            1229,
+            689
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000002_07_batterycap_mainboard2_top_04_scratch.png",
+          "crop_mask": "frame_000002_07_batterycap_mainboard2_top_04_scratch_mask.png"
+        }
+      ]
+    },
+    {
+      "frame_id": 3,
+      "has_rgb": true,
+      "rgb_path": "/home/seungjun/isaac_ws/zivid_capture/rgb_000003.png",
+      "rgb_mtime": 1790070361.8362372,
+      "rgb_rejected_stale_seconds": null,
+      "mask_path": "/home/seungjun/isaac_ws/zivid_capture/defect_mask_000003.png",
+      "mask_pixels": 645,
+      "identity_exact": true,
+      "overview": "frame_000003_overview.png",
+      "overview_copy": "overviews/frame_000003_overview.png",
+      "min_pixels": 30,
+      "skipped_below_min_pixels": [
+        {
+          "name": "batterycap_rightcap_top_01_scratch",
+          "pixels": 29
+        }
+      ],
+      "defects": [
+        {
+          "name": "batterycap_mainboard2_top_04_scratch",
+          "pixels": 147,
+          "bbox_xyxy": [
+            1443,
+            775,
+            1468,
+            826
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000003_01_batterycap_mainboard2_top_04_scratch.png",
+          "crop_mask": "frame_000003_01_batterycap_mainboard2_top_04_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_mainboard2_top_01_scratch",
+          "pixels": 126,
+          "bbox_xyxy": [
+            1231,
+            929,
+            1266,
+            939
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000003_02_batterycap_mainboard2_top_01_scratch.png",
+          "crop_mask": "frame_000003_02_batterycap_mainboard2_top_01_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_mainboard2_top_00_scratch",
+          "pixels": 93,
+          "bbox_xyxy": [
+            1419,
+            803,
+            1451,
+            822
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000003_03_batterycap_mainboard2_top_00_scratch.png",
+          "crop_mask": "frame_000003_03_batterycap_mainboard2_top_00_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_mainboard2_top_03_scratch",
+          "pixels": 85,
+          "bbox_xyxy": [
+            920,
+            1109,
+            937,
+            1161
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000003_04_batterycap_mainboard2_top_03_scratch.png",
+          "crop_mask": "frame_000003_04_batterycap_mainboard2_top_03_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_leftcap_top_00_scratch",
+          "pixels": 71,
+          "bbox_xyxy": [
+            1574,
+            700,
+            1600,
+            717
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000003_05_batterycap_leftcap_top_00_scratch.png",
+          "crop_mask": "frame_000003_05_batterycap_leftcap_top_00_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_leftsidewall_outer_00_scratch",
+          "pixels": 32,
+          "bbox_xyxy": [
+            1711,
+            703,
+            1733,
+            727
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000003_06_batterycap_leftsidewall_outer_00_scratch.png",
+          "crop_mask": "frame_000003_06_batterycap_leftsidewall_outer_00_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_rightcap_top_00_scratch",
+          "pixels": 31,
+          "bbox_xyxy": [
+            839,
+            1178,
+            851,
+            1183
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000003_07_batterycap_rightcap_top_00_scratch.png",
+          "crop_mask": "frame_000003_07_batterycap_rightcap_top_00_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_leftsidewall_outer_01_scratch",
+          "pixels": 31,
+          "bbox_xyxy": [
+            1759,
+            740,
+            1761,
+            758
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000003_08_batterycap_leftsidewall_outer_01_scratch.png",
+          "crop_mask": "frame_000003_08_batterycap_leftsidewall_outer_01_scratch_mask.png"
+        }
+      ]
+    },
+    {
+      "frame_id": 4,
+      "has_rgb": true,
+      "rgb_path": "/home/seungjun/isaac_ws/zivid_capture/rgb_000004.png",
+      "rgb_mtime": 1790070365.2284486,
+      "rgb_rejected_stale_seconds": null,
+      "mask_path": "/home/seungjun/isaac_ws/zivid_capture/defect_mask_000004.png",
+      "mask_pixels": 557,
+      "identity_exact": true,
+      "overview": "frame_000004_overview.png",
+      "overview_copy": "overviews/frame_000004_overview.png",
+      "min_pixels": 30,
+      "skipped_below_min_pixels": [
+        {
+          "name": "batterycap_rightcap_top_00_scratch",
+          "pixels": 11
+        },
+        {
+          "name": "batterycap_rightcap_top_01_scratch",
+          "pixels": 2
+        }
+      ],
+      "defects": [
+        {
+          "name": "batterycap_mainboard2_top_04_scratch",
+          "pixels": 124,
+          "bbox_xyxy": [
+            1445,
+            968,
+            1502,
+            992
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000004_01_batterycap_mainboard2_top_04_scratch.png",
+          "crop_mask": "frame_000004_01_batterycap_mainboard2_top_04_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_leftsidewall_outer_00_scratch",
+          "pixels": 100,
+          "bbox_xyxy": [
+            1708,
+            1088,
+            1719,
+            1126
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000004_02_batterycap_leftsidewall_outer_00_scratch.png",
+          "crop_mask": "frame_000004_02_batterycap_leftsidewall_outer_00_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_mainboard2_top_01_scratch",
+          "pixels": 92,
+          "bbox_xyxy": [
+            1292,
+            930,
+            1297,
+            957
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000004_03_batterycap_mainboard2_top_01_scratch.png",
+          "crop_mask": "frame_000004_03_batterycap_mainboard2_top_01_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_leftsidewall_outer_01_scratch",
+          "pixels": 83,
+          "bbox_xyxy": [
+            1727,
+            1161,
+            1756,
+            1174
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000004_04_batterycap_leftsidewall_outer_01_scratch.png",
+          "crop_mask": "frame_000004_04_batterycap_leftsidewall_outer_01_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_mainboard2_top_00_scratch",
+          "pixels": 81,
+          "bbox_xyxy": [
+            1451,
+            958,
+            1461,
+            992
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000004_05_batterycap_mainboard2_top_00_scratch.png",
+          "crop_mask": "frame_000004_05_batterycap_mainboard2_top_00_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_leftcap_top_00_scratch",
+          "pixels": 64,
+          "bbox_xyxy": [
+            1585,
+            994,
+            1609,
+            1003
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000004_06_batterycap_leftcap_top_00_scratch.png",
+          "crop_mask": "frame_000004_06_batterycap_leftcap_top_00_scratch_mask.png"
+        }
+      ]
+    },
+    {
+      "frame_id": 5,
+      "has_rgb": true,
+      "rgb_path": "/home/seungjun/isaac_ws/zivid_capture/rgb_000005.png",
+      "rgb_mtime": 1790070368.7344956,
+      "rgb_rejected_stale_seconds": null,
+      "mask_path": "/home/seungjun/isaac_ws/zivid_capture/defect_mask_000005.png",
+      "mask_pixels": 469,
+      "identity_exact": true,
+      "overview": "frame_000005_overview.png",
+      "overview_copy": "overviews/frame_000005_overview.png",
+      "min_pixels": 30,
+      "skipped_below_min_pixels": [
+        {
+          "name": "batterycap_mainboard2_top_01_scratch",
+          "pixels": 22
+        },
+        {
+          "name": "batterycap_leftcap_top_00_scratch",
+          "pixels": 16
+        }
+      ],
+      "defects": [
+        {
+          "name": "batterycap_mainboard2_top_03_scratch",
+          "pixels": 95,
+          "bbox_xyxy": [
+            1519,
+            1232,
+            1553,
+            1287
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000005_01_batterycap_mainboard2_top_03_scratch.png",
+          "crop_mask": "frame_000005_01_batterycap_mainboard2_top_03_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_rightsidewall_outer_00_scratch",
+          "pixels": 61,
+          "bbox_xyxy": [
+            1457,
+            1499,
+            1483,
+            1514
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000005_02_batterycap_rightsidewall_outer_00_scratch.png",
+          "crop_mask": "frame_000005_02_batterycap_rightsidewall_outer_00_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_rightcap_top_01_scratch",
+          "pixels": 57,
+          "bbox_xyxy": [
+            1556,
+            1371,
+            1572,
+            1383
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000005_03_batterycap_rightcap_top_01_scratch.png",
+          "crop_mask": "frame_000005_03_batterycap_rightcap_top_01_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_rightsidewall_outer_01_scratch",
+          "pixels": 54,
+          "bbox_xyxy": [
+            1395,
+            1520,
+            1411,
+            1539
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000005_04_batterycap_rightsidewall_outer_01_scratch.png",
+          "crop_mask": "frame_000005_04_batterycap_rightsidewall_outer_01_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_mainboard2_top_02_scratch",
+          "pixels": 45,
+          "bbox_xyxy": [
+            1495,
+            1044,
+            1515,
+            1058
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000005_05_batterycap_mainboard2_top_02_scratch.png",
+          "crop_mask": "frame_000005_05_batterycap_mainboard2_top_02_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_mainboard2_top_04_scratch",
+          "pixels": 45,
+          "bbox_xyxy": [
+            1444,
+            684,
+            1466,
+            727
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000005_06_batterycap_mainboard2_top_04_scratch.png",
+          "crop_mask": "frame_000005_06_batterycap_mainboard2_top_04_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_rightcap_top_00_scratch",
+          "pixels": 39,
+          "bbox_xyxy": [
+            1559,
+            1376,
+            1567,
+            1394
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000005_07_batterycap_rightcap_top_00_scratch.png",
+          "crop_mask": "frame_000005_07_batterycap_rightcap_top_00_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_mainboard2_top_00_scratch",
+          "pixels": 35,
+          "bbox_xyxy": [
+            1448,
+            716,
+            1465,
+            723
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000005_08_batterycap_mainboard2_top_00_scratch.png",
+          "crop_mask": "frame_000005_08_batterycap_mainboard2_top_00_scratch_mask.png"
+        }
+      ]
+    },
+    {
+      "frame_id": 6,
+      "has_rgb": true,
+      "rgb_path": "/home/seungjun/isaac_ws/zivid_capture/rgb_000006.png",
+      "rgb_mtime": 1790070372.2886598,
+      "rgb_rejected_stale_seconds": null,
+      "mask_path": "/home/seungjun/isaac_ws/zivid_capture/defect_mask_000006.png",
+      "mask_pixels": 478,
+      "identity_exact": true,
+      "overview": "frame_000006_overview.png",
+      "overview_copy": "overviews/frame_000006_overview.png",
+      "min_pixels": 30,
+      "skipped_below_min_pixels": [
+        {
+          "name": "batterycap_leftcap_top_00_scratch",
+          "pixels": 11
+        }
+      ],
+      "defects": [
+        {
+          "name": "batterycap_mainboard2_top_03_scratch",
+          "pixels": 72,
+          "bbox_xyxy": [
+            1349,
+            700,
+            1366,
+            720
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000006_01_batterycap_mainboard2_top_03_scratch.png",
+          "crop_mask": "frame_000006_01_batterycap_mainboard2_top_03_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_rightsidewall_outer_00_scratch",
+          "pixels": 67,
+          "bbox_xyxy": [
+            1156,
+            540,
+            1160,
+            566
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000006_02_batterycap_rightsidewall_outer_00_scratch.png",
+          "crop_mask": "frame_000006_02_batterycap_rightsidewall_outer_00_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_mainboard2_top_01_scratch",
+          "pixels": 67,
+          "bbox_xyxy": [
+            1521,
+            1020,
+            1538,
+            1073
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000006_03_batterycap_mainboard2_top_01_scratch.png",
+          "crop_mask": "frame_000006_03_batterycap_mainboard2_top_01_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_rightsidewall_outer_01_scratch",
+          "pixels": 62,
+          "bbox_xyxy": [
+            1070,
+            563,
+            1103,
+            588
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000006_04_batterycap_rightsidewall_outer_01_scratch.png",
+          "crop_mask": "frame_000006_04_batterycap_rightsidewall_outer_01_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_rightcap_top_01_scratch",
+          "pixels": 57,
+          "bbox_xyxy": [
+            1308,
+            586,
+            1314,
+            612
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000006_05_batterycap_rightcap_top_01_scratch.png",
+          "crop_mask": "frame_000006_05_batterycap_rightcap_top_01_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_mainboard2_top_02_scratch",
+          "pixels": 42,
+          "bbox_xyxy": [
+            1450,
+            872,
+            1453,
+            910
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000006_06_batterycap_mainboard2_top_02_scratch.png",
+          "crop_mask": "frame_000006_06_batterycap_mainboard2_top_02_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_mainboard2_top_04_scratch",
+          "pixels": 35,
+          "bbox_xyxy": [
+            1603,
+            1186,
+            1612,
+            1200
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000006_07_batterycap_mainboard2_top_04_scratch.png",
+          "crop_mask": "frame_000006_07_batterycap_mainboard2_top_04_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_rightcap_top_00_scratch",
+          "pixels": 33,
+          "bbox_xyxy": [
+            1302,
+            576,
+            1313,
+            608
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000006_08_batterycap_rightcap_top_00_scratch.png",
+          "crop_mask": "frame_000006_08_batterycap_rightcap_top_00_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_mainboard2_top_00_scratch",
+          "pixels": 32,
+          "bbox_xyxy": [
+            1596,
+            1157,
+            1605,
+            1202
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000006_09_batterycap_mainboard2_top_00_scratch.png",
+          "crop_mask": "frame_000006_09_batterycap_mainboard2_top_00_scratch_mask.png"
+        }
+      ]
+    },
+    {
+      "frame_id": 7,
+      "has_rgb": true,
+      "rgb_path": "/home/seungjun/isaac_ws/zivid_capture/rgb_000007.png",
+      "rgb_mtime": 1790070375.9129934,
+      "rgb_rejected_stale_seconds": null,
+      "mask_path": "/home/seungjun/isaac_ws/zivid_capture/defect_mask_000007.png",
+      "mask_pixels": 307,
+      "identity_exact": true,
+      "overview": "frame_000007_overview.png",
+      "overview_copy": "overviews/frame_000007_overview.png",
+      "min_pixels": 30,
+      "skipped_below_min_pixels": [],
+      "defects": [
+        {
+          "name": "batterycap_rightsidewall_outer_01_scratch",
+          "pixels": 154,
+          "bbox_xyxy": [
+            1430,
+            1031,
+            1455,
+            1073
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000007_01_batterycap_rightsidewall_outer_01_scratch.png",
+          "crop_mask": "frame_000007_01_batterycap_rightsidewall_outer_01_scratch_mask.png"
+        },
+        {
+          "name": "batterycap_rightsidewall_outer_00_scratch",
+          "pixels": 153,
+          "bbox_xyxy": [
+            1430,
+            959,
+            1478,
+            964
+          ],
+          "zoom": 7.5,
+          "source": "bbox_xyxy",
+          "crop": "frame_000007_02_batterycap_rightsidewall_outer_00_scratch.png",
+          "crop_mask": "frame_000007_02_batterycap_rightsidewall_outer_00_scratch_mask.png"
+        }
+      ]
+    },
+    {
+      "frame_id": 8,
+      "has_rgb": true,
+      "rgb_path": "/home/seungjun/isaac_ws/zivid_capture/rgb_000008.png",
+      "rgb_mtime": 1790067642.698805,
+      "rgb_rejected_stale_seconds": null,
+      "mask_path": "/home/seungjun/isaac_ws/zivid_capture/defect_mask_000008.png",
+      "mask_pixels": 234,
+      "identity_exact": true,
+      "overview": "frame_000008_overview.png",
+      "overview_copy": "overviews/frame_000008_overview.png",
+      "min_pixels": 30,
+      "skipped_below_min_pixels": [],
+      "defects": []
+    },
+    {
+      "frame_id": 9,
+      "has_rgb": true,
+      "rgb_path": "/home/seungjun/isaac_ws/zivid_capture/rgb_000009.png",
+      "rgb_mtime": 1790067687.8121233,
+      "rgb_rejected_stale_seconds": null,
+      "mask_path": "/home/seungjun/isaac_ws/zivid_capture/defect_mask_000009.png",
+      "mask_pixels": 482,
+      "identity_exact": true,
+      "overview": "frame_000009_overview.png",
+      "overview_copy": "overviews/frame_000009_overview.png",
+      "min_pixels": 30,
+      "skipped_below_min_pixels": [],
+      "defects": []
+    }
+  ],
+  "total_crops": 92,
+  "frames_without_rgb": []
+}

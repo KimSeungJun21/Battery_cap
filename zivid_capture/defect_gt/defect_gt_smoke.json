@@ -1,0 +1,130 @@
+{
+  "scenario": "smoke",
+  "long_axis_index": 1,
+  "theta_zero_axis_index": 2,
+  "theta_ninety_axis_index": 0,
+  "decal_offset_m": 0.0002,
+  "alpha_threshold": 0.1,
+  "class_label": "defect",
+  "defects": [
+    {
+      "name": "front_stain",
+      "defect_type": "stain",
+      "difficulty": "easy",
+      "visible_at_rest": true,
+      "notes": "파이프라인 동작 확인용. 단일 뷰로 무조건 잡혀야 한다.",
+      "prim_path": "/World/MustardBottle/Defects/front_stain",
+      "seed": 1680751710,
+      "placement": {
+        "theta_deg": 0.0,
+        "axial_ratio": 0.55,
+        "tangent_deg": 0.0,
+        "jitter_mm": 0.0
+      },
+      "object_frame": {
+        "surface_point": [
+          -4.911422619713335e-07,
+          0.009565545821959995,
+          0.02497872596577322
+        ],
+        "decal_origin": [
+          3.684688228832119e-06,
+          0.009568258689400054,
+          0.025178663963137313
+        ],
+        "normal": [
+          0.020879152454017263,
+          0.013564337200296973,
+          0.9996899868204736
+        ],
+        "tangent": [
+          -0.0002832379221901383,
+          0.9999080001461719,
+          -0.01356137972194547
+        ],
+        "bitangent": [
+          -0.9997819666152622,
+          0.0,
+          0.020881073509727933
+        ],
+        "quad_corners": [
+          [
+            0.010504369335872081,
+            -0.0009307753121347521,
+            0.0251018071783656
+          ],
+          [
+            0.010498421339506089,
+            0.02006729269093486,
+            0.024817018204204743
+          ],
+          [
+            -0.010496999959414418,
+            0.02006729269093486,
+            0.025255520747909026
+          ],
+          [
+            -0.010491051963048425,
+            -0.0009307753121347521,
+            0.025540309722069884
+          ]
+        ],
+        "transform": [
+          [
+            -0.0002832379221901383,
+            -0.9997819666152622,
+            0.020879152454017263,
+            3.684688228832119e-06
+          ],
+          [
+            0.9999080001461719,
+            0.0,
+            0.013564337200296973,
+            0.009568258689400054
+          ],
+          [
+            -0.01356137972194547,
+            0.020881073509727933,
+            0.9996899868204736,
+            0.025178663963137313
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 0,
+        "max_conform_shift_mm": 0.8618104926551357,
+        "clearance_min_mm": 0.193910341654719,
+        "clearance_max_mm": 0.20397120459978088
+      },
+      "size": {
+        "length_mm": 9.0,
+        "width_mm": 7.0,
+        "depth_um": 0.0,
+        "patch_mm": 21.0,
+        "footprint_area_mm2": 55.05097961425781
+      },
+      "appearance": {
+        "albedo_scale": 0.55,
+        "roughness_delta": 0.05,
+        "base_albedo_source": "sampled",
+        "debug_visible": false,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 0.0,
+        "p95_normal_tilt_deg": 0.0
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/front_stain_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/front_stain_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/front_stain_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/front_stain_opacity.png"
+      }
+    }
+  ]
+}

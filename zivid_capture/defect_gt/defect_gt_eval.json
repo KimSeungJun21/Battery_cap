@@ -1,0 +1,1475 @@
+{
+  "scenario": "eval",
+  "long_axis_index": 1,
+  "theta_zero_axis_index": 2,
+  "theta_ninety_axis_index": 0,
+  "decal_offset_m": 0.0002,
+  "alpha_threshold": 0.1,
+  "class_label": "defect",
+  "defects": [
+    {
+      "name": "eval_00_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": true,
+      "notes": "",
+      "prim_path": "/World/MustardBottle/Defects/eval_00_scratch",
+      "seed": 1497881537,
+      "placement": {
+        "theta_deg": 0.0,
+        "axial_ratio": 0.32,
+        "tangent_deg": -90.0,
+        "jitter_mm": 0.3
+      },
+      "object_frame": {
+        "surface_point": [
+          0.00013720148345899743,
+          -0.03456298773279282,
+          0.02621926232749905
+        ],
+        "decal_origin": [
+          0.00013988561257484802,
+          -0.03455244752350196,
+          0.02641896635710034
+        ],
+        "normal": [
+          0.013420645579252861,
+          0.05270104645432013,
+          0.9985201480064665
+        ],
+        "tangent": [
+          0.9999096882374211,
+          6.114724747270913e-17,
+          -0.013439321744170505
+        ],
+        "bitangent": [
+          -0.0007082663195541454,
+          0.9986103342658835,
+          -0.05269628692992509
+        ],
+        "quad_corners": [
+          [
+            -0.016147097755268933,
+            -0.050829796162505665,
+            0.027496976791102468
+          ],
+          [
+            0.016449958462706273,
+            -0.050829796162505665,
+            0.027058854897115812
+          ],
+          [
+            0.01642686898041863,
+            -0.01827509888449825,
+            0.025340955923098214
+          ],
+          [
+            -0.016170187237556578,
+            -0.01827509888449825,
+            0.02577907781708487
+          ]
+        ],
+        "transform": [
+          [
+            0.9999096882374211,
+            -0.0007082663195541454,
+            0.013420645579252861,
+            0.00013988561257484802
+          ],
+          [
+            6.114724747270913e-17,
+            0.9986103342658835,
+            0.05270104645432013,
+            -0.03455244752350196
+          ],
+          [
+            -0.013439321744170505,
+            -0.05269628692992509,
+            0.9985201480064665,
+            0.02641896635710034
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 0,
+        "max_conform_shift_mm": 3.2024853737177437,
+        "clearance_min_mm": 0.16019237817777549,
+        "clearance_max_mm": 0.2931718698114259
+      },
+      "size": {
+        "length_mm": 12.0,
+        "width_mm": 0.5,
+        "depth_um": 50.0,
+        "patch_mm": 32.60000038146973,
+        "footprint_area_mm2": 177.95911427220798
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "sampled+debug_neon",
+        "background": "printed",
+        "background_clutter": 0.1828100085258484,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 7.534186363220215,
+        "p95_normal_tilt_deg": 5.3920183181762695
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_00_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_00_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_00_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_00_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_00_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "eval_01_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": false,
+      "notes": "",
+      "prim_path": "/World/MustardBottle/Defects/eval_01_scratch",
+      "seed": 1380338313,
+      "placement": {
+        "theta_deg": 60.0,
+        "axial_ratio": 0.32,
+        "tangent_deg": -53.0,
+        "jitter_mm": 0.3
+      },
+      "object_frame": {
+        "surface_point": [
+          0.034364020949901875,
+          -0.034604932444425245,
+          0.01968109589525735
+        ],
+        "decal_origin": [
+          0.034471210234061855,
+          -0.0346418423086458,
+          0.01984586275868714
+        ],
+        "normal": [
+          0.535946420799899,
+          -0.18454932110278055,
+          0.8238343171489523
+        ],
+        "tangent": [
+          0.7300071376142045,
+          0.5914777992003649,
+          -0.342408516373949
+        ],
+        "bitangent": [
+          -0.42408844957637515,
+          0.784917550532281,
+          0.4517227311109224
+        ],
+        "quad_corners": [
+          [
+            0.02911763313505048,
+            -0.058728761191493686,
+            0.01793286397994007
+          ],
+          [
+            0.054667883230023265,
+            -0.038027037993850044,
+            0.005948565776233374
+          ],
+          [
+            0.03982478733307322,
+            -0.010554923425797922,
+            0.021758861537434206
+          ],
+          [
+            0.014274537238100446,
+            -0.03125664662344156,
+            0.03374315974114091
+          ]
+        ],
+        "transform": [
+          [
+            0.7300071376142045,
+            -0.42408844957637515,
+            0.535946420799899,
+            0.034471210234061855
+          ],
+          [
+            0.5914777992003649,
+            0.784917550532281,
+            -0.18454932110278055,
+            -0.0346418423086458
+          ],
+          [
+            -0.342408516373949,
+            0.4517227311109224,
+            0.8238343171489523,
+            0.01984586275868714
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 1,
+        "max_conform_shift_mm": 19.90007120027661,
+        "clearance_min_mm": 0.19689984576157557,
+        "clearance_max_mm": 0.47645031724626336
+      },
+      "size": {
+        "length_mm": 12.0,
+        "width_mm": 0.7,
+        "depth_um": 50.0,
+        "patch_mm": 35.000000381469725,
+        "footprint_area_mm2": 268.5669003855437
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "sampled+debug_neon",
+        "background": "printed",
+        "background_clutter": 0.16429972648620605,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 6.42534875869751,
+        "p95_normal_tilt_deg": 4.272752285003662
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_01_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_01_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_01_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_01_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_01_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "eval_02_stain",
+      "defect_type": "stain",
+      "difficulty": "easy",
+      "visible_at_rest": false,
+      "notes": "",
+      "prim_path": "/World/MustardBottle/Defects/eval_02_stain",
+      "seed": 1299408091,
+      "placement": {
+        "theta_deg": 120.0,
+        "axial_ratio": 0.32,
+        "tangent_deg": -16.0,
+        "jitter_mm": 0.3
+      },
+      "object_frame": {
+        "surface_point": [
+          0.03384892230474157,
+          -0.03445439938588014,
+          -0.019344710919970143
+        ],
+        "decal_origin": [
+          0.03395035643409207,
+          -0.034487376575619656,
+          -0.0195138960917784
+        ],
+        "normal": [
+          0.5071706467525035,
+          -0.16488594869759163,
+          -0.8459258590412889
+        ],
+        "tangent": [
+          -0.1549031720468296,
+          0.9481045610997147,
+          -0.2776738167558255
+        ],
+        "bitangent": [
+          0.8478106760135058,
+          0.271864608112223,
+          0.45530944696273296
+        ],
+        "quad_corners": [
+          [
+            0.022240219617055242,
+            -0.05510485553530141,
+            -0.022515938242275137
+          ],
+          [
+            0.017004492401872403,
+            -0.023058921370131047,
+            -0.03190131324862203
+          ],
+          [
+            0.04566049325112889,
+            -0.013869897615937911,
+            -0.016511853941281664
+          ],
+          [
+            0.05089622046631173,
+            -0.045915831781108266,
+            -0.007126478934934764
+          ]
+        ],
+        "transform": [
+          [
+            -0.1549031720468296,
+            0.8478106760135058,
+            0.5071706467525035,
+            0.03395035643409207
+          ],
+          [
+            0.9481045610997147,
+            0.271864608112223,
+            -0.16488594869759163,
+            -0.034487376575619656
+          ],
+          [
+            -0.2776738167558255,
+            0.45530944696273296,
+            -0.8459258590412889,
+            -0.0195138960917784
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 1,
+        "max_conform_shift_mm": 22.912344868154324,
+        "clearance_min_mm": 0.19510863331672396,
+        "clearance_max_mm": 0.6879826252794212
+      },
+      "size": {
+        "length_mm": 9.0,
+        "width_mm": 7.0,
+        "depth_um": 0.0,
+        "patch_mm": 33.8,
+        "footprint_area_mm2": 177.16396667480464
+      },
+      "appearance": {
+        "albedo_scale": 0.55,
+        "roughness_delta": 0.05,
+        "base_albedo_source": "sampled+debug_neon",
+        "background": "printed",
+        "background_clutter": 0.10165422409772873,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 0.0,
+        "p95_normal_tilt_deg": 0.0
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_02_stain_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_02_stain_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_02_stain_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_02_stain_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_02_stain_emissive.png"
+      }
+    },
+    {
+      "name": "eval_03_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": false,
+      "notes": "",
+      "prim_path": "/World/MustardBottle/Defects/eval_03_scratch",
+      "seed": 932691104,
+      "placement": {
+        "theta_deg": 180.0,
+        "axial_ratio": 0.32,
+        "tangent_deg": 21.0,
+        "jitter_mm": 0.3
+      },
+      "object_frame": {
+        "surface_point": [
+          0.00016818532254312985,
+          -0.03421451602885955,
+          -0.02529687008676995
+        ],
+        "decal_origin": [
+          0.00016509207933703676,
+          -0.03420593350324672,
+          -0.025496661908676086
+        ],
+        "normal": [
+          -0.015466216030465477,
+          0.04291262806412365,
+          -0.99895910953068
+        ],
+        "tangent": [
+          0.35894519127184127,
+          0.9327204391871211,
+          0.03450988243105578
+        ],
+        "bitangent": [
+          0.9332304891207318,
+          -0.3580378313463735,
+          -0.0298289372969529
+        ],
+        "quad_corners": [
+          [
+            -0.020897371757524857,
+            -0.04357326012066292,
+            -0.025572961315254782
+          ],
+          [
+            -0.009195758385136107,
+            -0.013166573447358157,
+            -0.02444793913483789
+          ],
+          [
+            0.02122755591619893,
+            -0.024838606885830526,
+            -0.02542036250209739
+          ],
+          [
+            0.00952594254381018,
+            -0.05524529355913529,
+            -0.026545384682514283
+          ]
+        ],
+        "transform": [
+          [
+            0.35894519127184127,
+            0.9332304891207318,
+            -0.015466216030465477,
+            0.00016509207933703676
+          ],
+          [
+            0.9327204391871211,
+            -0.3580378313463735,
+            0.04291262806412365,
+            -0.03420593350324672
+          ],
+          [
+            0.03450988243105578,
+            -0.0298289372969529,
+            -0.99895910953068,
+            -0.025496661908676086
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 0,
+        "max_conform_shift_mm": 3.039734027630761,
+        "clearance_min_mm": 0.17507872200094374,
+        "clearance_max_mm": 0.2816586652603935
+      },
+      "size": {
+        "length_mm": 12.0,
+        "width_mm": 0.5,
+        "depth_um": 50.0,
+        "patch_mm": 32.60000038146973,
+        "footprint_area_mm2": 177.95911427220798
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "sampled+debug_neon",
+        "background": "printed",
+        "background_clutter": 0.09151677042245865,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 7.445739269256592,
+        "p95_normal_tilt_deg": 5.4040398597717285
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_03_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_03_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_03_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_03_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_03_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "eval_04_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": false,
+      "notes": "",
+      "prim_path": "/World/MustardBottle/Defects/eval_04_scratch",
+      "seed": 1809530847,
+      "placement": {
+        "theta_deg": 240.0,
+        "axial_ratio": 0.32,
+        "tangent_deg": 58.0,
+        "jitter_mm": 0.3
+      },
+      "object_frame": {
+        "surface_point": [
+          -0.033736722794164065,
+          -0.034535298023762824,
+          -0.019347657523633432
+        ],
+        "decal_origin": [
+          -0.03383595342859711,
+          -0.03456991607371661,
+          -0.01951781883476911
+        ],
+        "normal": [
+          -0.496153172165226,
+          -0.17309024976891052,
+          -0.8508065556783868
+        ],
+        "tangent": [
+          0.6863759778293276,
+          0.5219206458027003,
+          -0.5064453144651717
+        ],
+        "bitangent": [
+          0.5317142529679058,
+          -0.8352476308974653,
+          -0.14014759459567455
+        ],
+        "quad_corners": [
+          [
+            -0.05515253269988097,
+            -0.029086693774795842,
+            -0.00820244280287649
+          ],
+          [
+            -0.03112937321402285,
+            -0.010819470972604403,
+            -0.02592802900235106
+          ],
+          [
+            -0.012519374157313254,
+            -0.040053138372637374,
+            -0.030833194866661733
+          ],
+          [
+            -0.03654253364317137,
+            -0.05832036117482881,
+            -0.013107608667187165
+          ]
+        ],
+        "transform": [
+          [
+            0.6863759778293276,
+            0.5317142529679058,
+            -0.496153172165226,
+            -0.03383595342859711
+          ],
+          [
+            0.5219206458027003,
+            -0.8352476308974653,
+            -0.17309024976891052,
+            -0.03456991607371661
+          ],
+          [
+            -0.5064453144651717,
+            -0.14014759459567455,
+            -0.8508065556783868,
+            -0.01951781883476911
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 0,
+        "max_conform_shift_mm": 22.203818746601545,
+        "clearance_min_mm": 0.1979024516694129,
+        "clearance_max_mm": 0.624645558412188
+      },
+      "size": {
+        "length_mm": 12.0,
+        "width_mm": 0.7,
+        "depth_um": 50.0,
+        "patch_mm": 35.000000381469725,
+        "footprint_area_mm2": 268.5669003855437
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "sampled+debug_neon",
+        "background": "printed",
+        "background_clutter": 0.1189129650592804,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 6.5878496170043945,
+        "p95_normal_tilt_deg": 4.287121772766113
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_04_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_04_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_04_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_04_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_04_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "eval_05_stain",
+      "defect_type": "stain",
+      "difficulty": "easy",
+      "visible_at_rest": false,
+      "notes": "",
+      "prim_path": "/World/MustardBottle/Defects/eval_05_stain",
+      "seed": 1089812901,
+      "placement": {
+        "theta_deg": 300.0,
+        "axial_ratio": 0.32,
+        "tangent_deg": -85.0,
+        "jitter_mm": 0.3
+      },
+      "object_frame": {
+        "surface_point": [
+          -0.03387946111800355,
+          -0.034148552906501935,
+          0.01961314429676364
+        ],
+        "decal_origin": [
+          -0.03398467690235302,
+          -0.034179897614174136,
+          0.019780318301993734
+        ],
+        "normal": [
+          -0.526078921747331,
+          -0.15672353836099623,
+          0.8358700261504627
+        ],
+        "tangent": [
+          0.8358321744998419,
+          0.08607871674726103,
+          0.5421946427197623
+        ],
+        "bitangent": [
+          -0.15692528210594864,
+          0.9838842345757728,
+          0.08571037737178788
+        ],
+        "quad_corners": [
+          [
+            -0.04545820338380981,
+            -0.0522622714915334,
+            0.009168723462446536
+          ],
+          [
+            -0.01720707588571516,
+            -0.049352810865475986,
+            0.0274949023863745
+          ],
+          [
+            -0.022511150420896225,
+            -0.01609752373681487,
+            0.030391913141540928
+          ],
+          [
+            -0.05076227791899087,
+            -0.019006984362872285,
+            0.012065734217612967
+          ]
+        ],
+        "transform": [
+          [
+            0.8358321744998419,
+            -0.15692528210594864,
+            -0.526078921747331,
+            -0.03398467690235302
+          ],
+          [
+            0.08607871674726103,
+            0.9838842345757728,
+            -0.15672353836099623,
+            -0.034179897614174136
+          ],
+          [
+            0.5421946427197623,
+            0.08571037737178788,
+            0.8358700261504627,
+            0.019780318301993734
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 0,
+        "max_conform_shift_mm": 28.986752782005684,
+        "clearance_min_mm": 0.1967435171186836,
+        "clearance_max_mm": 0.6133489074465733
+      },
+      "size": {
+        "length_mm": 9.0,
+        "width_mm": 7.0,
+        "depth_um": 0.0,
+        "patch_mm": 33.8,
+        "footprint_area_mm2": 178.45395324707027
+      },
+      "appearance": {
+        "albedo_scale": 0.55,
+        "roughness_delta": 0.05,
+        "base_albedo_source": "sampled+debug_neon",
+        "background": "printed",
+        "background_clutter": 0.1704678237438202,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 0.0,
+        "p95_normal_tilt_deg": 0.0
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_05_stain_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_05_stain_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_05_stain_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_05_stain_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_05_stain_emissive.png"
+      }
+    },
+    {
+      "name": "eval_06_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": true,
+      "notes": "",
+      "prim_path": "/World/MustardBottle/Defects/eval_06_scratch",
+      "seed": 140424385,
+      "placement": {
+        "theta_deg": 0.0,
+        "axial_ratio": 0.68,
+        "tangent_deg": -48.0,
+        "jitter_mm": 0.3
+      },
+      "object_frame": {
+        "surface_point": [
+          -0.00025276656540892587,
+          0.03437800707846078,
+          0.024928817801628478
+        ],
+        "decal_origin": [
+          -0.00024965680544577037,
+          0.03437514628224694,
+          0.02512877315974122
+        ],
+        "normal": [
+          0.01554879981577756,
+          -0.014303981069185774,
+          0.9997767905637044
+        ],
+        "tangent": [
+          0.7432038047812451,
+          0.669062149499765,
+          -0.001986118182634387
+        ],
+        "bitangent": [
+          -0.6688843991176427,
+          0.7430687964329593,
+          0.02103388658102345
+        ],
+        "quad_corners": [
+          [
+            -0.0014610631319377908,
+            0.011357411594200936,
+            0.024818294531214403
+          ],
+          [
+            0.022767381187440552,
+            0.033168837923120226,
+            0.02475354707770288
+          ],
+          [
+            0.0009617495210462509,
+            0.05739288097029295,
+            0.025439251788268037
+          ],
+          [
+            -0.023266694798332092,
+            0.03558145464137366,
+            0.02550399924177956
+          ]
+        ],
+        "transform": [
+          [
+            0.7432038047812451,
+            -0.6688843991176427,
+            0.01554879981577756,
+            -0.00024965680544577037
+          ],
+          [
+            0.669062149499765,
+            0.7430687964329593,
+            -0.014303981069185774,
+            0.03437514628224694
+          ],
+          [
+            -0.001986118182634387,
+            0.02103388658102345,
+            0.9997767905637044,
+            0.02512877315974122
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 0,
+        "max_conform_shift_mm": 2.6002081215095894,
+        "clearance_min_mm": 0.19578574246388802,
+        "clearance_max_mm": 0.20661713046462632
+      },
+      "size": {
+        "length_mm": 12.0,
+        "width_mm": 0.5,
+        "depth_um": 50.0,
+        "patch_mm": 32.60000038146973,
+        "footprint_area_mm2": 177.95911427220798
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "sampled+debug_neon",
+        "background": "printed",
+        "background_clutter": 0.18536271154880524,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 7.309677600860596,
+        "p95_normal_tilt_deg": 5.414436340332031
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_06_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_06_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_06_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_06_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_06_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "eval_07_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": false,
+      "notes": "",
+      "prim_path": "/World/MustardBottle/Defects/eval_07_scratch",
+      "seed": 842479819,
+      "placement": {
+        "theta_deg": 60.0,
+        "axial_ratio": 0.68,
+        "tangent_deg": -11.0,
+        "jitter_mm": 0.3
+      },
+      "object_frame": {
+        "surface_point": [
+          0.03429092612933404,
+          0.034286406549156816,
+          0.019861359405810575
+        ],
+        "decal_origin": [
+          0.03440562800363346,
+          0.03427735278096176,
+          0.020024948859363272
+        ],
+        "normal": [
+          0.5735093714971071,
+          -0.04526884097528013,
+          0.8179472677634836
+        ],
+        "tangent": [
+          0.18174311966309303,
+          0.9806208590567357,
+          -0.0731585212942178
+        ],
+        "bitangent": [
+          -0.7987843509108825,
+          0.1906133857303434,
+          0.5706225529369616
+        ],
+        "quad_corners": [
+          [
+            0.04520384966816105,
+            0.013780753273792672,
+            0.01131932821073152
+          ],
+          [
+            0.05156485892569881,
+            0.048102483714855586,
+            0.008758779937526136
+          ],
+          [
+            0.023607406339105873,
+            0.054773952288130846,
+            0.028730569507995025
+          ],
+          [
+            0.017246397081568117,
+            0.020452221847067926,
+            0.03129111778120041
+          ]
+        ],
+        "transform": [
+          [
+            0.18174311966309303,
+            -0.7987843509108825,
+            0.5735093714971071,
+            0.03440562800363346
+          ],
+          [
+            0.9806208590567357,
+            0.1906133857303434,
+            -0.04526884097528013,
+            0.03427735278096176
+          ],
+          [
+            -0.0731585212942178,
+            0.5706225529369616,
+            0.8179472677634836,
+            0.020024948859363272
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 0,
+        "max_conform_shift_mm": 14.383383867118466,
+        "clearance_min_mm": 0.1998319070784429,
+        "clearance_max_mm": 0.38727028523828155
+      },
+      "size": {
+        "length_mm": 12.0,
+        "width_mm": 0.7,
+        "depth_um": 50.0,
+        "patch_mm": 35.000000381469725,
+        "footprint_area_mm2": 268.5669003855437
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "sampled+debug_neon",
+        "background": "printed",
+        "background_clutter": 0.07595363259315491,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 6.853375434875488,
+        "p95_normal_tilt_deg": 4.2549519538879395
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_07_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_07_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_07_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_07_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_07_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "eval_08_stain",
+      "defect_type": "stain",
+      "difficulty": "easy",
+      "visible_at_rest": false,
+      "notes": "",
+      "prim_path": "/World/MustardBottle/Defects/eval_08_stain",
+      "seed": 320530283,
+      "placement": {
+        "theta_deg": 120.0,
+        "axial_ratio": 0.68,
+        "tangent_deg": 26.0,
+        "jitter_mm": 0.3
+      },
+      "object_frame": {
+        "surface_point": [
+          0.034544992431079,
+          0.03427658100422138,
+          -0.020080655579052253
+        ],
+        "decal_origin": [
+          0.034664338173349504,
+          0.034265089556682074,
+          -0.02024073224954285
+        ],
+        "normal": [
+          0.596728711352505,
+          -0.05745723769653784,
+          -0.8003833524529744
+        ],
+        "tangent": [
+          0.3823129584838756,
+          0.897309210055309,
+          0.22061954429565814
+        ],
+        "bitangent": [
+          0.7055151641339009,
+          -0.43764694376426416,
+          0.5574168151311134
+        ],
+        "quad_corners": [
+          [
+            0.016280042901109085,
+            0.026496797256363416,
+            -0.03338954672385529
+          ],
+          [
+            0.029202220897864076,
+            0.056825848556232864,
+            -0.025932606126662046
+          ],
+          [
+            0.053048633445589924,
+            0.04203338185700073,
+            -0.0070919177752304125
+          ],
+          [
+            0.04012645544883493,
+            0.011704330557131288,
+            -0.014548858372423654
+          ]
+        ],
+        "transform": [
+          [
+            0.3823129584838756,
+            0.7055151641339009,
+            0.596728711352505,
+            0.034664338173349504
+          ],
+          [
+            0.897309210055309,
+            -0.43764694376426416,
+            -0.05745723769653784,
+            0.034265089556682074
+          ],
+          [
+            0.22061954429565814,
+            0.5574168151311134,
+            -0.8003833524529744,
+            -0.02024073224954285
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 0,
+        "max_conform_shift_mm": 18.237015491909354,
+        "clearance_min_mm": 0.19922465085712188,
+        "clearance_max_mm": 0.40328978759918493
+      },
+      "size": {
+        "length_mm": 9.0,
+        "width_mm": 7.0,
+        "depth_um": 0.0,
+        "patch_mm": 33.8,
+        "footprint_area_mm2": 177.1988311767578
+      },
+      "appearance": {
+        "albedo_scale": 0.55,
+        "roughness_delta": 0.05,
+        "base_albedo_source": "sampled+debug_neon",
+        "background": "printed",
+        "background_clutter": 0.06774760782718658,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 0.0,
+        "p95_normal_tilt_deg": 0.0
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_08_stain_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_08_stain_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_08_stain_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_08_stain_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_08_stain_emissive.png"
+      }
+    },
+    {
+      "name": "eval_09_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": false,
+      "notes": "",
+      "prim_path": "/World/MustardBottle/Defects/eval_09_scratch",
+      "seed": 2070410760,
+      "placement": {
+        "theta_deg": 180.0,
+        "axial_ratio": 0.68,
+        "tangent_deg": 63.0,
+        "jitter_mm": 0.3
+      },
+      "object_frame": {
+        "surface_point": [
+          7.281013182281485e-05,
+          0.034689435194824536,
+          -0.025295399621988013
+        ],
+        "decal_origin": [
+          6.852729237378683e-05,
+          0.03468502517033876,
+          -0.02549530512208816
+        ],
+        "normal": [
+          -0.021414197245140064,
+          -0.022050122428906343,
+          -0.9995275005007198
+        ],
+        "tangent": [
+          0.8905876879505303,
+          0.45388011943742024,
+          -0.029093079080805852
+        ],
+        "bitangent": [
+          0.4543071672638184,
+          -0.8907898906478134,
+          0.009918089149705184
+        ],
+        "quad_corners": [
+          [
+            -0.021853259104138434,
+            0.04180665452440209,
+            -0.02518275278255388
+          ],
+          [
+            0.007179899862781097,
+            0.05660314659120352,
+            -0.026131187171686276
+          ],
+          [
+            0.021990313688886008,
+            0.02756339581627542,
+            -0.025807857461622438
+          ],
+          [
+            -0.007042845278033522,
+            0.012766903749473996,
+            -0.02485942307249004
+          ]
+        ],
+        "transform": [
+          [
+            0.8905876879505303,
+            0.4543071672638184,
+            -0.021414197245140064,
+            6.852729237378683e-05
+          ],
+          [
+            0.45388011943742024,
+            -0.8907898906478134,
+            -0.022050122428906343,
+            0.03468502517033876
+          ],
+          [
+            -0.029093079080805852,
+            0.009918089149705184,
+            -0.9995275005007198,
+            -0.02549530512208816
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 0,
+        "max_conform_shift_mm": 2.4321138688154122,
+        "clearance_min_mm": 0.1997324026426612,
+        "clearance_max_mm": 0.20535635064425997
+      },
+      "size": {
+        "length_mm": 12.0,
+        "width_mm": 0.5,
+        "depth_um": 50.0,
+        "patch_mm": 32.60000038146973,
+        "footprint_area_mm2": 177.95911427220798
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "sampled+debug_neon",
+        "background": "printed",
+        "background_clutter": 0.13649961352348328,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 7.352632522583008,
+        "p95_normal_tilt_deg": 5.398237228393555
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_09_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_09_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_09_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_09_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_09_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "eval_10_scratch",
+      "defect_type": "scratch",
+      "difficulty": "medium",
+      "visible_at_rest": false,
+      "notes": "",
+      "prim_path": "/World/MustardBottle/Defects/eval_10_scratch",
+      "seed": 1663644653,
+      "placement": {
+        "theta_deg": 240.0,
+        "axial_ratio": 0.68,
+        "tangent_deg": -80.0,
+        "jitter_mm": 0.3
+      },
+      "object_frame": {
+        "surface_point": [
+          -0.03518531430820193,
+          0.03439499387965515,
+          -0.02017075373811661
+        ],
+        "decal_origin": [
+          -0.035305611523715794,
+          0.03438188953898846,
+          -0.020329992100941975
+        ],
+        "normal": [
+          -0.6014860775693115,
+          -0.06552170333348076,
+          -0.7961918141268242
+        ],
+        "tangent": [
+          -0.7926426889230088,
+          0.17327503280895556,
+          0.5845454051670902
+        ],
+        "bitangent": [
+          0.09965975209273992,
+          0.9826915433630915,
+          -0.15615781893801833
+        ],
+        "quad_corners": [
+          [
+            -0.023178409997010083,
+            0.014152474235494504,
+            -0.02782677494165918
+          ],
+          [
+            -0.05092090441168458,
+            0.020217100449907134,
+            -0.007367685537824648
+          ],
+          [
+            -0.047432813050421505,
+            0.05461130484248241,
+            -0.01283320926022477
+          ],
+          [
+            -0.01969031863574701,
+            0.04854667862806978,
+            -0.033292298664059305
+          ]
+        ],
+        "transform": [
+          [
+            -0.7926426889230088,
+            0.09965975209273992,
+            -0.6014860775693115,
+            -0.035305611523715794
+          ],
+          [
+            0.17327503280895556,
+            0.9826915433630915,
+            -0.06552170333348076,
+            0.03438188953898846
+          ],
+          [
+            0.5845454051670902,
+            -0.15615781893801833,
+            -0.7961918141268242,
+            -0.020329992100941975
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 0,
+        "max_conform_shift_mm": 20.429755440277297,
+        "clearance_min_mm": 0.1988541504724346,
+        "clearance_max_mm": 0.4864038866597026
+      },
+      "size": {
+        "length_mm": 12.0,
+        "width_mm": 0.7,
+        "depth_um": 50.0,
+        "patch_mm": 35.000000381469725,
+        "footprint_area_mm2": 268.5669003855437
+      },
+      "appearance": {
+        "albedo_scale": 1.08,
+        "roughness_delta": 0.28,
+        "base_albedo_source": "sampled+debug_neon",
+        "background": "printed",
+        "background_clutter": 0.07564932107925415,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 6.555502891540527,
+        "p95_normal_tilt_deg": 4.270730018615723
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_10_scratch_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_10_scratch_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_10_scratch_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_10_scratch_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_10_scratch_emissive.png"
+      }
+    },
+    {
+      "name": "eval_11_stain",
+      "defect_type": "stain",
+      "difficulty": "easy",
+      "visible_at_rest": false,
+      "notes": "",
+      "prim_path": "/World/MustardBottle/Defects/eval_11_stain",
+      "seed": 1608978463,
+      "placement": {
+        "theta_deg": 300.0,
+        "axial_ratio": 0.68,
+        "tangent_deg": -43.0,
+        "jitter_mm": 0.3
+      },
+      "object_frame": {
+        "surface_point": [
+          -0.03398405783762892,
+          0.03422691712433273,
+          0.019477373772495366
+        ],
+        "decal_origin": [
+          -0.03410667887295111,
+          0.03421534194811219,
+          0.01963494945904624
+        ],
+        "normal": [
+          -0.6131051766109177,
+          -0.05787588110269897,
+          0.7878784327543695
+        ],
+        "tangent": [
+          0.5122390647469117,
+          0.730127796559482,
+          0.4522438957447685
+        ],
+        "bitangent": [
+          -0.6014259580032315,
+          0.6808551851001665,
+          -0.4179988444506914
+        ],
+        "quad_corners": [
+          [
+            -0.032599420376919305,
+            0.010369729558064133,
+            0.019056208092176338
+          ],
+          [
+            -0.01528573998847369,
+            0.03504804908177462,
+            0.034342051768349514
+          ],
+          [
+            -0.03561393736898291,
+            0.05806095433816024,
+            0.020213690825916144
+          ],
+          [
+            -0.05292761775742853,
+            0.03338263481444976,
+            0.00492784714974297
+          ]
+        ],
+        "transform": [
+          [
+            0.5122390647469117,
+            -0.6014259580032315,
+            -0.6131051766109177,
+            -0.03410667887295111
+          ],
+          [
+            0.730127796559482,
+            0.6808551851001665,
+            -0.05787588110269897,
+            0.03421534194811219
+          ],
+          [
+            0.4522438957447685,
+            -0.4179988444506914,
+            0.7878784327543695,
+            0.01963494945904624
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "conformance": {
+        "subdivisions": 12,
+        "miss_count": 0,
+        "max_conform_shift_mm": 21.670199254067,
+        "clearance_min_mm": 0.19876018220281894,
+        "clearance_max_mm": 0.4482430087106395
+      },
+      "size": {
+        "length_mm": 9.0,
+        "width_mm": 7.0,
+        "depth_um": 0.0,
+        "patch_mm": 33.8,
+        "footprint_area_mm2": 177.25112792968747
+      },
+      "appearance": {
+        "albedo_scale": 0.55,
+        "roughness_delta": 0.05,
+        "base_albedo_source": "sampled+debug_neon",
+        "background": "printed",
+        "background_clutter": 0.08586245775222778,
+        "debug_visible": true,
+        "base_roughness": 0.38,
+        "max_normal_tilt_deg": 0.0,
+        "p95_normal_tilt_deg": 0.0
+      },
+      "textures": {
+        "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_11_stain_albedo.png",
+        "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_11_stain_roughness.png",
+        "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_11_stain_normal.png",
+        "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_11_stain_opacity.png",
+        "emissive": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/eval_11_stain_emissive.png"
+      }
+    }
+  ]
+}

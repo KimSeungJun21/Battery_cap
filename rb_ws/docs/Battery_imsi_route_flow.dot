@@ -1,0 +1,82 @@
+digraph BatteryImsiRoute {
+  graph [
+    rankdir=TB,
+    bgcolor="#08111f",
+    pad="0.30",
+    nodesep="0.30",
+    ranksep="0.62",
+    splines=ortho,
+    fontname="Noto Sans CJK KR",
+    fontcolor="#e5edf7",
+    labelloc=t,
+    label="Battery_rb_imsi · camera candidate → motion plan → graph → beam search\n코드 흐름 + 2026-09-28 최신 cache 스냅샷"
+  ];
+
+  node [
+    shape=box,
+    style="rounded,filled",
+    fontname="Noto Sans CJK KR",
+    fontsize=11,
+    fontcolor="#e5edf7",
+    color="#38506b",
+    fillcolor="#111f31",
+    margin="0.18,0.12"
+  ];
+  edge [
+    color="#7b93ad",
+    fontname="Noto Sans CJK KR",
+    fontcolor="#b9c9dc",
+    fontsize=9,
+    arrowsize=0.72,
+    penwidth=1.35
+  ];
+
+  phase1 [label="① 카메라/물체 pose 후보\n56개 후보", fillcolor="#10283d", color="#38bdf8"];
+  phase2 [label="② 후보별 MoveIt preflight\nIK → plan-only motion plan\n로봇은 움직이지 않음", fillcolor="#12314a", color="#38bdf8", penwidth=2.0];
+  phase3 [label="③ 성공 38개\n계획 궤적의 최종 관절 상태 qᵢ cache\n실패 18개 제외", fillcolor="#123829", color="#34d399"];
+  phase4 [label="④ visibility / 화각 / local-Z 필터\n노드 Vᵢ=(후보명, qᵢ, surfel bitset Bᵢ)\n최종 graph 후보 37개", fillcolor="#322813", color="#fbbf24"];
+  phase5 [label="⑤ 후보쌍 edge cost 구성\nqᵢ→qⱼ 관절 이동 추정 비용\n현재 q→각 후보 시작 비용", fillcolor="#322813", color="#fbbf24"];
+  phase6 [label="⑥ 초기 Beam search\nbeam 512 / branch 15\n최소 view 우선 → 같은 depth 최저 cost", fillcolor="#2d2147", color="#a78bfa", penwidth=2.0];
+
+  { rank=same; phase1; phase2; phase3; phase4; phase5; phase6; }
+  phase1 -> phase2 -> phase3 -> phase4 -> phase5 -> phase6;
+
+  r1 [label="1\ntilt_x_pos_30\nz_neg_45", fillcolor="#123829", color="#34d399", penwidth=2.0];
+  r2 [label="2\ntilt_x_pos_45\nz_pos_90", fillcolor="#123829", color="#34d399", penwidth=2.0];
+  r3 [label="3\ntilt_x_neg_30\nz_neg_45", fillcolor="#123829", color="#34d399", penwidth=2.0];
+  r4 [label="4\nlocal_x_pos\n120deg", fillcolor="#123829", color="#34d399", penwidth=2.0];
+  route_stats [label="초기 계획 결과\n4 views · cost 12.454\ntop 82.98% · side 92.58%", fillcolor="#123829", color="#34d399"];
+  seed_note [label="reachable-capped seed 목표는 완료\n실제 종료 기준 top/side 90%는 아직 미달\n→ residual NBV 계속", fillcolor="#3b2f13", color="#fbbf24", fontcolor="#fef3c7"];
+
+  { rank=same; seed_note; route_stats; r4; r3; r2; r1; }
+  seed_note -> route_stats [dir=back, color="#fbbf24"];
+  route_stats -> r4 [dir=back, color="#34d399", penwidth=2.6];
+  r4 -> r3 [dir=back, color="#34d399", penwidth=2.6];
+  r3 -> r2 [dir=back, color="#34d399", penwidth=2.6];
+  r2 -> r1 [dir=back, color="#34d399", penwidth=2.6];
+  phase6 -> r1 [color="#a78bfa"];
+
+  runtime1 [label="⑦ 실제 observed mask + 현재 q\n남은 후보 gain 갱신", fillcolor="#102d35", color="#22d3ee"];
+  runtime2 [label="⑧ committed 앞 2개가 유효하면 유지\n없으면 runtime Beam search\nbeam 128 / branch 10", fillcolor="#102d35", color="#22d3ee"];
+  runtime3 [label="⑨ 첫 후보 cached qᵢ 선택\n현재 q→qᵢ MoveIt trajectory 재계획\nIsaac에 direct stream", fillcolor="#12314a", color="#38bdf8", penwidth=2.0];
+  runtime4 [label="⑩ 정지점 검증\njoint error ≤ 0.05 rad\n실제 object in-frame + grip", fillcolor="#123829", color="#34d399"];
+  runtime5 [label="⑪ Zivid 촬영\n실측 surfel / coverage /\nempirical visibility 갱신", fillcolor="#123829", color="#34d399"];
+  runtime6 [label="⑫ 실측 top ≥ 90%\nAND side ≥ 90%?", shape=diamond, fillcolor="#173a2c", color="#34d399"];
+  finish [label="검사 종료", shape=doublecircle, fillcolor="#123829", color="#34d399"];
+
+  { rank=same; runtime1; runtime2; runtime3; runtime4; runtime5; runtime6; finish; }
+  seed_note -> runtime1 [label="실행 시작"];
+  runtime1 -> runtime2 -> runtime3 -> runtime4 -> runtime5 -> runtime6;
+  runtime6 -> finish [label="예", color="#34d399", fontcolor="#6ee7b7"];
+  runtime6 -> runtime1 [label="아니오: 실측 반영 후 재계획", color="#22d3ee", fontcolor="#67e8f9", penwidth=2.0, constraint=false];
+
+  edge_formula [label="graph edge cost = maxₖ(|Δqₖ|/vₖ,max) + 0.95 s + 0.35 s/rad·Σₖ|Δqₖ|", fillcolor="#241e13", color="#8b6b2f", fontcolor="#fde68a"];
+  caveat [label="핵심 구분: 후보쌍마다 MoveIt motion plan한 graph가 아니다.\n사전 plan에서 얻은 cached 끝점 qᵢ 사이의 관절 차이로 edge를 추정하고, 실제 선택 후 trajectory는 현재 상태에서 다시 계획한다.", fillcolor="#3b2315", color="#fb923c", fontcolor="#ffedd5"];
+  beam_rule [label="Beam 상태=(covered bits, last, route, cost) · gain/cost 상위 branch만 확장 · 같은 (covered,last)는 싼 상태만 유지", fillcolor="#231a38", color="#8b5cf6", fontcolor="#ddd6fe"];
+
+  { rank=same; edge_formula; beam_rule; caveat; }
+  edge_formula -> beam_rule [style=invis];
+  beam_rule -> caveat [style=invis];
+  phase5 -> edge_formula [style=dashed, arrowhead=none, color="#8b6b2f"];
+  phase6 -> beam_rule [style=dashed, arrowhead=none, color="#8b5cf6"];
+}

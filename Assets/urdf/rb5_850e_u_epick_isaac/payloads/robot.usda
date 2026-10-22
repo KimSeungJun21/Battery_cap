@@ -1,0 +1,180 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "rb5_850e_u"
+    doc = """Generated from Composed Stage of root layer /tmp/tmplvj1ypwv/rb5_850e_u.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_rb5_850e_u_epick_isaac_op7xrqj6/usdex_rb5_850e_u_epick_isaac/rb5_850e_u.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_rb5_850e_u_epick_isaac_op7xrqj6/temp_rb5_850e_u_epick_isaac/rb5_850e_u_epick_isaac.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "rb5_850e_u" (
+    prepend apiSchemas = ["IsaacRobotAPI"]
+)
+{
+    prepend rel isaac:physics:robotJoints = [
+        </rb5_850e_u/Physics/root_joint>,
+        </rb5_850e_u/Physics/base>,
+        </rb5_850e_u/Physics/shoulder>,
+        </rb5_850e_u/Physics/elbow>,
+        </rb5_850e_u/Physics/wrist1>,
+        </rb5_850e_u/Physics/wrist2>,
+        </rb5_850e_u/Physics/wrist3>,
+        </rb5_850e_u/Physics/tcp_joint>,
+        </rb5_850e_u/Physics/tcp_to_epick_base_link>,
+        </rb5_850e_u/Physics/epick_base_link_to_epick_body>,
+        </rb5_850e_u/Physics/epick_body_to_epick_suction_cup>,
+    ]
+    prepend rel isaac:physics:robotLinks = [
+        </rb5_850e_u/Geometry/link0>,
+        </rb5_850e_u/Geometry/link0/link1>,
+        </rb5_850e_u/Geometry/link0/link1/link2>,
+        </rb5_850e_u/Geometry/link0/link1/link2/link3>,
+        </rb5_850e_u/Geometry/link0/link1/link2/link3/link4>,
+        </rb5_850e_u/Geometry/link0/link1/link2/link3/link4/link5>,
+        </rb5_850e_u/Geometry/link0/link1/link2/link3/link4/link5/link6>,
+        </rb5_850e_u/Geometry/link0/link1/link2/link3/link4/link5/link6/tcp>,
+        </rb5_850e_u/Geometry/link0/link1/link2/link3/link4/link5/link6/tcp/epick_base_link>,
+        </rb5_850e_u/Geometry/link0/link1/link2/link3/link4/link5/link6/tcp/epick_base_link/epick_body>,
+        </rb5_850e_u/Geometry/link0/link1/link2/link3/link4/link5/link6/tcp/epick_base_link/epick_body/epick_suction_cup>,
+    ]
+    token isaac:robotType = "Default"
+
+    over "Geometry"
+    {
+        over "link0" (
+            prepend apiSchemas = ["IsaacLinkAPI"]
+        )
+        {
+            over "link1" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "link2" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "link3" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        over "link4" (
+                            prepend apiSchemas = ["IsaacLinkAPI"]
+                        )
+                        {
+                            over "link5" (
+                                prepend apiSchemas = ["IsaacLinkAPI"]
+                            )
+                            {
+                                over "link6" (
+                                    prepend apiSchemas = ["IsaacLinkAPI"]
+                                )
+                                {
+                                    over "tcp" (
+                                        prepend apiSchemas = ["IsaacLinkAPI"]
+                                    )
+                                    {
+                                        over "epick_base_link" (
+                                            prepend apiSchemas = ["IsaacLinkAPI"]
+                                        )
+                                        {
+                                            over "epick_body" (
+                                                prepend apiSchemas = ["IsaacLinkAPI"]
+                                            )
+                                            {
+                                                over "epick_suction_cup" (
+                                                    prepend apiSchemas = ["IsaacLinkAPI"]
+                                                )
+                                                {
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        over "root_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "base" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "shoulder" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "elbow" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "wrist1" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "wrist2" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "wrist3" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "tcp_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "tcp_to_epick_base_link" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "epick_base_link_to_epick_body" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "epick_body_to_epick_suction_cup" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+    }
+}
+

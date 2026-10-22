@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include
+    filename="$(find epick_description)/urdf/epick_body.xacro"/>
+
+  <xacro:macro name="epick_visual_only"
+               params="
+                 parent
+                 origin_xyz:='0 0 0'
+                 origin_rpy:='0 0 0'
+                 prefix:=''
+                 suction_cup_radius:=0.012
+                 suction_cup_height:=0.015
+                 extension_radius:=0.0
+                 extension_length:=0.0
+                 tcp_stroke_compensation:=0.0">
+
+    <xacro:epick_body
+      parent="${parent}"
+      origin_xyz="${origin_xyz}"
+      origin_rpy="${origin_rpy}"
+      prefix="${prefix}"/>
+
+    <xacro:property
+      name="suction_cup_parent"
+      value="${body_link}"/>
+
+    <xacro:property
+      name="suction_cup_parent_length"
+      value="${body_length}"/>
+
+    <xacro:if value="${extension_length * extension_radius > 0.0}">
+      <xacro:property
+        name="suction_cup_parent"
+        value="${prefix}epick_extension"/>
+
+      <xacro:property
+        name="suction_cup_parent_length"
+        value="${extension_length}"/>
+
+      <xacro:cylinder_link
+        name="${prefix}epick_extension"
+        radius="${extension_radius}"
+        length="${extension_length}"
+        color="${body_color}"
+        parent="${body_link}"
+        origin_xyz="0 0 ${(body_length + extension_length) / 2}"/>
+    </xacro:if>
+
+    <xacro:cylinder_link
+      name="${prefix}epick_suction_cup"
+      radius="${suction_cup_radius}"
+      length="${suction_cup_height}"
+      color="${body_color}"
+      parent="${suction_cup_parent}"
+      origin_xyz="0 0 ${(suction_cup_parent_length + suction_cup_height) / 2}"/>
+
+    <link name="${prefix}epick_tip"/>
+
+    <xacro:joint
+      parent="${prefix}epick_suction_cup"
+      child="${prefix}epick_tip"
+      xyz="0 0 ${suction_cup_height / 2}"/>
+
+    <link name="${prefix}epick_tcp"/>
+
+    <xacro:joint
+      parent="${prefix}epick_tip"
+      child="${prefix}epick_tcp"
+      xyz="0 0 ${-tcp_stroke_compensation}"/>
+
+  </xacro:macro>
+
+</robot>

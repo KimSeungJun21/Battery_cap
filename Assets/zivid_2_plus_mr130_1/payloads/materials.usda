@@ -1,0 +1,57 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    doc = """Generated from Composed Stage of root layer /tmp/tmpcl5t5eg4/zivid_camera_robot.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_zivid_2_plus_mr130_sq0sxet4/usdex_zivid_2_plus_mr130/zivid_camera_robot.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_zivid_2_plus_mr130_sq0sxet4/temp_zivid_2_plus_mr130/zivid_2_plus_mr130.usd
+
+
+Generated from Composed Stage of root layer /home/seungjun/isaac_ws/Assets/zivid_2_plus_mr130_1/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Scope "Materials"
+{
+    def Material "zivid_gray"
+    {
+        color3f inputs:diffuseColor = (0.05087609, 0.05087609, 0.05087609)
+        float inputs:metallic = 0
+        float inputs:opacity = 1
+        float inputs:roughness = 0.5
+        token inputs:wrapMode = "repeat"
+        token outputs:displacement (
+            displayGroup = "Outputs"
+        )
+        prepend token outputs:displacement.connect = </Materials/zivid_gray/PreviewSurface.outputs:displacement>
+        token outputs:surface (
+            displayGroup = "Outputs"
+        )
+        prepend token outputs:surface.connect = </Materials/zivid_gray/PreviewSurface.outputs:surface>
+        token outputs:volume (
+            displayGroup = "Outputs"
+        )
+
+        def Shader "PreviewSurface" (
+            apiSchemas = ["NodeDefAPI"]
+        )
+        {
+            token info:id = "UsdPreviewSurface"
+            prepend color3f inputs:diffuseColor.connect = </Materials/zivid_gray.inputs:diffuseColor>
+            prepend float inputs:metallic.connect = </Materials/zivid_gray.inputs:metallic>
+            prepend float inputs:opacity.connect = </Materials/zivid_gray.inputs:opacity>
+            prepend float inputs:roughness.connect = </Materials/zivid_gray.inputs:roughness>
+            token outputs:displacement
+            token outputs:surface
+        }
+    }
+}
+

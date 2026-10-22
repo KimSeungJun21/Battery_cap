@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120">
+  <defs>
+    <style>
+      .bg{fill:#08111f}.title{fill:#f1f5f9;font:700 30px 'Noto Sans CJK KR',sans-serif}.sub{fill:#94a3b8;font:400 16px 'Noto Sans CJK KR',sans-serif}.section{font:700 19px 'Noto Sans CJK KR',sans-serif}.panel{fill:#0d1929;stroke:#263b55;stroke-width:2}.card{fill:#12243a;stroke:#38bdf8;stroke-width:2}.green{fill:#123829;stroke:#34d399;stroke-width:2}.amber{fill:#322813;stroke:#fbbf24;stroke-width:2}.purple{fill:#2d2147;stroke:#a78bfa;stroke-width:2}.orange{fill:#3b2315;stroke:#fb923c;stroke-width:2}.h{fill:#e5edf7;font:700 18px 'Noto Sans CJK KR',sans-serif}.t{fill:#cbd5e1;font:400 14px 'Noto Sans CJK KR',sans-serif}.ts{fill:#9fb0c3;font:400 12px 'Noto Sans CJK KR',sans-serif}.center{text-anchor:middle}.edge{fill:none;stroke:#42556d;stroke-width:1.7;opacity:.72;marker-end:url(#gray)}.chosen{fill:none;stroke:#34d399;stroke-width:5;marker-end:url(#green)}.call{fill:none;stroke:#38bdf8;stroke-width:2;marker-end:url(#blue)}.dash{stroke-dasharray:7 7}.bit0{fill:#172235;stroke:#31435b;stroke-width:1}.bit1{fill:#155e75;stroke:#22d3ee;stroke-width:1}.bitTop{fill:#166534;stroke:#4ade80;stroke-width:1}.bitSide{fill:#854d0e;stroke:#fbbf24;stroke-width:1}
+    </style>
+    <marker id="gray" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#526780"/></marker>
+    <marker id="green" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#34d399"/></marker>
+    <marker id="blue" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#38bdf8"/></marker>
+  </defs>
+  <rect class="bg" width="1800" height="1120"/>
+  <text class="title" x="55" y="52">Battery imsi — candidate graph의 노드와 간선</text>
+  <text class="sub" x="55" y="82">최신 cache: 37 nodes · self-loop를 제외한 1,332 directed pair edges · 초록색은 초기 Beam Search가 고른 경로</text>
+
+  <rect class="panel" x="45" y="120" width="615" height="770" rx="18"/>
+  <text class="section" x="70" y="157" fill="#7dd3fc">A. 그래프 노드 Vᵢ의 내부 구성</text>
+
+  <rect class="card" x="95" y="195" width="515" height="520" rx="18"/>
+  <text class="h center" x="352" y="232">Vᵢ — camera/view candidate</text>
+  <text class="t" x="125" y="275">candidate_name</text>
+  <rect class="green" x="275" y="250" width="300" height="42" rx="9"/>
+  <text class="t center" x="425" y="277">tilt_x_pos_30_z_neg_45</text>
+
+  <text class="t" x="125" y="330">cached final joint state qᵢ</text>
+  <g transform="translate(125,350)">
+    <rect class="purple" x="0" y="0" width="67" height="45" rx="8"/><rect class="purple" x="75" y="0" width="67" height="45" rx="8"/><rect class="purple" x="150" y="0" width="67" height="45" rx="8"/><rect class="purple" x="225" y="0" width="67" height="45" rx="8"/><rect class="purple" x="300" y="0" width="67" height="45" rx="8"/><rect class="purple" x="375" y="0" width="67" height="45" rx="8"/>
+    <text class="ts center" x="33" y="19"><tspan x="33">base</tspan><tspan x="33" dy="16">q₁</tspan></text><text class="ts center" x="108" y="19"><tspan x="108">shoulder</tspan><tspan x="108" dy="16">q₂</tspan></text><text class="ts center" x="183" y="19"><tspan x="183">elbow</tspan><tspan x="183" dy="16">q₃</tspan></text><text class="ts center" x="258" y="19"><tspan x="258">wrist1</tspan><tspan x="258" dy="16">q₄</tspan></text><text class="ts center" x="333" y="19"><tspan x="333">wrist2</tspan><tspan x="333" dy="16">q₅</tspan></text><text class="ts center" x="408" y="19"><tspan x="408">wrist3</tspan><tspan x="408" dy="16">q₆</tspan></text>
+  </g>
+
+  <text class="t" x="125" y="445">expected visibility bitset Bᵢ (50,000 surfels)</text>
+  <g transform="translate(125,468)">
+    <rect class="bitTop" x="0" y="0" width="31" height="31"/><rect class="bit0" x="35" y="0" width="31" height="31"/><rect class="bitTop" x="70" y="0" width="31" height="31"/><rect class="bitTop" x="105" y="0" width="31" height="31"/><rect class="bit0" x="140" y="0" width="31" height="31"/><rect class="bitSide" x="175" y="0" width="31" height="31"/><rect class="bitSide" x="210" y="0" width="31" height="31"/><rect class="bit0" x="245" y="0" width="31" height="31"/><rect class="bitSide" x="280" y="0" width="31" height="31"/><rect class="bit1" x="315" y="0" width="31" height="31"/><rect class="bit0" x="350" y="0" width="31" height="31"/><rect class="bit1" x="385" y="0" width="31" height="31"/>
+    <rect class="bit0" x="0" y="35" width="31" height="31"/><rect class="bitTop" x="35" y="35" width="31" height="31"/><rect class="bitTop" x="70" y="35" width="31" height="31"/><rect class="bit0" x="105" y="35" width="31" height="31"/><rect class="bitSide" x="140" y="35" width="31" height="31"/><rect class="bitSide" x="175" y="35" width="31" height="31"/><rect class="bit0" x="210" y="35" width="31" height="31"/><rect class="bitSide" x="245" y="35" width="31" height="31"/><rect class="bit1" x="280" y="35" width="31" height="31"/><rect class="bit0" x="315" y="35" width="31" height="31"/><rect class="bit1" x="350" y="35" width="31" height="31"/><rect class="bit1" x="385" y="35" width="31" height="31"/>
+  </g>
+  <text class="ts" x="125" y="565" fill="#4ade80">■ top visible</text><text class="ts" x="255" y="565" fill="#fbbf24">■ side visible</text><text class="ts" x="390" y="565" fill="#22d3ee">■ other visible</text><text class="ts" x="525" y="565">■ 0</text>
+
+  <text class="t" x="125" y="615">visibility source</text>
+  <rect class="amber" x="275" y="590" width="300" height="42" rx="9"/>
+  <text class="t center" x="425" y="617">empirical 우선 / 없으면 geometric</text>
+  <text class="ts" x="125" y="668"><tspan x="125">노드는 “카메라 위치”만이 아니라,</tspan><tspan x="125" dy="20">도달 가능한 관절 끝점과 그 뷰에서 보일 surfel 집합을 함께 가진다.</tspan></text>
+
+  <rect class="amber" x="95" y="750" width="515" height="105" rx="14"/>
+  <text class="h center" x="352" y="785">런타임에서 붙는 동적 node label</text>
+  <text class="t center" x="352" y="817">Uᵢᵗ = Bᵢ &amp; ~Oₜ  · 아직 안 본 예상 surfel</text>
+  <text class="t center" x="352" y="841">gainᵢᵗ = 3·top(Uᵢᵗ) + 1·side(Uᵢᵗ) + 0·bottom(Uᵢᵗ)</text>
+
+  <rect class="panel" x="690" y="120" width="1065" height="770" rx="18"/>
+  <text class="section" x="720" y="157" fill="#fbbf24">B. Directed candidate graph G=(V,E) — 표현을 위해 일부 간선만 그림</text>
+
+  <!-- dense static pair edges, drawn behind nodes -->
+  <g>
+    <path class="edge" d="M805 500L1030 300"/><path class="edge" d="M805 500L1270 250"/><path class="edge" d="M805 500L1510 420"/><path class="edge" d="M805 500L1300 665"/><path class="edge" d="M805 500L1000 685"/>
+    <path class="edge" d="M1030 300L1270 250"/><path class="edge" d="M1270 250L1030 300"/><path class="edge" d="M1030 300L1510 420"/><path class="edge" d="M1510 420L1030 300"/><path class="edge" d="M1030 300L1300 665"/><path class="edge" d="M1300 665L1030 300"/>
+    <path class="edge" d="M1270 250L1510 420"/><path class="edge" d="M1510 420L1270 250"/><path class="edge" d="M1270 250L1300 665"/><path class="edge" d="M1300 665L1270 250"/><path class="edge" d="M1510 420L1300 665"/><path class="edge" d="M1300 665L1510 420"/>
+    <path class="edge dash" d="M1000 685L1030 300"/><path class="edge dash" d="M1000 685L1270 250"/><path class="edge dash" d="M1000 685L1510 420"/><path class="edge dash" d="M1000 685L1300 665"/>
+    <path class="edge dash" d="M1580 690L1030 300"/><path class="edge dash" d="M1580 690L1270 250"/><path class="edge dash" d="M1580 690L1510 420"/><path class="edge dash" d="M1580 690L1300 665"/>
+  </g>
+
+  <circle cx="805" cy="500" r="64" fill="#12314a" stroke="#38bdf8" stroke-width="3"/>
+  <text class="h center" x="805" y="493">START</text><text class="ts center" x="805" y="516">q_current</text>
+
+  <g><circle cx="1030" cy="300" r="66" fill="#123829" stroke="#34d399" stroke-width="3"/><text class="h center" x="1030" y="298">A</text><text class="ts center" x="1030" y="320">q_A, B_A</text><text class="ts center" x="1030" y="386"><tspan x="1030">tilt_x_pos_30</tspan><tspan x="1030" dy="17">z_neg_45</tspan></text></g>
+  <g><circle cx="1270" cy="250" r="66" fill="#123829" stroke="#34d399" stroke-width="3"/><text class="h center" x="1270" y="248">B</text><text class="ts center" x="1270" y="270">q_B, B_B</text><text class="ts center" x="1270" y="336"><tspan x="1270">tilt_x_pos_45</tspan><tspan x="1270" dy="17">z_pos_90</tspan></text></g>
+  <g><circle cx="1510" cy="420" r="66" fill="#123829" stroke="#34d399" stroke-width="3"/><text class="h center" x="1510" y="418">C</text><text class="ts center" x="1510" y="440">q_C, B_C</text><text class="ts center" x="1510" y="506"><tspan x="1510">tilt_x_neg_30</tspan><tspan x="1510" dy="17">z_neg_45</tspan></text></g>
+  <g><circle cx="1300" cy="665" r="66" fill="#123829" stroke="#34d399" stroke-width="3"/><text class="h center" x="1300" y="663">D</text><text class="ts center" x="1300" y="685">q_D, B_D</text><text class="ts center" x="1300" y="751"><tspan x="1300">local_x_pos</tspan><tspan x="1300" dy="17">120deg</tspan></text></g>
+  <g><circle cx="1000" cy="685" r="54" fill="#182434" stroke="#64748b" stroke-width="2"/><text class="h center" x="1000" y="682">V₅</text><text class="ts center" x="1000" y="704">q₅, B₅</text></g>
+  <g><circle cx="1580" cy="690" r="54" fill="#182434" stroke="#64748b" stroke-width="2"/><text class="h center" x="1580" y="681">…</text><text class="ts center" x="1580" y="704">V₃₇</text></g>
+
+  <!-- selected route overlay -->
+  <path class="chosen" d="M850 455L980 338"/><path class="chosen" d="M1095 286L1204 263"/><path class="chosen" d="M1330 285L1453 382"/><path class="chosen" d="M1474 479L1337 610"/>
+  <g class="center"><rect class="green" x="860" y="350" width="105" height="32" rx="8"/><text class="ts center" x="912" y="371">2.014 s</text><rect class="green" x="1102" y="233" width="105" height="32" rx="8"/><text class="ts center" x="1154" y="254">2.998 s</text><rect class="green" x="1363" y="307" width="105" height="32" rx="8"/><text class="ts center" x="1415" y="328">2.888 s</text><rect class="green" x="1395" y="548" width="105" height="32" rx="8"/><text class="ts center" x="1447" y="569">4.554 s</text></g>
+
+  <rect class="purple" x="735" y="795" width="975" height="62" rx="12"/>
+  <text class="t center" x="1222" y="820">초기 Beam route: START → A → B → C → D</text>
+  <text class="t center" x="1222" y="844">누적 edge cost = 2.014 + 2.998 + 2.888 + 4.554 = 12.454</text>
+
+  <text class="section" x="55" y="935" fill="#fbbf24">C. 간선 Eᵢ⟶ⱼ가 뜻하는 것</text>
+  <rect class="amber" x="55" y="960" width="760" height="115" rx="14"/>
+  <text class="h center" x="435" y="997">c(i,j) = maxₖ(|qⱼₖ-qᵢₖ| / vₖ,max) + 0.95 s + 0.35 s/rad · Σₖ|qⱼₖ-qᵢₖ|</text>
+  <text class="t center" x="435" y="1031">방향성이 있는 완전 그래프: 같은 두 노드라도 i→j와 j→i를 별도 저장</text>
+  <text class="t center" x="435" y="1055">현재 상태 START에서 각 노드로 가는 간선은 매 runtime replan마다 다시 계산</text>
+
+  <rect class="orange" x="845" y="960" width="900" height="115" rx="14"/>
+  <text class="h center" x="1295" y="997">중요: pair edge는 후보쌍마다 실제 MoveIt motion plan한 시간이 아님</text>
+  <text class="t center" x="1295" y="1031">preflight에서 얻은 cached 끝점 qᵢ와 관절 최대속도로 계산한 motion-aware 추정 비용</text>
+  <text class="t center" x="1295" y="1055">후보가 선택되면 현재 실제 q에서 cached qᵢ까지 MoveIt trajectory를 다시 계획하고 stream</text>
+</svg>

@@ -1,0 +1,83 @@
+# joint_limits.yaml allows the dynamics properties specified in the URDF to be overwritten or augmented as needed
+
+# For beginners, we downscale velocity and acceleration limits.
+# You can always specify higher scaling factors (<= 1.0) in your motion requests.  # Increase the values below to 1.0 to always move at maximum speed.
+# 요청에서 스케일을 지정하지 않을 때 쓰는 기본값.
+# relay는 1.0을 명시하지만, 다른 노드(픽 스크립트 등)는 이 값을 쓴다.
+default_velocity_scaling_factor: 1.0
+default_acceleration_scaling_factor: 1.0
+
+# Specific joint properties can be changed with the keys [max_position, min_position, max_velocity, max_acceleration]
+# Joint limits can be turned off with [has_velocity_limits, has_acceleration_limits]
+# 가속 한계를 켠다.
+#
+# 전부 has_acceleration_limits: false / max_acceleration: 0 이었다.
+# MoveIt의 시간 파라미터화(TOTG)는 가속 한계가 없으면 궤적 시간을
+# 제대로 짜지 못해, 속도 스케일을 1.0으로 올려도 실제 실행이 느리다.
+# 실측: 30~60도 재배향에 3.86초가 걸렸는데, 180도/s 속도 한계라면
+# 1초 안에 끝나야 한다.
+#
+# 50 rad/s^2. 10에서 올렸다.
+#
+# 속도 한계 3.14 rad/s에서 사다리꼴 궤적의 총 시간은
+#   T = 이동각/v + v/a
+# 이고, 뒤 항이 가감속에 쓰는 시간이다.
+#   a=10 -> 3.14/10 = 0.314초
+#   a=50 -> 3.14/50 = 0.063초
+# 이동 거리와 무관하게 이동 1회당 0.25초가 줄어든다.
+#
+# 이 이상 올려도 의미가 적다. a=100이면 0.031초라 추가 이득이
+# 0.03초뿐이고, 그때부터는 속도 한계 3.14 rad/s가 전부를 지배한다.
+#
+# Isaac articulation이 이 가속을 따라가지 못하면 컨트롤러가 경로
+# 허용오차로 궤적을 중단하고, NBV 쪽에는 이동 실패로 보인다.
+# 실패가 늘거나 흡착이 떨어지면 되돌릴 것: joint_limits.yaml.accel10
+joint_limits:
+  # base 위치 한계를 [-180도, 0도]로 묶는다.
+  #
+  # 작업 영역(병/카메라)은 base 기준 -91도에 있다. 6축 팔은 같은 점에
+  # 대해 거울 해를 갖는데, 그게 +89도 근처에 생긴다. 둘 다 원래 범위
+  # 안이라 플래너가 후보마다 다른 쪽을 골랐고, base가 -100도와 +100도
+  # 사이를 195도씩 왕복했다 (실측 로그). 그 궤적이 길고 실패도 잦았다.
+  #
+  # +89도 해는 팔을 뒤로 접어 도달하는 자세라 이 작업에서 쓸 이유가
+  # 없다. 음수 쪽 반만 남기면 왕복이 사라진다.
+  #
+  # 주의: 시작 자세의 base가 이 범위 밖(양수)이면 MoveIt이 start state
+  # out of bounds로 즉시 실패한다. 홈 자세를 확인할 것.
+  base:
+    has_position_limits: true
+    min_position: -3.1415926535897931
+    max_position: 0.0
+    has_velocity_limits: true
+    max_velocity: 3.1400000000000001
+    has_acceleration_limits: true
+    max_acceleration: 50.0
+  elbow:
+    has_velocity_limits: true
+    max_velocity: 3.1400000000000001
+    has_acceleration_limits: true
+    max_acceleration: 50.0
+  shoulder:
+    has_position_limits: true
+    min_position: -1.0471975511965976
+    max_position: 1.5707963267948966
+    has_velocity_limits: true
+    max_velocity: 3.1400000000000001
+    has_acceleration_limits: true
+    max_acceleration: 50.0
+  wrist1:
+    has_velocity_limits: true
+    max_velocity: 3.1400000000000001
+    has_acceleration_limits: true
+    max_acceleration: 50.0
+  wrist2:
+    has_velocity_limits: true
+    max_velocity: 3.1400000000000001
+    has_acceleration_limits: true
+    max_acceleration: 50.0
+  wrist3:
+    has_velocity_limits: true
+    max_velocity: 3.1400000000000001
+    has_acceleration_limits: true
+    max_acceleration: 50.0

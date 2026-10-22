@@ -1,0 +1,30 @@
+{
+  "name": "batterycap_leftsidewall_outer_00_stain",
+  "defect_type": "stain",
+  "seed": 668750836,
+  "patch_mm": 19.0,
+  "resolution_px": 256,
+  "mm_per_px": 0.07421875,
+  "patch_center_mm": [
+    0.0,
+    0.0
+  ],
+  "footprint_area_mm2": 41.522491455078125,
+  "max_normal_tilt_deg": 0.0,
+  "p95_normal_tilt_deg": 0.0,
+  "alpha_threshold": 0.1,
+  "base_albedo_source": "constant",
+  "base_roughness": 0.38,
+  "debug_visible": false,
+  "base_metallic": 0.0,
+  "normal_strength": 1.0,
+  "length_mm": 8.0,
+  "width_mm": 6.0,
+  "depth_um": 0.0,
+  "textures": {
+    "albedo": "/home/seungjun/isaac_ws/seungjun/batterycap_defect_camera_20260929_134506/defect_textures/batterycap_leftsidewall_outer_00_stain_albedo.png",
+    "roughness": "/home/seungjun/isaac_ws/seungjun/batterycap_defect_camera_20260929_134506/defect_textures/batterycap_leftsidewall_outer_00_stain_roughness.png",
+    "normal": "/home/seungjun/isaac_ws/seungjun/batterycap_defect_camera_20260929_134506/defect_textures/batterycap_leftsidewall_outer_00_stain_normal.png",
+    "opacity": "/home/seungjun/isaac_ws/seungjun/batterycap_defect_camera_20260929_134506/defect_textures/batterycap_leftsidewall_outer_00_stain_opacity.png"
+  }
+}

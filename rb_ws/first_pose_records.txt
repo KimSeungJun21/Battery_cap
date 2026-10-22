@@ -1,0 +1,18 @@
+# 2026-09-29 11:34:32  hand-set pose (read over ROS: /joint_states, tf world->tcp)
+# predicted: camera 0.573 m, top incidence 5.0 deg, off-axis 0.7 deg, in-frame 100% (zoom x1.0 and x1.2)
+export BATTERY_IMSI_FIRST_POSE_JOINT_NAMES="base,shoulder,elbow,wrist1,wrist2,wrist3"
+export BATTERY_IMSI_FIRST_POSE_JOINTS="-1.456600,0.688500,0.456300,1.148900,1.643600,-0.092400"
+export BATTERY_IMSI_FIRST_POSE_TCP="-0.029356,-0.653815,0.510113,0.912079,-0.000072,-0.003721,0.409998"
+
+# 2026-09-29 11:37:18  hand-set pose (read over ROS: /joint_states, tf world->tcp)
+# predicted: -X end face frontal (incidence 3.0 deg), camera 0.536 m, off-axis 1.5 deg, in-frame 100% (zoom x1.0 and x1.2)
+export BATTERY_IMSI_FIRST_POSE_JOINT_NAMES="base,shoulder,elbow,wrist1,wrist2,wrist3"
+export BATTERY_IMSI_FIRST_POSE_JOINTS="-1.363300,-0.163800,1.886800,-0.892500,1.429700,-1.758100"
+export BATTERY_IMSI_FIRST_POSE_TCP="-0.025947,-0.480111,0.529364,0.276826,-0.659670,-0.286605,0.637229"
+
+# 2026-09-29 12:21:09  hand-set pose (read over ROS: /joint_states, tf world->tcp)
+# predicted: +X end face frontal (incidence 2.9 deg), camera 0.543 m, off-axis 0.7 deg, in-frame 100% (zoom x1.0 and x1.2)
+export BATTERY_IMSI_FIRST_POSE_JOINT_NAMES="base,shoulder,elbow,wrist1,wrist2,wrist3"
+export BATTERY_IMSI_FIRST_POSE_JOINTS="-1.356600,-0.196000,1.888900,-0.841800,1.427400,1.428100"
+export BATTERY_IMSI_FIRST_POSE_TCP="-0.025458,-0.468771,0.535613,0.285891,0.651600,0.290408,0.639802"
+

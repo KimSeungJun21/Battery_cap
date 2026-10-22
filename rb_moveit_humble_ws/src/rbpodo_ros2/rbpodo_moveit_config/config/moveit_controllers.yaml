@@ -1,0 +1,24 @@
+# MoveIt uses this configuration for controller management
+
+# Disabled: the Isaac bridge keeps polling past planned duration for physical
+# convergence (goal_wait_timeout), which otherwise trips MoveIt's own duration watchdog.
+trajectory_execution:
+  execution_duration_monitoring: false
+
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+moveit_simple_controller_manager:
+  controller_names:
+    - joint_trajectory_controller
+
+  joint_trajectory_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - base
+      - shoulder
+      - elbow
+      - wrist1
+      - wrist2
+      - wrist3

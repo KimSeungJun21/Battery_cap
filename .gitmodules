@@ -1,0 +1,9 @@
+[submodule "rbpodo"]
+	path = rbpodo
+	url = https://github.com/RainbowRobotics/rbpodo.git
+[submodule "third_party/rbpodo"]
+	path = third_party/rbpodo
+	url = https://github.com/RainbowRobotics/rbpodo.git
+[submodule "third_party/ros2_epick_gripper"]
+	path = third_party/ros2_epick_gripper
+	url = https://github.com/PickNikRobotics/ros2_epick_gripper.git

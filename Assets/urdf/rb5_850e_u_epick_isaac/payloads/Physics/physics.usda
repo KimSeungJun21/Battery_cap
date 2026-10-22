@@ -1,0 +1,310 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "rb5_850e_u"
+    doc = """Generated from Composed Stage of root layer /tmp/tmplvj1ypwv/rb5_850e_u.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_rb5_850e_u_epick_isaac_op7xrqj6/usdex_rb5_850e_u_epick_isaac/rb5_850e_u.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_rb5_850e_u_epick_isaac_op7xrqj6/temp_rb5_850e_u_epick_isaac/rb5_850e_u_epick_isaac.usd
+
+
+Generated from Composed Stage of root layer /home/seungjun/isaac_ws/Assets/urdf/rb5_850e_u_epick_isaac/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "rb5_850e_u"
+{
+    over "Geometry"
+    {
+        over "link0" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsArticulationRootAPI", "NewtonArticulationRootAPI"]
+        )
+        {
+            bool newton:selfCollisionEnabled = 0
+
+            over "link1" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (0.000057, -0.005795, -0.034516)
+                float3 physics:diagonalInertia = (0.0073332028, 0.00878691, 0.009401565)
+                float physics:mass = 4.147
+                quatf physics:principalAxes = (0.61578673, 0.34891292, 0.35963708, 0.6080523)
+
+                over "link2" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (-0.000037, -0.121603, 0.212933)
+                    float3 physics:diagonalInertia = (0.02194921, 0.38891467, 0.39221445)
+                    float physics:mass = 9.633
+                    quatf physics:principalAxes = (0.7071601, 0.0013313455, 0.7070498, 0.0018238169)
+
+                    over "link3" (
+                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                    )
+                    {
+                        point3f physics:centerOfMass = (0.000021, -0.015845, 0.202568)
+                        float3 physics:diagonalInertia = (0.0075271027, 0.1118321, 0.11203984)
+                        float physics:mass = 3.915
+                        quatf physics:principalAxes = (0.70703197, -0.005890095, 0.7071084, 0.00830029)
+
+                        over "link4" (
+                            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                        )
+                        {
+                            point3f physics:centerOfMass = (0.000057, -0.106332, 0.025881)
+                            float3 physics:diagonalInertia = (0.001181823, 0.0016010806, 0.0016290384)
+                            float physics:mass = 1.452
+                            quatf physics:principalAxes = (0.6966893, -0.12048228, 0.6987048, 0.10917737)
+
+                            over "link5" (
+                                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                            )
+                            {
+                                point3f physics:centerOfMass = (-0.000028, -0.025911, -0.004363)
+                                float3 physics:diagonalInertia = (0.0011838089, 0.0016035419, 0.0016314721)
+                                float physics:mass = 1.454
+                                quatf physics:principalAxes = (0.5792079, -0.40339893, -0.56983644, -0.42080155)
+
+                                over "link6" (
+                                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                                )
+                                {
+                                    point3f physics:centerOfMass = (-0.000002, -0.079964, -0.000494)
+                                    float3 physics:diagonalInertia = (0.00014226131, 0.00014789704, 0.00024370664)
+                                    float physics:mass = 0.243
+                                    quatf physics:principalAxes = (0.46839386, 0.47229216, 0.5288333, 0.52714574)
+
+                                    over "tcp" (
+                                        prepend apiSchemas = ["PhysicsRigidBodyAPI"]
+                                    )
+                                    {
+                                        over "epick_base_link" (
+                                            prepend apiSchemas = ["PhysicsRigidBodyAPI"]
+                                        )
+                                        {
+                                            over "epick_body" (
+                                                prepend apiSchemas = ["PhysicsRigidBodyAPI"]
+                                            )
+                                            {
+                                                over "epick_suction_cup" (
+                                                    prepend apiSchemas = ["PhysicsRigidBodyAPI"]
+                                                )
+                                                {
+                                                    over "cylinder_1" (
+                                                        prepend apiSchemas = ["NewtonCollisionAPI"]
+                                                    )
+                                                    {
+                                                    }
+                                                }
+
+                                                over "cylinder" (
+                                                    prepend apiSchemas = ["NewtonCollisionAPI"]
+                                                )
+                                                {
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        def PhysicsRevoluteJoint "base" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 10
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </rb5_850e_u/Geometry/link0>
+            custom rel physics:body1
+            prepend rel physics:body1 = </rb5_850e_u/Geometry/link0/link1>
+            point3f physics:localPos0 = (0, 0, 0.1655)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -179.90875
+            float physics:upperLimit = 179.90875
+            custom float urdf:limit:effort = 10
+            custom float urdf:limit:velocity = 3.14
+        }
+
+        def PhysicsRevoluteJoint "shoulder" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 10
+            uniform token physics:axis = "Y"
+            custom rel physics:body0
+            prepend rel physics:body0 = </rb5_850e_u/Geometry/link0/link1>
+            custom rel physics:body1
+            prepend rel physics:body1 = </rb5_850e_u/Geometry/link0/link1/link2>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -179.90875
+            float physics:upperLimit = 179.90875
+            custom float urdf:limit:effort = 10
+            custom float urdf:limit:velocity = 3.14
+        }
+
+        def PhysicsRevoluteJoint "elbow" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 10
+            uniform token physics:axis = "Y"
+            custom rel physics:body0
+            prepend rel physics:body0 = </rb5_850e_u/Geometry/link0/link1/link2>
+            custom rel physics:body1
+            prepend rel physics:body1 = </rb5_850e_u/Geometry/link0/link1/link2/link3>
+            point3f physics:localPos0 = (0, 0, 0.425)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -179.90875
+            float physics:upperLimit = 179.90875
+            custom float urdf:limit:effort = 10
+            custom float urdf:limit:velocity = 3.14
+        }
+
+        def PhysicsRevoluteJoint "wrist1" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 10
+            uniform token physics:axis = "Y"
+            custom rel physics:body0
+            prepend rel physics:body0 = </rb5_850e_u/Geometry/link0/link1/link2/link3>
+            custom rel physics:body1
+            prepend rel physics:body1 = </rb5_850e_u/Geometry/link0/link1/link2/link3/link4>
+            point3f physics:localPos0 = (0, 0, 0.392)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -179.90875
+            float physics:upperLimit = 179.90875
+            custom float urdf:limit:effort = 10
+            custom float urdf:limit:velocity = 3.14
+        }
+
+        def PhysicsRevoluteJoint "wrist2" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 10
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </rb5_850e_u/Geometry/link0/link1/link2/link3/link4>
+            custom rel physics:body1
+            prepend rel physics:body1 = </rb5_850e_u/Geometry/link0/link1/link2/link3/link4/link5>
+            point3f physics:localPos0 = (0, -0.1107, 0.1107)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -179.90875
+            float physics:upperLimit = 179.90875
+            custom float urdf:limit:effort = 10
+            custom float urdf:limit:velocity = 3.14
+        }
+
+        def PhysicsRevoluteJoint "wrist3" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 10
+            uniform token physics:axis = "Y"
+            custom rel physics:body0
+            prepend rel physics:body0 = </rb5_850e_u/Geometry/link0/link1/link2/link3/link4/link5>
+            custom rel physics:body1
+            prepend rel physics:body1 = </rb5_850e_u/Geometry/link0/link1/link2/link3/link4/link5/link6>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -179.90875
+            float physics:upperLimit = 179.90875
+            custom float urdf:limit:effort = 10
+            custom float urdf:limit:velocity = 3.14
+        }
+
+        def PhysicsFixedJoint "root_joint"
+        {
+            custom rel physics:body0
+            prepend rel physics:body0 = </rb5_850e_u>
+            custom rel physics:body1
+            prepend rel physics:body1 = </rb5_850e_u/Geometry/link0>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+        }
+
+        def PhysicsFixedJoint "tcp_joint"
+        {
+            custom rel physics:body0
+            prepend rel physics:body0 = </rb5_850e_u/Geometry/link0/link1/link2/link3/link4/link5/link6>
+            custom rel physics:body1
+            prepend rel physics:body1 = </rb5_850e_u/Geometry/link0/link1/link2/link3/link4/link5/link6/tcp>
+            point3f physics:localPos0 = (0, -0.0967, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+        }
+
+        def PhysicsFixedJoint "tcp_to_epick_base_link"
+        {
+            custom rel physics:body0
+            prepend rel physics:body0 = </rb5_850e_u/Geometry/link0/link1/link2/link3/link4/link5/link6/tcp>
+            custom rel physics:body1
+            prepend rel physics:body1 = </rb5_850e_u/Geometry/link0/link1/link2/link3/link4/link5/link6/tcp/epick_base_link>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, 0.70710677, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+        }
+
+        def PhysicsFixedJoint "epick_base_link_to_epick_body"
+        {
+            custom rel physics:body0
+            prepend rel physics:body0 = </rb5_850e_u/Geometry/link0/link1/link2/link3/link4/link5/link6/tcp/epick_base_link>
+            custom rel physics:body1
+            prepend rel physics:body1 = </rb5_850e_u/Geometry/link0/link1/link2/link3/link4/link5/link6/tcp/epick_base_link/epick_body>
+            point3f physics:localPos0 = (0, 0, 0.05115)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+        }
+
+        def PhysicsFixedJoint "epick_body_to_epick_suction_cup"
+        {
+            custom rel physics:body0
+            prepend rel physics:body0 = </rb5_850e_u/Geometry/link0/link1/link2/link3/link4/link5/link6/tcp/epick_base_link/epick_body>
+            custom rel physics:body1
+            prepend rel physics:body1 = </rb5_850e_u/Geometry/link0/link1/link2/link3/link4/link5/link6/tcp/epick_base_link/epick_body/epick_suction_cup>
+            point3f physics:localPos0 = (0, 0, 0.05865)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+        }
+    }
+}
+

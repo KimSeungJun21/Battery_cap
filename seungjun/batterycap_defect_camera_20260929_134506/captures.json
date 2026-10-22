@@ -1,0 +1,347 @@
+{
+  "created_at": "2026-09-29T13:48:17.376818+09:00",
+  "output_dir": "/home/seungjun/isaac_ws/seungjun/batterycap_defect_camera_20260929_134506",
+  "robot_arm_used": false,
+  "target": "batterycap",
+  "resolution": [
+    2448,
+    2048
+  ],
+  "distance_m": 0.22,
+  "zoom": 1.4,
+  "bbox_padding_px": 24,
+  "debug_visible": false,
+  "captures": [
+    {
+      "index": 1,
+      "target_defect": "batterycap_mainboard2_top_00_scratch",
+      "target_visible": true,
+      "distance_m": 0.22,
+      "object_to_world": [
+        [
+          -0.9063077969257033,
+          -0.42261824053355224,
+          -5.6491387123713834e-08,
+          -0.052951517585496176
+        ],
+        [
+          0.2988361746774085,
+          -0.6408563783643145,
+          0.7071068116020014,
+          0.4203717995605284
+        ],
+        [
+          -0.2988362727913936,
+          0.6408563997324981,
+          0.7071067507710904,
+          0.9666720325353158
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "observations": [
+        {
+          "name": "batterycap_leftcap_top_00_scratch",
+          "semantic_id": 5,
+          "pixels": 2019,
+          "mask_bbox_xyxy": [
+            652,
+            724,
+            714,
+            814
+          ],
+          "is_target": false,
+          "display_bbox_xyxy": [
+            628,
+            700,
+            738,
+            838
+          ]
+        },
+        {
+          "name": "batterycap_mainboard2_top_00_scratch",
+          "semantic_id": 7,
+          "pixels": 2416,
+          "mask_bbox_xyxy": [
+            1124,
+            1016,
+            1324,
+            1032
+          ],
+          "is_target": true,
+          "display_bbox_xyxy": [
+            1100,
+            992,
+            1348,
+            1056
+          ],
+          "crop_bbox_xyxy": [
+            824,
+            624,
+            1624,
+            1424
+          ]
+        }
+      ],
+      "directory": "01_batterycap_mainboard2_top_00_scratch"
+    },
+    {
+      "index": 2,
+      "target_defect": "batterycap_rightcap_top_00_scratch",
+      "target_visible": true,
+      "distance_m": 0.22,
+      "object_to_world": [
+        [
+          -0.8191520308675905,
+          0.5735764555187912,
+          -5.649138712424924e-08,
+          0.12303467735046678
+        ],
+        [
+          -0.4055798165020843,
+          -0.5792279080225571,
+          0.7071068116020014,
+          0.44574311973710334
+        ],
+        [
+          0.4055797859504815,
+          0.5792280036758524,
+          0.7071067507710904,
+          0.9391794038345702
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "observations": [
+        {
+          "name": "batterycap_rightcap_top_00_scratch",
+          "semantic_id": 4,
+          "pixels": 795,
+          "mask_bbox_xyxy": [
+            1179,
+            1019,
+            1269,
+            1029
+          ],
+          "is_target": true,
+          "display_bbox_xyxy": [
+            1155,
+            995,
+            1293,
+            1053
+          ],
+          "crop_bbox_xyxy": [
+            1044,
+            844,
+            1404,
+            1204
+          ]
+        }
+      ],
+      "directory": "02_batterycap_rightcap_top_00_scratch"
+    },
+    {
+      "index": 3,
+      "target_defect": "batterycap_leftcap_top_00_scratch",
+      "target_visible": true,
+      "distance_m": 0.22,
+      "object_to_world": [
+        [
+          -0.5735764171832993,
+          0.8191520577103908,
+          -5.649138712447847e-08,
+          -0.051056378655894456
+        ],
+        [
+          -0.5792279728268136,
+          -0.4055797239520144,
+          0.7071068116020014,
+          0.3226421460709911
+        ],
+        [
+          0.5792279768330516,
+          0.4055798242859737,
+          0.7071067507710904,
+          1.0622803741825118
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "observations": [
+        {
+          "name": "batterycap_leftcap_top_00_scratch",
+          "semantic_id": 5,
+          "pixels": 2015,
+          "mask_bbox_xyxy": [
+            1179,
+            999,
+            1269,
+            1049
+          ],
+          "is_target": true,
+          "display_bbox_xyxy": [
+            1155,
+            975,
+            1293,
+            1073
+          ],
+          "crop_bbox_xyxy": [
+            1044,
+            844,
+            1404,
+            1204
+          ]
+        },
+        {
+          "name": "batterycap_mainboard2_top_00_scratch",
+          "semantic_id": 7,
+          "pixels": 2380,
+          "mask_bbox_xyxy": [
+            1540,
+            445,
+            1585,
+            641
+          ],
+          "is_target": false,
+          "display_bbox_xyxy": [
+            1516,
+            421,
+            1609,
+            665
+          ]
+        }
+      ],
+      "directory": "03_batterycap_leftcap_top_00_scratch"
+    },
+    {
+      "index": 4,
+      "target_defect": "batterycap_rightsidewall_outer_00_scratch",
+      "target_visible": true,
+      "distance_m": 0.22,
+      "object_to_world": [
+        [
+          -5.6491387123713834e-08,
+          0.25881902250034167,
+          -0.9659258323453023,
+          0.48328048989996164
+        ],
+        [
+          0.7071068116020014,
+          0.6830126871341905,
+          0.1830126394536303,
+          0.5608877008577441
+        ],
+        [
+          0.7071067507710904,
+          -0.683012725215058,
+          -0.18301273236649737,
+          1.3310304255408685
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "observations": [
+        {
+          "name": "batterycap_rightsidewall_outer_00_scratch",
+          "semantic_id": 6,
+          "pixels": 1216,
+          "mask_bbox_xyxy": [
+            1165,
+            1018,
+            1283,
+            1030
+          ],
+          "is_target": true,
+          "display_bbox_xyxy": [
+            1141,
+            994,
+            1307,
+            1054
+          ],
+          "crop_bbox_xyxy": [
+            988,
+            788,
+            1460,
+            1260
+          ]
+        }
+      ],
+      "directory": "04_batterycap_rightsidewall_outer_00_scratch"
+    },
+    {
+      "index": 5,
+      "target_defect": "batterycap_leftsidewall_outer_00_stain",
+      "target_visible": true,
+      "distance_m": 0.22,
+      "object_to_world": [
+        [
+          5.6491387123713834e-08,
+          2.3399497228737687e-08,
+          -0.9999999999999984,
+          0.4996006532398549
+        ],
+        [
+          -0.7071068116020014,
+          -0.7071067507710903,
+          -5.649138674465999e-08,
+          0.6485434617075693
+        ],
+        [
+          -0.7071067507710904,
+          0.7071068116020033,
+          -2.3399497385746947e-08,
+          1.243374658454034
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "observations": [
+        {
+          "name": "batterycap_leftsidewall_outer_00_stain",
+          "semantic_id": 3,
+          "pixels": 7593,
+          "mask_bbox_xyxy": [
+            1163,
+            977,
+            1289,
+            1073
+          ],
+          "is_target": true,
+          "display_bbox_xyxy": [
+            1139,
+            953,
+            1313,
+            1097
+          ],
+          "crop_bbox_xyxy": [
+            974,
+            773,
+            1478,
+            1277
+          ]
+        }
+      ],
+      "directory": "05_batterycap_leftsidewall_outer_00_stain"
+    }
+  ]
+}

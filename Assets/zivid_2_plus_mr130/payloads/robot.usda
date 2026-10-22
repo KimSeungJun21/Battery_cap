@@ -1,0 +1,63 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "zivid_camera_robot"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp8to7h1xh/zivid_camera_robot.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_zivid_2_plus_mr130_ix6ztjv9/usdex_zivid_2_plus_mr130/zivid_camera_robot.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_zivid_2_plus_mr130_ix6ztjv9/temp_zivid_2_plus_mr130/zivid_2_plus_mr130.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "zivid_camera_robot" (
+    prepend apiSchemas = ["IsaacRobotAPI"]
+)
+{
+    prepend rel isaac:physics:robotJoints = </zivid_camera_robot/Physics/root_joint>
+    prepend rel isaac:physics:robotLinks = </zivid_camera_robot/Geometry/zivid_base_link>
+    token isaac:robotType = "Default"
+
+    over "Geometry"
+    {
+        over "zivid_base_link" (
+            prepend apiSchemas = ["IsaacLinkAPI"]
+        )
+        {
+            over "zivid_2_plus" (
+                prepend apiSchemas = ["IsaacSiteAPI"]
+            )
+            {
+            }
+
+            over "zivid_2_plus_convex_hull" (
+                prepend apiSchemas = ["IsaacSiteAPI"]
+            )
+            {
+            }
+
+            over "zivid_optical_frame" (
+                prepend apiSchemas = ["IsaacSiteAPI"]
+            )
+            {
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        over "root_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+    }
+}
+

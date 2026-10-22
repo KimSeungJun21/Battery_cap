@@ -1,0 +1,30 @@
+{
+  "name": "front_scratch",
+  "defect_type": "scratch",
+  "seed": 1463402636,
+  "patch_mm": 19.8,
+  "resolution_px": 256,
+  "mm_per_px": 0.07734375,
+  "patch_center_mm": [
+    0.0,
+    0.13123095035552979
+  ],
+  "footprint_area_mm2": 12.837491455078126,
+  "max_normal_tilt_deg": 24.974027633666992,
+  "p95_normal_tilt_deg": 20.116487503051758,
+  "alpha_threshold": 0.1,
+  "base_albedo_source": "sampled",
+  "base_roughness": 0.38,
+  "debug_visible": false,
+  "base_metallic": 0.0,
+  "normal_strength": 1.0,
+  "length_mm": 14.0,
+  "width_mm": 0.8,
+  "depth_um": 50.0,
+  "textures": {
+    "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/front_scratch_albedo.png",
+    "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/front_scratch_roughness.png",
+    "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/front_scratch_normal.png",
+    "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/front_scratch_opacity.png"
+  }
+}

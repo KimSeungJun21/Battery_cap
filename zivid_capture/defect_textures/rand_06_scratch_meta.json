@@ -1,0 +1,30 @@
+{
+  "name": "rand_06_scratch",
+  "defect_type": "scratch",
+  "seed": 1609734587,
+  "patch_mm": 17.960000381469726,
+  "resolution_px": 256,
+  "mm_per_px": 0.07015625149011612,
+  "patch_center_mm": [
+    0.0,
+    0.11575952172279355
+  ],
+  "footprint_area_mm2": 8.524730147286135,
+  "max_normal_tilt_deg": 28.56910514831543,
+  "p95_normal_tilt_deg": 23.218334197998047,
+  "alpha_threshold": 0.1,
+  "base_albedo_source": "sampled",
+  "base_roughness": 0.38,
+  "debug_visible": false,
+  "base_metallic": 0.0,
+  "normal_strength": 1.0,
+  "length_mm": 12.35,
+  "width_mm": 0.61,
+  "depth_um": 50.0,
+  "textures": {
+    "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/rand_06_scratch_albedo.png",
+    "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/rand_06_scratch_roughness.png",
+    "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/rand_06_scratch_normal.png",
+    "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/rand_06_scratch_opacity.png"
+  }
+}

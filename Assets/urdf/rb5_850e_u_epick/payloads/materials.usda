@@ -1,0 +1,57 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    doc = """Generated from Composed Stage of root layer /tmp/tmp_42bbnon/rb5_850e_u.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_rb5_850e_u_epick_mcy9l6e0/usdex_rb5_850e_u_epick/rb5_850e_u.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_rb5_850e_u_epick_mcy9l6e0/temp_rb5_850e_u_epick/rb5_850e_u_epick.usd
+
+
+Generated from Composed Stage of root layer /home/seungjun/isaac_ws/Assets/urdf/rb5_850e_u_epick/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Scope "Materials"
+{
+    def Material "epick_gray"
+    {
+        color3f inputs:diffuseColor = (0.05087609, 0.05087609, 0.05087609)
+        float inputs:metallic = 0
+        float inputs:opacity = 1
+        float inputs:roughness = 0.5
+        token inputs:wrapMode = "repeat"
+        token outputs:displacement (
+            displayGroup = "Outputs"
+        )
+        prepend token outputs:displacement.connect = </Materials/epick_gray/PreviewSurface.outputs:displacement>
+        token outputs:surface (
+            displayGroup = "Outputs"
+        )
+        prepend token outputs:surface.connect = </Materials/epick_gray/PreviewSurface.outputs:surface>
+        token outputs:volume (
+            displayGroup = "Outputs"
+        )
+
+        def Shader "PreviewSurface" (
+            apiSchemas = ["NodeDefAPI"]
+        )
+        {
+            token info:id = "UsdPreviewSurface"
+            prepend color3f inputs:diffuseColor.connect = </Materials/epick_gray.inputs:diffuseColor>
+            prepend float inputs:metallic.connect = </Materials/epick_gray.inputs:metallic>
+            prepend float inputs:opacity.connect = </Materials/epick_gray.inputs:opacity>
+            prepend float inputs:roughness.connect = </Materials/epick_gray.inputs:roughness>
+            token outputs:displacement
+            token outputs:surface
+        }
+    }
+}
+

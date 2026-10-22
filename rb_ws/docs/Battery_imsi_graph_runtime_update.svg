@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200">
+  <defs>
+    <style>
+      .bg{fill:#08111f}.title{fill:#f1f5f9;font:700 30px 'Noto Sans CJK KR',sans-serif}.sub{fill:#94a3b8;font:400 16px 'Noto Sans CJK KR',sans-serif}.section{font:700 19px 'Noto Sans CJK KR',sans-serif}.panel{fill:#0d1929;stroke:#263b55;stroke-width:2}.blue{fill:#12314a;stroke:#38bdf8;stroke-width:2}.cyan{fill:#102d35;stroke:#22d3ee;stroke-width:2}.greenbox{fill:#123829;stroke:#34d399;stroke-width:2}.amber{fill:#322813;stroke:#fbbf24;stroke-width:2}.purple{fill:#2d2147;stroke:#a78bfa;stroke-width:2}.orange{fill:#3b2315;stroke:#fb923c;stroke-width:2}.ghost{fill:#172235;stroke:#64748b;stroke-width:2;stroke-dasharray:7 6;opacity:.62}.h{fill:#e5edf7;font:700 17px 'Noto Sans CJK KR',sans-serif}.t{fill:#cbd5e1;font:400 14px 'Noto Sans CJK KR',sans-serif}.ts{fill:#9fb0c3;font:400 12px 'Noto Sans CJK KR',sans-serif}.center{text-anchor:middle}.pair{fill:none;stroke:#465b73;stroke-width:2;opacity:.75;marker-end:url(#gray)}.startedge{fill:none;stroke:#22d3ee;stroke-width:3;marker-end:url(#cyanArrow)}.selected{fill:none;stroke:#34d399;stroke-width:5;marker-end:url(#greenArrow)}.flow{fill:none;stroke:#a78bfa;stroke-width:4;marker-end:url(#purpleArrow)}.dash{stroke-dasharray:8 7}.bit0{fill:#172235;stroke:#31435b;stroke-width:1}.bitObs{fill:#155e75;stroke:#22d3ee;stroke-width:1}.bitNew{fill:#166534;stroke:#4ade80;stroke-width:1}.strike{stroke:#fb7185;stroke-width:5}
+    </style>
+    <marker id="gray" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#526780"/></marker>
+    <marker id="cyanArrow" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#22d3ee"/></marker>
+    <marker id="greenArrow" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#34d399"/></marker>
+    <marker id="purpleArrow" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#a78bfa"/></marker>
+  </defs>
+  <rect class="bg" width="1800" height="1200"/>
+  <text class="title" x="55" y="52">Battery imsi — 실측 촬영 전/후의 effective planning graph 업데이트</text>
+  <text class="sub" x="55" y="82">pair graph를 전부 재생성하지 않고, 관측 상태·잔여 gain·START 간선·남은 후보를 바꾼 뒤 runtime Beam Search를 다시 수행</text>
+
+  <rect class="panel" x="40" y="120" width="720" height="700" rx="18"/>
+  <text class="section" x="68" y="158" fill="#67e8f9">t 시점 · 촬영 전 Gₜ</text>
+  <rect class="cyan" x="70" y="180" width="660" height="78" rx="12"/>
+  <text class="h center" x="400" y="208">누적 실측 관측 Oₜ</text>
+  <text class="t center" x="400" y="236">각 노드의 잔여 surfel Uᵢᵗ = Bᵢ &amp; ~Oₜ → top/side weighted gain 재계산</text>
+
+  <!-- before graph pair edges -->
+  <path class="pair" d="M310 420L520 330"/><path class="pair" d="M520 330L310 420"/><path class="pair" d="M520 330L585 585"/><path class="pair" d="M585 585L520 330"/><path class="pair" d="M585 585L300 640"/><path class="pair" d="M300 640L585 585"/><path class="pair" d="M300 640L310 420"/><path class="pair" d="M310 420L300 640"/><path class="pair dash" d="M310 420L585 585"/><path class="pair dash" d="M520 330L300 640"/>
+  <!-- dynamic start edges -->
+  <path class="startedge" d="M145 500L255 435"/><path class="startedge" d="M155 475L465 350"/><path class="startedge" d="M155 525L525 578"/><path class="startedge" d="M135 535L260 615"/>
+
+  <circle cx="120" cy="505" r="58" fill="#12314a" stroke="#38bdf8" stroke-width="3"/>
+  <text class="h center" x="120" y="500">STARTₜ</text><text class="ts center" x="120" y="521">qₜ actual</text>
+
+  <g><circle cx="310" cy="420" r="60" fill="#182d3c" stroke="#22d3ee" stroke-width="2"/><text class="h center" x="310" y="412">A</text><text class="ts center" x="310" y="434">U_Aᵗ</text><rect class="cyan" x="225" y="485" width="170" height="46" rx="8"/><text class="ts center" x="310" y="505"><tspan x="310">gain_Aᵗ</tspan><tspan x="310" dy="16">top + side</tspan></text></g>
+  <g><circle cx="520" cy="330" r="65" fill="#123829" stroke="#34d399" stroke-width="4"/><text class="h center" x="520" y="322">B</text><text class="ts center" x="520" y="344">U_Bᵗ</text><rect class="greenbox" x="430" y="405" width="180" height="52" rx="9"/><text class="ts center" x="520" y="426"><tspan x="520">gain_Bᵗ / edge cost</tspan><tspan x="520" dy="17">Beam이 첫 후보로 선택</tspan></text></g>
+  <g><circle cx="585" cy="585" r="60" fill="#182d3c" stroke="#22d3ee" stroke-width="2"/><text class="h center" x="585" y="577">C</text><text class="ts center" x="585" y="599">U_Cᵗ</text><rect class="cyan" x="500" y="650" width="170" height="46" rx="8"/><text class="ts center" x="585" y="670"><tspan x="585">gain_Cᵗ</tspan><tspan x="585" dy="16">top + side</tspan></text></g>
+  <g><circle cx="300" cy="640" r="60" fill="#182d3c" stroke="#22d3ee" stroke-width="2"/><text class="h center" x="300" y="632">D</text><text class="ts center" x="300" y="654">U_Dᵗ</text><rect class="cyan" x="215" y="705" width="170" height="46" rx="8"/><text class="ts center" x="300" y="725"><tspan x="300">gain_Dᵗ</tspan><tspan x="300" dy="16">top + side</tspan></text></g>
+  <path class="selected" d="M163 466L462 348"/>
+
+  <!-- center capture/update event -->
+  <path class="flow" d="M760 470H825"/>
+  <rect class="purple" x="800" y="215" width="210" height="510" rx="18"/>
+  <text class="h center" x="905" y="252">실제 후보 B 실행</text>
+  <text class="t center" x="905" y="283"><tspan x="905">현재 qₜ→cached q_B</tspan><tspan x="905" dy="21">trajectory 재계획·stream</tspan></text>
+  <line x1="830" y1="320" x2="980" y2="320" stroke="#4c3e70" stroke-width="2"/>
+  <text class="h center" x="905" y="355">Zivid capture</text>
+  <text class="t center" x="905" y="385"><tspan x="905">실제 도달 qₜ₊₁</tspan><tspan x="905" dy="22">실측 visible mask M_B</tspan></text>
+
+  <g transform="translate(837,440)">
+    <rect class="bitObs" x="0" y="0" width="28" height="28"/><rect class="bit0" x="32" y="0" width="28" height="28"/><rect class="bitNew" x="64" y="0" width="28" height="28"/><rect class="bitNew" x="96" y="0" width="28" height="28"/><rect class="bit0" x="128" y="0" width="28" height="28"/>
+    <rect class="bit0" x="0" y="32" width="28" height="28"/><rect class="bitNew" x="32" y="32" width="28" height="28"/><rect class="bitObs" x="64" y="32" width="28" height="28"/><rect class="bitNew" x="96" y="32" width="28" height="28"/><rect class="bitObs" x="128" y="32" width="28" height="28"/>
+  </g>
+  <text class="ts center" x="905" y="525">M_B의 신규 surfel은 초록</text>
+  <line x1="830" y1="550" x2="980" y2="550" stroke="#4c3e70" stroke-width="2"/>
+  <text class="t center" x="905" y="583"><tspan x="905">Oₜ₊₁ = Oₜ ∪ M_B</tspan><tspan x="905" dy="23">B_B ← M_B (empirical-live)</tspan><tspan x="905" dy="23">empirical votes[B] += M_B</tspan><tspan x="905" dy="23">remaining ← remaining \ {B}</tspan></text>
+  <path class="flow" d="M1010 470H1040"/>
+
+  <rect class="panel" x="1040" y="120" width="720" height="700" rx="18"/>
+  <text class="section" x="1068" y="158" fill="#6ee7b7">t+1 시점 · 촬영 후 Gₜ₊₁</text>
+  <rect class="greenbox" x="1070" y="180" width="660" height="78" rx="12"/>
+  <text class="h center" x="1400" y="208">갱신된 누적 관측 Oₜ₊₁</text>
+  <text class="t center" x="1400" y="236">모든 남은 노드: Uᵢᵗ⁺¹ = Bᵢ &amp; ~Oₜ₊₁ → 이미 본 surfel만큼 gain 감소</text>
+
+  <!-- after graph, B ghosted and start moved -->
+  <path class="pair" d="M1310 420L1585 585"/><path class="pair" d="M1585 585L1310 420"/><path class="pair" d="M1585 585L1300 655"/><path class="pair" d="M1300 655L1585 585"/><path class="pair" d="M1300 655L1310 420"/><path class="pair" d="M1310 420L1300 655"/>
+  <path class="startedge" d="M1530 330L1358 392"/><path class="startedge" d="M1550 372L1580 525"/><path class="startedge" d="M1518 365L1340 620"/>
+
+  <circle cx="1550" cy="330" r="60" fill="#12314a" stroke="#38bdf8" stroke-width="3"/>
+  <text class="h center" x="1550" y="322">STARTₜ₊₁</text><text class="ts center" x="1550" y="344">qₜ₊₁ actual</text>
+
+  <g><circle cx="1310" cy="420" r="60" fill="#182d3c" stroke="#22d3ee" stroke-width="2"/><text class="h center" x="1310" y="412">A</text><text class="ts center" x="1310" y="434">U_Aᵗ⁺¹</text><rect class="cyan" x="1225" y="485" width="170" height="46" rx="8"/><text class="ts center" x="1310" y="505"><tspan x="1310">gain_A 재계산</tspan><tspan x="1310" dy="16">중복 surfel 제거</tspan></text></g>
+  <g><circle class="ghost" cx="1190" cy="315" r="55"/><text class="h center" x="1190" y="308" opacity=".55">B</text><text class="ts center" x="1190" y="330">captured</text><path class="strike" d="M1150 275L1230 355"/><path class="strike" d="M1230 275L1150 355"/><text class="ts center" x="1190" y="390">현재 episode 후보에서 제거</text></g>
+  <g><circle cx="1585" cy="585" r="60" fill="#123829" stroke="#34d399" stroke-width="3"/><text class="h center" x="1585" y="577">C</text><text class="ts center" x="1585" y="599">U_Cᵗ⁺¹</text><rect class="greenbox" x="1500" y="650" width="170" height="46" rx="8"/><text class="ts center" x="1585" y="670"><tspan x="1585">새 runtime route</tspan><tspan x="1585" dy="16">첫 후보</tspan></text></g>
+  <g><circle cx="1300" cy="655" r="60" fill="#182d3c" stroke="#22d3ee" stroke-width="2"/><text class="h center" x="1300" y="647">D</text><text class="ts center" x="1300" y="669">U_Dᵗ⁺¹</text><rect class="cyan" x="1215" y="720" width="170" height="46" rx="8"/><text class="ts center" x="1300" y="740"><tspan x="1300">gain_D 재계산</tspan><tspan x="1300" dy="16">중복 surfel 제거</tspan></text></g>
+  <path class="selected" d="M1555 390L1577 522"/><path class="selected" d="M1538 622L1357 646"/>
+  <rect class="purple" x="1425" y="735" width="285" height="50" rx="10"/>
+  <text class="t center" x="1567" y="766">runtime Beam 128 / branch 10 재실행</text>
+
+  <text class="section" x="55" y="870" fill="#67e8f9">업데이트되는 것</text>
+  <rect class="cyan" x="55" y="895" width="820" height="230" rx="16"/>
+  <text class="h" x="85" y="935">① 관측 상태</text><text class="t" x="280" y="935">Oₜ → Oₜ₊₁ = Oₜ ∪ M_selected</text>
+  <text class="h" x="85" y="975">② node gain label</text><text class="t" x="280" y="975">모든 남은 후보의 Bᵢ &amp; ~Oₜ₊₁ 및 top/side score 재계산</text>
+  <text class="h" x="85" y="1015">③ topology</text><text class="t" x="280" y="1015">촬영/시도한 후보는 remaining set에서 제거, commit 목록도 정리</text>
+  <text class="h" x="85" y="1055">④ START edges</text><text class="t" x="280" y="1055">실제 도달 qₜ₊₁에서 모든 남은 qᵢ까지 비용 재계산</text>
+  <text class="h" x="85" y="1095">⑤ selected visibility</text><text class="t" x="280" y="1095">B_selected를 empirical-live M으로 교체하고 persistent vote cache에 누적</text>
+
+  <text class="section" x="925" y="870" fill="#fbbf24">그대로 유지되는 것</text>
+  <rect class="amber" x="925" y="895" width="820" height="230" rx="16"/>
+  <text class="h" x="955" y="940">① 남은 후보의 cached qᵢ</text><text class="t" x="1235" y="940">preflight에서 얻은 관절 끝점</text>
+  <text class="h" x="955" y="990">② pair edge c(i,j)</text><text class="t" x="1235" y="990">후보쌍 관절 차이 기반 비용 행렬</text>
+  <text class="h" x="955" y="1040">③ group bit masks / goals</text><text class="t" x="1235" y="1040">top·side·bottom 분류와 planner target</text>
+  <text class="h" x="955" y="1090">④ 미촬영 후보 Bᵢ</text><text class="t" x="1235" y="1090">같은 episode에서는 사전 geometric/empirical mask 유지</text>
+  <text class="ts center" x="1335" y="1160">다음 실행에서는 누적 empirical hit ratio가 기준 이상인 pose의 Bᵢ를 새 empirical mask로 시작</text>
+</svg>

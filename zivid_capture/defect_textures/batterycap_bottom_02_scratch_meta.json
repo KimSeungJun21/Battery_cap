@@ -1,0 +1,30 @@
+{
+  "name": "batterycap_bottom_02_scratch",
+  "defect_type": "scratch",
+  "seed": 553226412,
+  "patch_mm": 16.099999809265135,
+  "resolution_px": 256,
+  "mm_per_px": 0.06289062425494193,
+  "patch_center_mm": [
+    0.0,
+    0.09796874970197675
+  ],
+  "footprint_area_mm2": 7.855088009684113,
+  "max_normal_tilt_deg": 29.82427215576172,
+  "p95_normal_tilt_deg": 24.035005569458008,
+  "alpha_threshold": 0.1,
+  "base_albedo_source": "constant",
+  "base_roughness": 0.38,
+  "debug_visible": false,
+  "base_metallic": 0.0,
+  "normal_strength": 1.0,
+  "length_mm": 10.45,
+  "width_mm": 0.65,
+  "depth_um": 50.0,
+  "textures": {
+    "albedo": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/batterycap_bottom_02_scratch_albedo.png",
+    "roughness": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/batterycap_bottom_02_scratch_roughness.png",
+    "normal": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/batterycap_bottom_02_scratch_normal.png",
+    "opacity": "/home/seungjun/isaac_ws/zivid_capture/defect_textures/batterycap_bottom_02_scratch_opacity.png"
+  }
+}

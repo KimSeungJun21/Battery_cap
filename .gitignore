@@ -1,0 +1,9 @@
+build/
+install/
+log/
+run_logs/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.bag
+*.db3

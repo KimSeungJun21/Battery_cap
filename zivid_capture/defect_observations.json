@@ -1,0 +1,276 @@
+{
+  "frames": [
+    {
+      "frame_id": 0,
+      "defects": {
+        "batterycap_rightcap_top_00_scratch": {
+          "pixels": 73,
+          "pixels_with_depth": 73,
+          "bbox_xyxy": [
+            634,
+            479,
+            661,
+            493
+          ],
+          "centroid_xy": [
+            644.3287671232877,
+            486.5890410958904
+          ]
+        },
+        "batterycap_leftcap_top_00_scratch": {
+          "pixels": 185,
+          "pixels_with_depth": 185,
+          "bbox_xyxy": [
+            1998,
+            479,
+            2035,
+            499
+          ],
+          "centroid_xy": [
+            2014.4756756756756,
+            490.0324324324324
+          ]
+        },
+        "batterycap_mainboard2_top_00_scratch": {
+          "pixels": 226,
+          "pixels_with_depth": 226,
+          "bbox_xyxy": [
+            1739,
+            488,
+            1809,
+            509
+          ],
+          "centroid_xy": [
+            1773.8893805309735,
+            498.4734513274336
+          ]
+        }
+      }
+    },
+    {
+      "frame_id": 1,
+      "defects": {
+        "batterycap_leftsidewall_outer_00_stain": {
+          "pixels": 1687,
+          "pixels_with_depth": 1687,
+          "bbox_xyxy": [
+            1265,
+            1048,
+            1310,
+            1107
+          ],
+          "centroid_xy": [
+            1286.8547717842323,
+            1077.6834617664492
+          ]
+        },
+        "batterycap_leftcap_top_00_scratch": {
+          "pixels": 6,
+          "pixels_with_depth": 6,
+          "bbox_xyxy": [
+            1268,
+            919,
+            1300,
+            921
+          ],
+          "centroid_xy": [
+            1292.1666666666667,
+            919.8333333333334
+          ]
+        }
+      }
+    },
+    {
+      "frame_id": 2,
+      "defects": {
+        "batterycap_rightcap_top_00_scratch": {
+          "pixels": 12,
+          "pixels_with_depth": 12,
+          "bbox_xyxy": [
+            483,
+            429,
+            511,
+            432
+          ],
+          "centroid_xy": [
+            487.0833333333333,
+            430.0833333333333
+          ]
+        },
+        "batterycap_leftcap_top_00_scratch": {
+          "pixels": 19,
+          "pixels_with_depth": 19,
+          "bbox_xyxy": [
+            2027,
+            452,
+            2072,
+            456
+          ],
+          "centroid_xy": [
+            2041.5263157894738,
+            453.6842105263158
+          ]
+        },
+        "batterycap_mainboard2_top_00_scratch": {
+          "pixels": 79,
+          "pixels_with_depth": 79,
+          "bbox_xyxy": [
+            1733,
+            463,
+            1813,
+            466
+          ],
+          "centroid_xy": [
+            1772.620253164557,
+            464.1012658227848
+          ]
+        }
+      }
+    },
+    {
+      "frame_id": 3,
+      "defects": {
+        "batterycap_rightcap_top_00_scratch": {
+          "pixels": 96,
+          "pixels_with_depth": 96,
+          "bbox_xyxy": [
+            594,
+            1000,
+            620,
+            1020
+          ],
+          "centroid_xy": [
+            606.6041666666666,
+            1009.4166666666666
+          ]
+        },
+        "batterycap_leftcap_top_00_scratch": {
+          "pixels": 239,
+          "pixels_with_depth": 239,
+          "bbox_xyxy": [
+            1768,
+            1022,
+            1797,
+            1053
+          ],
+          "centroid_xy": [
+            1781.7531380753137,
+            1037.2301255230125
+          ]
+        },
+        "batterycap_mainboard2_top_00_scratch": {
+          "pixels": 296,
+          "pixels_with_depth": 296,
+          "bbox_xyxy": [
+            1543,
+            1017,
+            1607,
+            1048
+          ],
+          "centroid_xy": [
+            1575.043918918919,
+            1032.6452702702702
+          ]
+        }
+      }
+    },
+    {
+      "frame_id": 4,
+      "defects": {
+        "batterycap_rightcap_top_00_scratch": {
+          "pixels": 3,
+          "pixels_with_depth": 3,
+          "bbox_xyxy": [
+            1179,
+            869,
+            1182,
+            870
+          ],
+          "centroid_xy": [
+            1180.0,
+            869.0
+          ]
+        },
+        "batterycap_rightsidewall_outer_00_scratch": {
+          "pixels": 266,
+          "pixels_with_depth": 266,
+          "bbox_xyxy": [
+            1157,
+            1000,
+            1176,
+            1053
+          ],
+          "centroid_xy": [
+            1165.5676691729323,
+            1026.0075187969924
+          ]
+        }
+      }
+    },
+    {
+      "frame_id": 5,
+      "defects": {}
+    },
+    {
+      "frame_id": 6,
+      "defects": {
+        "batterycap_leftsidewall_outer_00_stain": {
+          "pixels": 490,
+          "pixels_with_depth": 490,
+          "bbox_xyxy": [
+            2063,
+            1167,
+            2100,
+            1218
+          ],
+          "centroid_xy": [
+            2081.0673469387757,
+            1193.5857142857142
+          ]
+        },
+        "batterycap_rightcap_top_00_scratch": {
+          "pixels": 26,
+          "pixels_with_depth": 26,
+          "bbox_xyxy": [
+            936,
+            242,
+            943,
+            252
+          ],
+          "centroid_xy": [
+            937.6153846153846,
+            245.65384615384616
+          ]
+        },
+        "batterycap_leftcap_top_00_scratch": {
+          "pixels": 142,
+          "pixels_with_depth": 142,
+          "bbox_xyxy": [
+            2042,
+            958,
+            2065,
+            983
+          ],
+          "centroid_xy": [
+            2053.056338028169,
+            970.4366197183099
+          ]
+        },
+        "batterycap_mainboard2_top_00_scratch": {
+          "pixels": 162,
+          "pixels_with_depth": 162,
+          "bbox_xyxy": [
+            1757,
+            801,
+            1847,
+            847
+          ],
+          "centroid_xy": [
+            1801.5802469135801,
+            824.074074074074
+          ]
+        }
+      }
+    }
+  ]
+}
