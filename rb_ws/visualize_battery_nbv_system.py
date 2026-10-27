@@ -287,9 +287,19 @@ def crop_on_part(img, frame, K, zoom):
     return img.crop((round(left), round(top), round(left + w), round(top + h)))
 
 
-def cumulative_coverage(normals, visible):
+def saved_coverage_excluded(capture_dir, count):
+    """Surfels the run left out of top/side coverage (older runs: none)."""
+    surf = np.load(capture_dir / "object_occupancy" / "directional_surface_latest.npz")
+    key = "coverage_excluded"
+    return surf[key].astype(bool) if key in surf.files else np.zeros(count, bool)
+
+
+def cumulative_coverage(normals, visible, excluded=None):
     top = normals[:, 2] >= 0.5
     side = np.abs(normals[:, 2]) < 0.5
+    if excluded is not None:
+        top &= ~excluded
+        side &= ~excluded
     rows, cum = [], np.zeros(len(normals), bool)
     for mask in visible:
         cum |= mask
@@ -440,7 +450,7 @@ def sequence_gif(run, candidates, capture_dir, points, normals, visible, out_pat
     """
     from PIL import ImageDraw, ImageFont
 
-    replay = cumulative_coverage(normals, visible)
+    replay = cumulative_coverage(normals, visible, saved_coverage_excluded(capture_dir, len(normals)))
     t = post_preflight_times(run)
     K = np.load(capture_dir / "intrinsic.npy")
     font_path = next(iter(glob.glob("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")), None)
@@ -599,7 +609,7 @@ def main():
     tmp_dir.mkdir(parents=True, exist_ok=True)
 
     points, normals, visible = reconstruct_surfels(run, args.capture_dir)
-    replay = cumulative_coverage(normals, visible)
+    replay = cumulative_coverage(normals, visible, saved_coverage_excluded(args.capture_dir, len(normals)))
     print("frame  pose                        logged top/side    replayed top/side")
     for i, f in enumerate(run["frames"]):
         c = run["coverage"][i]

@@ -1,6 +1,6 @@
 {
-  "status": "coverage_reached",
-  "started_at": "2026-09-29T16:57:57.842833",
+  "status": "frontier_exhausted",
+  "started_at": "2026-10-27T15:36:19.694833",
   "max_capture_count": 10,
   "captured_frame_count": 7,
   "frames": [
@@ -13,283 +13,283 @@
         0.0
       ],
       "occupancy_path": "/home/seungjun/isaac_ws/zivid_capture/object_occupancy/object_occupancy_000000.npz",
-      "unknown_count": 31572,
-      "free_count": 1056,
+      "unknown_count": 31576,
+      "free_count": 1052,
       "occupied_count": 140,
       "ray_count": 140,
-      "elapsed_s": 1.342,
-      "elapsed_excl_render_s": 0.419,
+      "elapsed_s": 1.422,
+      "elapsed_excl_render_s": 0.412,
       "joint_positions_rad": {
-        "base": -1.3939785957336426,
-        "shoulder": 0.24298544228076935,
-        "elbow": 0.8519949316978455,
-        "wrist1": 0.4965137839317322,
-        "wrist2": 1.5707521438598633,
-        "wrist3": -0.1786024123430252
+        "base": -1.3941274881362915,
+        "shoulder": 0.24415215849876404,
+        "elbow": 0.8505069613456726,
+        "wrist1": 0.4968445897102356,
+        "wrist2": 1.5707391500473022,
+        "wrist3": -0.1784694641828537
       },
       "tcp_position": [
-        -0.010580145753920078,
-        -0.5701600313186646,
-        0.6585865616798401
+        -0.01059834286570549,
+        -0.570529580116272,
+        0.6586170196533203
       ],
       "tcp_orientation_xyzw": [
-        0.7142800688743591,
-        0.0006799696711823344,
-        -0.0019418640295043588,
-        0.6998569369316101
+        0.7142587304115295,
+        0.0006748458254151046,
+        -0.0019474003929644823,
+        0.6998786926269531
       ]
     },
     {
       "frame_id": 1,
       "pose_name": "mandatory_minus_x_end",
       "rotation_xyz_deg": [
-        0.589,
+        0.591,
         -43.218,
-        -92.579
+        -92.578
       ],
       "occupancy_path": "/home/seungjun/isaac_ws/zivid_capture/object_occupancy/object_occupancy_000001.npz",
-      "unknown_count": 31545,
-      "free_count": 1075,
+      "unknown_count": 31544,
+      "free_count": 1076,
       "occupied_count": 148,
-      "ray_count": 202,
-      "elapsed_s": 44.068,
-      "elapsed_excl_render_s": 42.474,
+      "ray_count": 200,
+      "elapsed_s": 45.798,
+      "elapsed_excl_render_s": 44.098,
       "joint_positions_rad": {
-        "base": -1.3677362203598022,
-        "shoulder": -0.15727147459983826,
-        "elbow": 1.8946808576583862,
-        "wrist1": -0.8861626386642456,
-        "wrist2": 1.4344391822814941,
-        "wrist3": -1.725259780883789
+        "base": -1.3665834665298462,
+        "shoulder": -0.15719133615493774,
+        "elbow": 1.8938134908676147,
+        "wrist1": -0.8849920034408569,
+        "wrist2": 1.4345186948776245,
+        "wrist3": -1.7274911403656006
       },
       "tcp_position": [
-        -0.027241526171565056,
-        -0.48179882764816284,
-        0.5211439728736877
+        -0.026662301272153854,
+        -0.48190709948539734,
+        0.5214015245437622
       ],
       "tcp_orientation_xyzw": [
-        -0.2877722978591919,
-        0.6460446119308472,
-        0.28935497999191284,
-        -0.645048201084137
-      ],
-      "visible_entropy": 484.0,
-      "expected_entropy": 484.0,
-      "visible_unknown_count": 484,
-      "visible_free_count": 63,
-      "visible_occupied_count": 25,
-      "visible_voxel_count": 572,
-      "expected_unknown_visible_count": 484.0
-    },
-    {
-      "frame_id": 2,
-      "pose_name": "local_x_neg_30deg",
-      "rotation_xyz_deg": [
-        -30.0,
-        0.0,
-        0.0
-      ],
-      "occupancy_path": "/home/seungjun/isaac_ws/zivid_capture/object_occupancy/object_occupancy_000002.npz",
-      "unknown_count": 30966,
-      "free_count": 1639,
-      "occupied_count": 163,
-      "ray_count": 355,
-      "elapsed_s": 47.21,
-      "elapsed_excl_render_s": 44.94,
-      "joint_positions_rad": {
-        "base": -1.3923841714859009,
-        "shoulder": 1.1620014905929565,
-        "elbow": -1.120545744895935,
-        "wrist1": 1.092197299003601,
-        "wrist2": 1.4790278673171997,
-        "wrist3": -0.18482235074043274
-      },
-      "tcp_position": [
-        -0.02054845727980137,
-        -0.5598238706588745,
-        0.685720682144165
-      ],
-      "tcp_orientation_xyzw": [
-        0.5331732034683228,
-        -0.00576999643817544,
-        -0.01272832602262497,
-        0.8458906412124634
-      ],
-      "visible_entropy": 1491.0,
-      "expected_entropy": 1491.0,
-      "visible_unknown_count": 1491,
-      "visible_free_count": 161,
-      "visible_occupied_count": 50,
-      "visible_voxel_count": 1702,
-      "expected_unknown_visible_count": 1491.0
-    },
-    {
-      "frame_id": 3,
-      "pose_name": "mandatory_top_frontal",
-      "rotation_xyz_deg": [
-        40.421,
-        0.158,
-        -0.245
-      ],
-      "occupancy_path": "/home/seungjun/isaac_ws/zivid_capture/object_occupancy/object_occupancy_000003.npz",
-      "unknown_count": 30403,
-      "free_count": 2202,
-      "occupied_count": 163,
-      "ray_count": 426,
-      "elapsed_s": 49.037,
-      "elapsed_excl_render_s": 46.156,
-      "joint_positions_rad": {
-        "base": -1.4653431177139282,
-        "shoulder": 0.7045633792877197,
-        "elbow": 0.4534381330013275,
-        "wrist1": 1.1496654748916626,
-        "wrist2": 1.635283350944519,
-        "wrist3": -0.09618671983480453
-      },
-      "tcp_position": [
-        -0.03531390056014061,
-        -0.658858060836792,
-        0.5007150769233704
-      ],
-      "tcp_orientation_xyzw": [
-        0.9147258400917053,
-        -0.0006938292644917965,
-        -0.009615863673388958,
-        0.40396004915237427
+        -0.2879578769207001,
+        0.6465303301811218,
+        0.2894122302532196,
+        -0.6444527506828308
       ],
       "visible_entropy": 275.0,
       "expected_entropy": 275.0,
       "visible_unknown_count": 275,
-      "visible_free_count": 102,
-      "visible_occupied_count": 64,
-      "visible_voxel_count": 441,
+      "visible_free_count": 0,
+      "visible_occupied_count": 0,
+      "visible_voxel_count": 275,
       "expected_unknown_visible_count": 275.0
     },
     {
-      "frame_id": 4,
-      "pose_name": "mandatory_plus_x_end",
+      "frame_id": 2,
+      "pose_name": "mandatory_top_frontal",
       "rotation_xyz_deg": [
-        -0.106,
-        41.68,
-        91.508
+        40.424,
+        0.158,
+        -0.244
       ],
-      "occupancy_path": "/home/seungjun/isaac_ws/zivid_capture/object_occupancy/object_occupancy_000004.npz",
-      "unknown_count": 30209,
-      "free_count": 2394,
-      "occupied_count": 165,
-      "ray_count": 525,
-      "elapsed_s": 50.987,
-      "elapsed_excl_render_s": 47.496,
+      "occupancy_path": "/home/seungjun/isaac_ws/zivid_capture/object_occupancy/object_occupancy_000002.npz",
+      "unknown_count": 30978,
+      "free_count": 1642,
+      "occupied_count": 148,
+      "ray_count": 271,
+      "elapsed_s": 48.09,
+      "elapsed_excl_render_s": 45.715,
       "joint_positions_rad": {
-        "base": -1.3657779693603516,
-        "shoulder": -0.1877489686012268,
-        "elbow": 1.8936359882354736,
-        "wrist1": -0.8324853777885437,
-        "wrist2": 1.432904601097107,
-        "wrist3": 1.3924999237060547
+        "base": -1.4559459686279297,
+        "shoulder": 0.697595477104187,
+        "elbow": 0.46544307470321655,
+        "wrist1": 1.1434601545333862,
+        "wrist2": 1.637895107269287,
+        "wrist3": -0.1254185289144516
       },
       "tcp_position": [
-        -0.028669539839029312,
-        -0.47115492820739746,
-        0.5279294848442078
+        -0.02902057021856308,
+        -0.6578543782234192,
+        0.5008364319801331
       ],
       "tcp_orientation_xyzw": [
-        0.30023711919784546,
-        0.6361997127532959,
-        0.29060181975364685,
-        0.6485816836357117
+        0.9143407344818115,
+        -0.003529399400576949,
+        -0.02050049416720867,
+        0.4044110178947449
       ],
-      "visible_entropy": 413.0,
-      "expected_entropy": 413.0,
-      "visible_unknown_count": 413,
-      "visible_free_count": 71,
-      "visible_occupied_count": 25,
-      "visible_voxel_count": 509,
-      "expected_unknown_visible_count": 413.0
+      "visible_entropy": 43.0,
+      "expected_entropy": 43.0,
+      "visible_unknown_count": 43,
+      "visible_free_count": 0,
+      "visible_occupied_count": 0,
+      "visible_voxel_count": 43,
+      "expected_unknown_visible_count": 43.0
+    },
+    {
+      "frame_id": 3,
+      "pose_name": "local_y_neg_30deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -30.0,
+        0.0
+      ],
+      "occupancy_path": "/home/seungjun/isaac_ws/zivid_capture/object_occupancy/object_occupancy_000003.npz",
+      "unknown_count": 30522,
+      "free_count": 2093,
+      "occupied_count": 153,
+      "ray_count": 404,
+      "elapsed_s": 49.881,
+      "elapsed_excl_render_s": 46.883,
+      "joint_positions_rad": {
+        "base": -1.6160811185836792,
+        "shoulder": 0.8733125329017639,
+        "elbow": -0.2937067747116089,
+        "wrist1": 1.046891212463379,
+        "wrist2": 2.0379016399383545,
+        "wrist3": 0.02776210568845272
+      },
+      "tcp_position": [
+        -0.09633626788854599,
+        -0.6424587965011597,
+        0.6740840077400208
+      ],
+      "tcp_orientation_xyzw": [
+        0.7007451057434082,
+        -0.17475739121437073,
+        0.15359506011009216,
+        0.6744069457054138
+      ],
+      "visible_entropy": 61.0,
+      "expected_entropy": 61.0,
+      "visible_unknown_count": 61,
+      "visible_free_count": 0,
+      "visible_occupied_count": 0,
+      "visible_voxel_count": 61,
+      "expected_unknown_visible_count": 61.0
+    },
+    {
+      "frame_id": 4,
+      "pose_name": "local_y_neg_15deg",
+      "rotation_xyz_deg": [
+        0.0,
+        -15.0,
+        0.0
+      ],
+      "occupancy_path": "/home/seungjun/isaac_ws/zivid_capture/object_occupancy/object_occupancy_000004.npz",
+      "unknown_count": 30272,
+      "free_count": 2343,
+      "occupied_count": 153,
+      "ray_count": 543,
+      "elapsed_s": 51.593,
+      "elapsed_excl_render_s": 47.976,
+      "joint_positions_rad": {
+        "base": -1.5388844013214111,
+        "shoulder": 0.7856688499450684,
+        "elbow": -0.14761731028556824,
+        "wrist1": 0.9496419429779053,
+        "wrist2": 1.811154842376709,
+        "wrist3": -0.025731507688760757
+      },
+      "tcp_position": [
+        -0.06712080538272858,
+        -0.6456477642059326,
+        0.6850467324256897
+      ],
+      "tcp_orientation_xyzw": [
+        0.7103468775749207,
+        -0.08311422914266586,
+        0.08601842075586319,
+        0.6936138868331909
+      ],
+      "visible_entropy": 41.0,
+      "expected_entropy": 41.0,
+      "visible_unknown_count": 41,
+      "visible_free_count": 0,
+      "visible_occupied_count": 0,
+      "visible_voxel_count": 41,
+      "expected_unknown_visible_count": 41.0
     },
     {
       "frame_id": 5,
-      "pose_name": "local_x_pos_150deg",
+      "pose_name": "local_x_pos_15deg",
       "rotation_xyz_deg": [
-        150.0,
+        15.0,
         0.0,
         0.0
       ],
       "occupancy_path": "/home/seungjun/isaac_ws/zivid_capture/object_occupancy/object_occupancy_000005.npz",
-      "unknown_count": 29436,
-      "free_count": 3156,
-      "occupied_count": 176,
-      "ray_count": 684,
-      "elapsed_s": 54.01,
-      "elapsed_excl_render_s": 49.909,
+      "unknown_count": 29728,
+      "free_count": 2887,
+      "occupied_count": 153,
+      "ray_count": 673,
+      "elapsed_s": 53.347,
+      "elapsed_excl_render_s": 49.108,
       "joint_positions_rad": {
-        "base": -1.439236044883728,
-        "shoulder": 0.8069967031478882,
-        "elbow": 1.2991161346435547,
-        "wrist1": -1.0446504354476929,
-        "wrist2": -1.6374164819717407,
-        "wrist3": -3.0030465126037598
+        "base": -1.4591593742370605,
+        "shoulder": 0.5896897315979004,
+        "elbow": 0.29625239968299866,
+        "wrist1": 0.9479883313179016,
+        "wrist2": 1.653669834136963,
+        "wrist3": -0.15656587481498718
       },
       "tcp_position": [
-        -0.012362045235931873,
-        -0.7013814449310303,
-        0.39772269129753113
+        -0.0327872559428215,
+        -0.6293598413467407,
+        0.6448282599449158
       ],
       "tcp_orientation_xyzw": [
-        0.8633854389190674,
-        -0.006932148244231939,
-        0.009711652994155884,
-        -0.5044037699699402
+        0.7958717942237854,
+        -0.03596078231930733,
+        -0.0031907500233501196,
+        0.6043879389762878
       ],
-      "visible_entropy": 1290.0,
-      "expected_entropy": 1290.0,
-      "visible_unknown_count": 1290,
-      "visible_free_count": 330,
-      "visible_occupied_count": 52,
-      "visible_voxel_count": 1672,
-      "expected_unknown_visible_count": 1290.0
+      "visible_entropy": 47.0,
+      "expected_entropy": 47.0,
+      "visible_unknown_count": 47,
+      "visible_free_count": 0,
+      "visible_occupied_count": 0,
+      "visible_voxel_count": 47,
+      "expected_unknown_visible_count": 47.0
     },
     {
       "frame_id": 6,
-      "pose_name": "tilt_x_neg_30_z_neg_45",
+      "pose_name": "mandatory_plus_x_end",
       "rotation_xyz_deg": [
-        -30.0,
-        0.0,
-        -45.0
+        -0.102,
+        41.68,
+        91.509
       ],
       "occupancy_path": "/home/seungjun/isaac_ws/zivid_capture/object_occupancy/object_occupancy_000006.npz",
-      "unknown_count": 28906,
-      "free_count": 3686,
-      "occupied_count": 176,
-      "ray_count": 837,
-      "elapsed_s": 56.482,
-      "elapsed_excl_render_s": 51.775,
+      "unknown_count": 29569,
+      "free_count": 3036,
+      "occupied_count": 163,
+      "ray_count": 776,
+      "elapsed_s": 55.61,
+      "elapsed_excl_render_s": 50.695,
       "joint_positions_rad": {
-        "base": -1.2389804124832153,
-        "shoulder": 0.18634086847305298,
-        "elbow": 0.9845553636550903,
-        "wrist1": 0.2348002940416336,
-        "wrist2": 1.108080267906189,
-        "wrist3": -1.1081798076629639
+        "base": -1.3624540567398071,
+        "shoulder": -0.1883978694677353,
+        "elbow": 1.8949609994888306,
+        "wrist1": -0.8310970067977905,
+        "wrist2": 1.4333546161651611,
+        "wrist3": 1.3952590227127075
       },
       "tcp_position": [
-        0.03799569606781006,
-        -0.582610547542572,
-        0.6686111092567444
+        -0.027127673849463463,
+        -0.4709348678588867,
+        0.5273106694221497
       ],
       "tcp_orientation_xyzw": [
-        0.4806059002876282,
-        -0.1879478096961975,
-        -0.35606148838996887,
-        0.7790467143058777
+        0.29937443137168884,
+        0.6373571753501892,
+        0.29283544421195984,
+        0.6468371152877808
       ],
-      "visible_entropy": 1085.0,
-      "expected_entropy": 1085.0,
-      "visible_unknown_count": 1085,
-      "visible_free_count": 408,
-      "visible_occupied_count": 67,
-      "visible_voxel_count": 1560,
-      "expected_unknown_visible_count": 1085.0
+      "visible_entropy": 251.0,
+      "expected_entropy": 251.0,
+      "visible_unknown_count": 251,
+      "visible_free_count": 0,
+      "visible_occupied_count": 0,
+      "visible_voxel_count": 251,
+      "expected_unknown_visible_count": 251.0
     }
   ]
 }

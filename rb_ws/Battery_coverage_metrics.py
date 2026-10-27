@@ -823,6 +823,176 @@ def sample_directional_surfels(
     }
 
 
+def _ray_hits_facing_surfel(tree, normals, origins, directions, max_range, step, radius):
+    """True where a ray (origin + s*direction, s >= 2*radius) meets a surfel facing back at it.
+
+    Only surfels with normal . direction < -0.5 count, so a ray grazing a
+    parallel surface (a wall it runs along, a lip just above it) is no hit.
+    """
+    padded = np.vstack([normals, np.zeros((1, 3))])  # index len(points) = no neighbour
+    hit = np.zeros(len(origins), dtype=bool)
+    for distance in np.arange(2.0 * radius, max_range, step):
+        pending = np.flatnonzero(~hit)
+        if len(pending) == 0:
+            break
+        _, indices = tree.query(
+            origins[pending] + distance * directions[pending],
+            k=8,
+            distance_upper_bound=radius,
+        )
+        facing = np.einsum("ikj,ij->ik", padded[indices], directions[pending])
+        hit[pending[np.min(facing, axis=1) < -0.5]] = True
+    return hit
+
+
+def inner_side_mask(points, normals, step=0.0015, radius=0.0012):
+    """Side surfels on the inside of an overhang, e.g. the legs' inner faces.
+
+    A side surfel (|n_z| < 0.5) counts as inner when an overhang covers it
+    (its +Z ray meets a downward-facing surfel) AND its own normal ray meets
+    a wall facing back at it, i.e. it faces another wall under the overhang.
+    The battery cap's legs face each other under the top plate (inner); the
+    legs' +/-Y faces and the plate's edges face open space (outer).
+    Needs scipy; returns an all-False mask without it.
+    """
+    points = np.asarray(points, dtype=np.float64)
+    normals = np.asarray(normals, dtype=np.float64)
+    side = np.flatnonzero(np.abs(normals[:, 2]) < 0.5)
+    mask = np.zeros(len(points), dtype=bool)
+    if len(side) == 0:
+        return mask
+    try:
+        from scipy.spatial import cKDTree
+    except (ImportError, ModuleNotFoundError):
+        return mask
+
+    tree = cKDTree(points)  # all surfels: the rays must meet any part surface
+    extent = points.max(axis=0) - points.min(axis=0)
+    up = np.tile([0.0, 0.0, 1.0], (len(side), 1))
+    covered = side[
+        _ray_hits_facing_surfel(
+            tree, normals, points[side], up, float(extent[2]) + step, step, radius
+        )
+    ]
+    facing = _ray_hits_facing_surfel(
+        tree,
+        normals,
+        points[covered],
+        normals[covered],
+        float(np.linalg.norm(extent)),
+        step,
+        radius,
+    )
+    mask[covered[facing]] = True
+    # A sparse sample can miss a ray hit; let coplanar neighbours vote.
+    vote_radius = 0.004
+    for index, neighbours in zip(side, tree.query_ball_point(points[side], r=vote_radius)):
+        neighbours = np.asarray(neighbours, dtype=np.int64)
+        coplanar = neighbours[
+            (normals[neighbours] @ normals[index] > 0.95)
+            & (np.abs((points[neighbours] - points[index]) @ normals[index]) < 0.0005)
+        ]
+        if len(coplanar) and np.count_nonzero(mask[coplanar]) * 2 > len(coplanar):
+            mask[index] = True
+    return mask
+
+
+def thin_side_mask(points, normals, radius=0.01, min_width=0.008, band=0.0015, plane_tol=0.0005):
+    """Side surfels on a strip narrower than ``min_width``: edges, steps, rims.
+
+    For each side surfel, the coplanar surfels within ``radius`` (same normal,
+    within ``plane_tol`` of its plane) are measured along a vertical and a
+    horizontal line through it (``band`` wide). If either line is shorter
+    than ``min_width`` the surfel sits on a thin strip: the plate's 2-5 mm
+    edges and the top's step walls; the legs' 20 x 70 mm end faces are not.
+    Needs scipy; returns an all-False mask without it.
+    """
+    points = np.asarray(points, dtype=np.float64)
+    normals = np.asarray(normals, dtype=np.float64)
+    side = np.flatnonzero(np.abs(normals[:, 2]) < 0.5)
+    mask = np.zeros(len(points), dtype=bool)
+    if len(side) == 0:
+        return mask
+    try:
+        from scipy.spatial import cKDTree
+    except (ImportError, ModuleNotFoundError):
+        return mask
+
+    tree = cKDTree(points[side])
+    for index, neighbours in zip(side, tree.query_ball_point(points[side], r=radius)):
+        neighbours = side[np.asarray(neighbours, dtype=np.int64)]
+        normal = normals[index]
+        offsets = points[neighbours] - points[index]
+        coplanar = (normals[neighbours] @ normal > 0.95) & (np.abs(offsets @ normal) < plane_tol)
+        offsets = offsets[coplanar]
+        vertical = np.array([0.0, 0.0, 1.0]) - normal[2] * normal
+        vertical /= np.linalg.norm(vertical)
+        along_v = offsets @ vertical
+        along_h = offsets @ np.cross(normal, vertical)
+        column = along_v[np.abs(along_h) < band]
+        row = along_h[np.abs(along_v) < band]
+        if np.ptp(column) < min_width or np.ptp(row) < min_width:
+            mask[index] = True
+    return mask
+
+
+def buried_top_mask(points, normals, radius=0.0012, min_gap=0.0005):
+    """Top surfels with another horizontal surface of the part right above them.
+
+    The CAD keeps overlapping layers: under each end pad (top at 50.35 mm)
+    the plate top (50.1) and pocket floor (49.9) are still there, and a 1 mm
+    sheet lies on the centre. Such a +Z surfel has a surfel with |n_z| > 0.9
+    within ``radius`` in XY and more than ``min_gap`` higher; no camera can
+    see it, yet the 3 mm depth match marked the layers within 3 mm as seen.
+    Needs scipy; returns an all-False mask without it.
+    """
+    points = np.asarray(points, dtype=np.float64)
+    normals = np.asarray(normals, dtype=np.float64)
+    top = np.flatnonzero(normals[:, 2] >= 0.5)
+    flat = np.flatnonzero(np.abs(normals[:, 2]) > 0.9)
+    mask = np.zeros(len(points), dtype=bool)
+    if len(top) == 0 or len(flat) == 0:
+        return mask
+    try:
+        from scipy.spatial import cKDTree
+    except (ImportError, ModuleNotFoundError):
+        return mask
+
+    tree = cKDTree(points[flat, :2])
+    for index, neighbours in zip(top, tree.query_ball_point(points[top, :2], r=radius)):
+        if neighbours and np.any(points[flat[neighbours], 2] > points[index, 2] + min_gap):
+            mask[index] = True
+    return mask
+
+
+def coverage_exclusion_masks(points, normals):
+    """Surfels left out of top/side coverage.
+
+    Side counts only the legs' outer faces:
+    * ``inner``: legs' inner faces under the top plate (inner_side_mask)
+    * ``y_facing``: every +/-Y facing side surfel - on this cap they are thin
+      lines (plate edges, step walls, the legs' 3 mm wide Y faces)
+    * ``thin``: any other strip narrower than 8 mm (thin_side_mask), e.g. the
+      top's X step walls and the plate's end wings beside the legs
+    Top counts only surfaces a camera can reach:
+    * ``buried_top``: CAD layers under another top surface (buried_top_mask)
+    ``excluded`` is the union.
+    """
+    normals = np.asarray(normals, dtype=np.float64)
+    side = np.abs(normals[:, 2]) < 0.5
+    inner = inner_side_mask(points, normals)
+    y_facing = side & (np.abs(normals[:, 1]) > np.abs(normals[:, 0])) & ~inner
+    thin = thin_side_mask(points, normals) & ~inner & ~y_facing
+    buried_top = buried_top_mask(points, normals)
+    return {
+        "inner": inner,
+        "y_facing": y_facing,
+        "thin": thin,
+        "buried_top": buried_top,
+        "excluded": inner | y_facing | thin | buried_top,
+    }
+
+
 def _nearest_point_distances(query_points, reference_points, radius):
     """Nearest distance with scipy acceleration and a numpy-only fallback."""
     try:
@@ -947,13 +1117,24 @@ def update_directional_surfel_observations(
 
 
 def directional_surface_coverage(surface_model):
-    """전체 및 object-local +/-Z/side 방향별 surfel coverage."""
+    """전체 및 object-local +/-Z/side 방향별 surfel coverage.
+
+    surface_model["coverage_excluded"](coverage_exclusion_masks)가 있으면
+    top/side 분모와 분자에서 뺀다: side는 다리 바깥면만, top은 카메라가 닿는
+    (다른 층에 묻히지 않은) 면만. 뺀 surfel은 result["excluded"]로 따로 준다.
+    """
     normals = np.asarray(surface_model["normals"], dtype=np.float64)
     observed = np.asarray(surface_model["observed"], dtype=bool)
+    excluded = surface_model.get("coverage_excluded")
+    excluded = (
+        np.zeros(len(normals), dtype=bool)
+        if excluded is None
+        else np.asarray(excluded, dtype=bool)
+    )
     groups = {
-        "top(+Z)": normals[:, 2] >= 0.5,
+        "top(+Z)": (normals[:, 2] >= 0.5) & ~excluded,
         "bottom(-Z)": normals[:, 2] <= -0.5,
-        "side": np.abs(normals[:, 2]) < 0.5,
+        "side": (np.abs(normals[:, 2]) < 0.5) & ~excluded,
     }
 
     def summarize(mask):
@@ -969,4 +1150,5 @@ def directional_surface_coverage(surface_model):
     result["groups"] = {
         name: summarize(mask) for name, mask in groups.items()
     }
+    result["excluded"] = summarize(excluded)
     return result

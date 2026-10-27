@@ -1154,6 +1154,15 @@ def save_zivid_capture(
                 target_points_object,
                 dtype=np.float32,
             ).copy(),
+            # Full-frame inputs for the fine frontier map, which carves with
+            # every depth ray (background included), not only the ROI crop.
+            "depth": depth,
+            "part_pixel_mask": surface_pixel_mask,
+            "object_from_camera_cv": np.asarray(
+                object_from_camera,
+                dtype=np.float64,
+            ).copy(),
+            "intrinsic": np.asarray(intrinsic_matrix, dtype=np.float64),
         }
     )
 

@@ -1,0 +1,75 @@
+run 20261027_122248: 7 frames, top 17566 / side 4554 surfels
+[검증] 오프라인 재구성 누적 커버리지 vs 로그 (top / side; side는 다리 바깥면만 - 2026-10-27 오후 이전 로그의 side는 모든 옆면 기준이라 다를 수 있음)
+  0 neutral                  offline  76.6 /   0.0   log  76.6 /  44.0
+  1 mandatory_minus_x_end    offline  76.6 /  49.7   log  76.6 /  61.0
+  2 mandatory_top_frontal    offline  77.7 /  49.7   log  77.7 /  61.1
+  3 local_x_pos_15deg        offline  77.8 /  49.7   log  77.8 /  61.1
+  4 local_y_pos_30deg        offline  81.6 /  99.4   log  81.6 /  79.1
+  5 mandatory_plus_x_end     offline  81.6 / 100.0   log  81.6 /  79.3
+  6 local_x_neg_30deg        offline  89.0 / 100.0   log  89.0 /  82.9
+
+[1] 필수 3개 뷰의 기여 (frame 0 대비 추가 / 다른 뷰가 대신 못 보는 고유분)
+  mandatory_minus_x_end    frame0 대비 + 2267  고유 + 2263  +Z:   0  +X:   0  -X:2263  +Y:   0  -Y:   0
+  mandatory_top_frontal    frame0 대비 +  192  고유 +  185  +Z: 185  +X:   0  -X:   0  +Y:   0  -Y:   0
+  mandatory_plus_x_end     frame0 대비 + 2294  고유 + 2291  +Z:   0  +X:2291  -X:   0  +Y:   0  -Y:   0
+  기준선(frame 0 + 필수 3): top 77.7%  side 100.0%  top+side 82.3%
+  남은 영역(residual): +Z 3921/17566, +X 0/2291, -X 0/2263, +Y 0/0, -Y 0/0  = 3921 surfels
+  90% 도달까지 필요: top +2165, side +0 surfels
+
+[검증] z-buffer GT 예측 (gripper 점 6622개 포함, base/grasp fit 4.1 mm)
+  모든 촬영 뷰에서 예측상 보이는데 한 번도 관측 안 된 surfel(관측 불가로 처리): top 1369, side 0
+  남은 영역 기준 leave-one-out: 실제 Δ vs 예측 Δ (예측은 그 뷰를 뺀 나머지로 관측 불가 판정)
+  neutral                  전체 recall 0.90 precision 0.98 | 남은영역 실제     0 예측   165
+  mandatory_minus_x_end    전체 recall 0.99 precision 1.00 | 남은영역 실제     0 예측     0
+  mandatory_top_frontal    전체 recall 0.95 precision 0.70 | 남은영역 실제     0 예측   828
+  local_x_pos_15deg        전체 recall 0.95 precision 0.94 | 남은영역 실제    19 예측   494
+  local_y_pos_30deg        전체 recall 0.88 precision 0.98 | 남은영역 실제   685 예측   465
+  mandatory_plus_x_end     전체 recall 0.99 precision 1.00 | 남은영역 실제     0 예측     0
+  local_x_neg_30deg        전체 recall 0.95 precision 0.92 | 남은영역 실제  1897 예측  1664
+
+[2] frontier (필수 우선 순서 재현): frame 0 = 512, 필수 3개 후 = 202, 종료 기준 < 77
+
+[3] 필수 3개 이후 실제 촬영된 뷰의 남은 영역 관측 (실제 순서, 누적)
+  뷰                        frontier예측 frontier해소 | GT남은영역 Δ   %잔여     +Z    +X    -X    +Y    -Y | top   side  | 시간(s) Δ/s
+  local_x_pos_15deg                47          2 |         19    0.5%     19     0     0     0     0 |  77.8 100.0 |  1.42     13
+  local_y_pos_30deg                27         11 |        676   17.2%    676     0     0     0     0 |  81.6 100.0 |  0.90    753
+  local_x_neg_30deg                58         25 |       1291   32.9%   1291     0     0     0     0 |  89.0 100.0 |  1.11   1165
+  -> 최종 top 89.0% side 100.0%, 남은 frontier 164
+
+[4] 필수 3개 직후 후보 18개: frontier 가시 수 vs GT 남은 영역 예측 (Spearman rho = 0.20)
+  후보                       localZ frontier  GT남은    +Z    +X    -X    +Y    -Y  이동(s)
+  local_x_pos_120deg          0.38      103   1853  1853     0     0     0     0   2.59
+  local_x_neg_30deg           0.19       70   1770  1770     0     0     0     0   1.35
+  tilt_x_pos_45_z_pos_90      0.40       35   1631  1631     0     0     0     0   1.72
+  tilt_x_neg_30_z_neg_45      0.24       61   1445  1445     0     0     0     0   1.93
+  tilt_x_neg_30_z_pos_45      0.26       50   1367  1367     0     0     0     0   1.10
+  tilt_y_pos_30_z_pos_45      0.23       31   1350  1350     0     0     0     0   1.17
+  local_x_neg_15deg           0.38       53   1314  1314     0     0     0     0   1.35
+  tilt_y_neg_30_z_neg_45      0.26       35   1272  1272     0     0     0     0   1.93
+  tilt_x_neg_45_z_pos_90      0.45        5   1006  1006     0     0     0     0   1.77
+  local_y_pos_45deg           0.40       37   1003  1003     0     0     0     0   1.86
+  local_y_neg_45deg           0.46       37    815   815     0     0     0     0   1.24
+  local_y_neg_30deg           0.55       36    523   523     0     0     0     0   1.39
+  local_y_pos_30deg           0.55       28    498   498     0     0     0     0   1.48
+  local_x_pos_15deg           0.79       47    375   375     0     0     0     0   1.41
+  local_y_neg_15deg           0.60       27    362   362     0     0     0     0   1.59
+  local_y_pos_15deg           0.58       32    296   296     0     0     0     0   1.74
+  diag_x_neg_30_y_pos_30      0.04       70      0     0     0     0     0     0   1.35
+  diag_x_neg_30_y_neg_30      0.08       85      0     0     0     0     0     0   1.40
+
+[5] 필수 3개 이후 greedy 계획 비교 (GT는 z-buffer 예측, 시간은 필수 3개 완료 시점부터)
+  GT 남은영역 / 시간 (상한선):
+    local_x_neg_30deg          top  87.8% side 100.0%  t= 1.35s
+    tilt_y_pos_30_z_pos_45     top  89.0% side 100.0%  t= 2.29s
+    local_x_pos_120deg         top  89.6% side 100.0%  t= 4.45s
+    tilt_x_pos_45_z_pos_90     top  89.7% side 100.0%  t= 6.84s
+    tilt_y_neg_30_z_neg_45     top  89.8% side 100.0%  t= 8.32s
+    tilt_x_neg_45_z_pos_90     top  89.9% side 100.0%  t=10.11s
+    local_x_pos_15deg          top  89.9% side 100.0%  t=11.56s
+    local_y_neg_15deg          top  90.0% side 100.0%  t=12.54s
+    local_y_pos_15deg          top  90.0% side 100.0%  t=13.43s
+    local_y_neg_30deg          top  90.0% side 100.0%  t=14.48s
+  frontier / 시간:
+    diag_x_neg_30_y_neg_30     top  77.7% side 100.0%  t= 1.40s
+  frontier 개수만 (현재 방식에 가까움):
+    local_x_pos_120deg         top  88.2% side 100.0%  t= 2.59s

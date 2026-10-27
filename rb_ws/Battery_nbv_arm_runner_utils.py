@@ -375,11 +375,13 @@ def _coverage_goal_counts(surface_model, targets):
     """Return bit masks and absolute surfel targets for route planning."""
 
     normals = np.asarray(surface_model["normals"], dtype=np.float64)
+    excluded = surface_model.get("coverage_excluded")
+    outer = np.ones(len(normals), dtype=bool) if excluded is None else ~np.asarray(excluded, dtype=bool)
     group_arrays = {
         "overall": np.ones(len(normals), dtype=bool),
-        "top": normals[:, 2] >= 0.5,
+        "top": (normals[:, 2] >= 0.5) & outer,
         "bottom": normals[:, 2] <= -0.5,
-        "side": np.abs(normals[:, 2]) < 0.5,
+        "side": (np.abs(normals[:, 2]) < 0.5) & outer,
     }
     group_bits = {
         name: _boolean_mask_to_bits(mask)
@@ -1014,19 +1016,24 @@ QUALITY_FACE_NORMALS = {
 }
 
 
-def quality_face_group_masks(normals, group_names):
+def quality_face_group_masks(normals, group_names, excluded=None):
     """Split surfels into +Z and four side faces by their dominant normal axis.
 
     The plain side group mixes the long +/-Y faces with the X end faces, so a
     side percentage can be met without ever facing an end face (the 0/5
     recall run saw both end-face defects only at 66-80 deg incidence).
+    ``excluded`` (coverage_exclusion_masks: legs' inner faces, +/-Y faces,
+    thin strips, buried top layers) is left out, so +/-Y can come back empty.
     """
 
     normals = np.asarray(normals, dtype=np.float64)
-    side = np.abs(normals[:, 2]) < 0.5
+    keep = np.ones(len(normals), dtype=bool)
+    if excluded is not None:
+        keep = ~np.asarray(excluded, dtype=bool)
+    side = (np.abs(normals[:, 2]) < 0.5) & keep
     x_dominant = np.abs(normals[:, 0]) >= np.abs(normals[:, 1])
     masks = {
-        "+Z": normals[:, 2] >= 0.5,
+        "+Z": (normals[:, 2] >= 0.5) & keep,
         "+X": side & x_dominant & (normals[:, 0] > 0.0),
         "-X": side & x_dominant & (normals[:, 0] <= 0.0),
         "+Y": side & ~x_dominant & (normals[:, 1] > 0.0),
@@ -1820,13 +1827,49 @@ def build_directional_surface_model(
         samples=sample_count,
         seed=0,
     )
+    try:
+        from rb_ws.Battery_coverage_metrics import coverage_exclusion_masks
+    except ModuleNotFoundError:
+        from Battery_coverage_metrics import coverage_exclusion_masks
+    # side counts the legs' outer faces only (the legs' inner faces, the thin
+    # +/-Y lines and other < 8 mm strips leave it); top counts only surfaces
+    # not buried under another CAD layer.
+    start = time.perf_counter()
+    masks = coverage_exclusion_masks(model["points"], model["normals"])
+    model["coverage_excluded"] = masks["excluded"]
+    normals = np.asarray(model["normals"])
+    side = np.abs(normals[:, 2]) < 0.5
+    top = normals[:, 2] >= 0.5
     print(
         log_prefix,
         "방향성 surface 분모:",
         f"{len(model['points'])} surfels,",
-        f"실제 표면적 {model['total_area'] * 1e4:.1f} cm2",
+        f"실제 표면적 {model['total_area'] * 1e4:.1f} cm2,",
+        f"top은 묻힌 층 제외 {int((top & ~masks['excluded']).sum())}/{int(top.sum())}",
+        f"(묻힌 층 {int(masks['buried_top'].sum())}),",
+        f"side는 다리 바깥면만 {int((side & ~masks['excluded']).sum())}/{int(side.sum())}",
+        f"(제외: 다리 안쪽 {int(masks['inner'].sum())},",
+        f"+/-Y 얇은 면 {int(masks['y_facing'].sum())},",
+        f"기타 8mm 미만 띠 {int(masks['thin'].sum())});",
+        f"{time.perf_counter() - start:.2f}s",
     )
     return model
+
+
+def _load_frontier_tools():
+    try:
+        import rb_ws.Battery_frontier_map_20261027 as module
+    except ModuleNotFoundError:
+        import Battery_frontier_map_20261027 as module
+    return module
+
+
+def _last_surface_observation():
+    try:
+        from rb_ws.Zivid_capture_utils import LAST_TARGET_SURFACE_OBSERVATION
+    except ModuleNotFoundError:
+        from Zivid_capture_utils import LAST_TARGET_SURFACE_OBSERVATION
+    return LAST_TARGET_SURFACE_OBSERVATION
 
 
 def update_directional_surface_from_last_capture(
@@ -1903,6 +1946,10 @@ def save_directional_surface_model(
         "points": np.asarray(surface_model["points"], dtype=np.float32),
         "normals": np.asarray(surface_model["normals"], dtype=np.float32),
         "observed": np.asarray(surface_model["observed"], dtype=bool),
+        "coverage_excluded": np.asarray(
+            surface_model.get("coverage_excluded", np.zeros(len(surface_model["points"]))),
+            dtype=bool,
+        ),
         "total_area": np.float64(surface_model["total_area"]),
         "frame_id": np.int32(frame_id),
     }
@@ -2433,6 +2480,32 @@ def run_nbv_capture_sequence_with_arm(
     # top/side 목표를 넘으면 필수 node 잔여나 quality 부족과 무관하게 즉시
     # 종료한다. ACCEPTANCE도 coverage + 시간만 보고 나머지는 참고로 출력.
     imsi_stop_at_coverage = _env_flag("BATTERY_IMSI_STOP_AT_COVERAGE", False)
+    # Mesh-free decisions (Battery_frontier_map_20261027): NBV gain = visible
+    # frontier voxels of a 2.5 mm map carved with every depth ray; stop when
+    # no remaining candidate sees enough frontier. GT coverage is reported.
+    imsi_frontier_enabled = _env_flag("BATTERY_IMSI_FRONTIER_MAP", False)
+    imsi_frontier_leaf_m = max(5e-4, float(os.environ.get(
+        "BATTERY_IMSI_FRONTIER_LEAF_M", "0.0025"
+    )))
+    imsi_frontier_pixel_stride = max(1, int(os.environ.get(
+        "BATTERY_IMSI_FRONTIER_PIXEL_STRIDE", "6"
+    )))
+    imsi_frontier_margin_m = max(0.0, float(os.environ.get(
+        "BATTERY_IMSI_FRONTIER_MARGIN_M", "0.01"
+    )))
+    imsi_frontier_stop_ratio = max(0.0, float(os.environ.get(
+        "BATTERY_IMSI_FRONTIER_STOP_RATIO", "0.05"
+    )))
+    imsi_frontier_stop_min_voxels = max(0, int(os.environ.get(
+        "BATTERY_IMSI_FRONTIER_STOP_MIN_VOXELS", "30"
+    )))
+    imsi_frontier_replan_min_resolved = min(1.0, max(0.0, float(os.environ.get(
+        "BATTERY_IMSI_FRONTIER_REPLAN_MIN_RESOLVED", "0.30"
+    ))))
+    # Underside frontier (adjacent part above it, within acos(cos) of -Z) is
+    # not counted: the bottom is not inspected. Empty = count everything.
+    _frontier_down = os.environ.get("BATTERY_IMSI_FRONTIER_EXCLUDE_DOWN_COS", "").strip()
+    imsi_frontier_exclude_down_cos = float(_frontier_down) if _frontier_down else None
     imsi_face_deficit_min_coverage = min(1.0, max(0.0, float(os.environ.get(
         "BATTERY_IMSI_FACE_DEFICIT_MIN_COVERAGE", "0.50"
     ))))
@@ -3037,15 +3110,24 @@ def run_nbv_capture_sequence_with_arm(
         and bool(imsi_quality_groups)
         and nbv_view_reference_local_point is not None
     )
-    quality_group_masks = quality_face_group_masks(
-        surface_model["normals"], imsi_quality_groups
-    )
+    # Faces left with no side surfel (+/-Y) are not quality targets.
+    quality_group_masks = {
+        name: mask
+        for name, mask in quality_face_group_masks(
+            surface_model["normals"],
+            imsi_quality_groups,
+            surface_model.get("coverage_excluded"),
+        ).items()
+        if np.any(mask)
+    }
     quality_exhausted_groups = set()
     quality_views_taken = 0
     quality_phase_active = False
     mandatory_finish_active = False
     side_face_masks = quality_face_group_masks(
-        surface_model["normals"], ["+X", "-X", "+Y", "-Y"]
+        surface_model["normals"],
+        ["+X", "-X", "+Y", "-Y"],
+        surface_model.get("coverage_excluded"),
     )
     face_failed = set()
 
@@ -3087,6 +3169,91 @@ def run_nbv_capture_sequence_with_arm(
             imsi_quality_min_density,
         )
         quality_report("frame 0")
+
+    frontier_map = None
+    frontier_state = {
+        "visible": {}, "frontier": None, "frame": -1,
+        "initial": None, "best": None, "best_name": None, "done": False,
+        "last_resolved": None, "stats": None,
+    }
+
+    def frontier_threshold():
+        return max(
+            float(imsi_frontier_stop_min_voxels),
+            imsi_frontier_stop_ratio * float(frontier_state["initial"] or 0),
+        )
+
+    def frontier_integrate(frame_id):
+        observation = _last_surface_observation()
+        if int(observation.get("frame_id", -1)) != int(frame_id) or "depth" not in observation:
+            print(log_prefix, "[IMSI][FRONTIER] WARNING: frame", frame_id,
+                  "의 depth 관측이 없어 frontier map을 갱신하지 않습니다.")
+            return None
+        before = frontier_state["stats"]
+        started = time.monotonic()
+        info = frontier_map.integrate_depth(
+            observation["depth"],
+            observation["intrinsic"],
+            observation["object_from_camera_cv"],
+            observation.get("part_pixel_mask"),
+        )
+        stats = frontier_map.stats()
+        frontier_state["stats"] = stats
+        if frontier_state["initial"] is None:
+            frontier_state["initial"] = stats["frontier"]
+        print(
+            log_prefix, f"[IMSI][FRONTIER] frame {frame_id}: rays={info['rays']},",
+            f"part voxels={stats['part_occupied']}, UNKNOWN={stats['unknown']},",
+            f"frontier={stats['frontier']}"
+            + (f" ({stats['frontier'] - before['frontier']:+d})" if before else "")
+            + (
+                f", underside excluded={stats['frontier_down_excluded']}"
+                if imsi_frontier_exclude_down_cos is not None else ""
+            ),
+            f"[{time.monotonic() - started:.2f}s]",
+        )
+        return stats
+
+    def frontier_visible_for(names):
+        frontier_flat = frontier_map.frontier_indices()
+        visible = {}
+        for name in names:
+            object_world = candidate_object_world_matrices.get(name)
+            if object_world is None:
+                continue
+            visible[name] = frontier_map.visible_frontier(
+                frontier_flat,
+                np.linalg.inv(object_world) @ camera_world_matrix,
+                intrinsic_matrix,
+                image_size,
+            )
+        frontier_state.update(frontier=frontier_flat, visible=visible, frame=len(frame_records))
+        return frontier_flat, visible
+
+    if imsi_frontier_enabled and precomputed_joint_view_limit:
+        frontier_tools = _load_frontier_tools()
+        frontier_map = frontier_tools.FrontierMap(
+            np.asarray(nbv_roi_min, dtype=np.float64) - imsi_frontier_margin_m,
+            np.asarray(nbv_roi_max, dtype=np.float64) + imsi_frontier_margin_m,
+            leaf_size=imsi_frontier_leaf_m,
+            pixel_stride=imsi_frontier_pixel_stride,
+            exclude_down_cos=imsi_frontier_exclude_down_cos,
+        )
+        print(
+            log_prefix, "[IMSI][FRONTIER] mesh-free 결정 모드: grid",
+            frontier_map.shape, f"leaf={imsi_frontier_leaf_m * 1000:.1f}mm,",
+            f"pixel stride={imsi_frontier_pixel_stride},",
+            f"stop: 남은 후보 최대 가시 frontier < max({imsi_frontier_stop_min_voxels},",
+            f"{imsi_frontier_stop_ratio * 100:.0f}% x frame-0 frontier)",
+            "(GT coverage는 보고/ACCEPTANCE에만 사용),",
+            "underside frontier 제외="
+            + (
+                f"-Z {math.degrees(math.acos(min(1.0, max(-1.0, imsi_frontier_exclude_down_cos)))):.0f}deg 이내"
+                if imsi_frontier_exclude_down_cos is not None else "off"
+            ) + ",",
+            f"후보 시점 local view Z >= {imsi_min_view_direction_local_z:.2f}",
+        )
+        frontier_integrate(0)
     initial_coverage_result = report_directional_surface_coverage(
         surface_model,
         elapsed_s=elapsed_pair()[0],
@@ -3993,40 +4160,62 @@ def run_nbv_capture_sequence_with_arm(
             # known-mesh surfel prediction. UNKNOWN voxels have p=0.5 and
             # exactly one bit of entropy. Keep their visible flat indices as
             # bitsets so Beam search removes overlap between successive views.
-            initial_voxel_results = score_candidate_poses(
-                occupancy_map=occupancy_latest_path,
-                candidates=[
-                    (
-                        name,
-                        candidate_object_world_matrices[name],
+            if frontier_map is not None:
+                route_frontier, route_frontier_visible = frontier_visible_for(
+                    route_candidate_names
+                )
+                initial_voxel_results = frontier_tools.frontier_candidate_results(
+                    route_frontier_visible
+                )
+                voxel_route_problem = frontier_tools.frontier_route_problem(
+                    route_frontier, route_frontier_visible
+                )
+                print(
+                    log_prefix, "[IMSI][FRONTIER] 후보 가시 frontier (상위 5):",
+                    ", ".join(
+                        f"{name}={len(visible)}"
+                        for name, visible in sorted(
+                            route_frontier_visible.items(),
+                            key=lambda item: -len(item[1]),
+                        )[:5]
+                    ),
+                    f"/ frontier {len(route_frontier)}",
+                )
+            else:
+                initial_voxel_results = score_candidate_poses(
+                    occupancy_map=occupancy_latest_path,
+                    candidates=[
+                        (
+                            name,
+                            candidate_object_world_matrices[name],
+                        )
+                        for name in route_candidate_names
+                    ],
+                    camera_world_matrix=camera_world_matrix,
+                    intrinsic_matrix=intrinsic_matrix,
+                    progress_label=f"{log_prefix} [IMSI][VOXEL-PRECOMPUTE]",
+                    image_size=image_size,
+                    pixel_stride=nbv_pixel_stride,
+                    roi_min=nbv_roi_min,
+                    roi_max=nbv_roi_max,
+                    return_visible_indices=True,
+                    score_unknown_only=True,
+                    ray_geometry_cache=voxel_ray_cache,
+                    surface_model=None,
+                    surface_mask=None,
+                    background_weight=1.0,
+                )
+                for result in initial_voxel_results:
+                    result["entropy_score"] = float(
+                        result["unknown_entropy_sum"]
                     )
-                    for name in route_candidate_names
-                ],
-                camera_world_matrix=camera_world_matrix,
-                intrinsic_matrix=intrinsic_matrix,
-                progress_label=f"{log_prefix} [IMSI][VOXEL-PRECOMPUTE]",
-                image_size=image_size,
-                pixel_stride=nbv_pixel_stride,
-                roi_min=nbv_roi_min,
-                roi_max=nbv_roi_max,
-                return_visible_indices=True,
-                score_unknown_only=True,
-                ray_geometry_cache=voxel_ray_cache,
-                surface_model=None,
-                surface_mask=None,
-                background_weight=1.0,
-            )
-            for result in initial_voxel_results:
-                result["entropy_score"] = float(
-                    result["unknown_entropy_sum"]
+                    result["score_source"] = "unknown_voxel_entropy"
+                voxel_route_problem = (
+                    build_unknown_voxel_visibility_bitsets(
+                        occupancy_latest_path,
+                        initial_voxel_results,
+                    )
                 )
-                result["score_source"] = "unknown_voxel_entropy"
-            voxel_route_problem = (
-                build_unknown_voxel_visibility_bitsets(
-                    occupancy_latest_path,
-                    initial_voxel_results,
-                )
-            )
             route_visibility_bits = voxel_route_problem[
                 "visibility_bits"
             ]
@@ -4842,10 +5031,24 @@ def run_nbv_capture_sequence_with_arm(
         face_focus_names = None
         if using_voxel_entropy_graph:
             ray_cache_hits_before = voxel_ray_cache.hits
-            candidate_results = run_voxel_entropy_scoring(
-                candidate_poses,
-                next_frame_id,
-            )
+            if frontier_map is not None:
+                cycle_names = [name for name, _ in candidate_poses]
+                if frontier_state["frame"] == len(frame_records) and all(
+                    name in frontier_state["visible"] for name in cycle_names
+                ):
+                    cycle_visible = {
+                        name: frontier_state["visible"][name] for name in cycle_names
+                    }
+                else:
+                    _, cycle_visible = frontier_visible_for(cycle_names)
+                candidate_results = frontier_tools.frontier_candidate_results(
+                    cycle_visible
+                )
+            else:
+                candidate_results = run_voxel_entropy_scoring(
+                    candidate_poses,
+                    next_frame_id,
+                )
             finish_top_active = False
             if (imsi_top_side_only_termination and imsi_finish_top_focus
                     and not imsi_inspection_focus):
@@ -4971,7 +5174,7 @@ def run_nbv_capture_sequence_with_arm(
                 previous_top_coverage_fraction + 1e-12
                 < nbv_top_surface_coverage_target
             )
-            if top_bias_active != precomputed_route_graph["top_bias_active"]:
+            if frontier_map is None and top_bias_active != precomputed_route_graph["top_bias_active"]:
                 # A route committed under top preference must be reconsidered
                 # when top succeeds, so the remaining side goal can recover.
                 committed_route_names = []
@@ -4984,12 +5187,23 @@ def run_nbv_capture_sequence_with_arm(
                 result["selection_gain"] = (
                     result["entropy_score"] * candidate_gain_weights[name]
                 )
-            voxel_route_problem = (
-                build_unknown_voxel_visibility_bitsets(
-                    occupancy_latest_path,
-                    candidate_results,
+            if frontier_map is not None:
+                result_names = {result["candidate_name"] for result in candidate_results}
+                voxel_route_problem = frontier_tools.frontier_route_problem(
+                    frontier_state["frontier"],
+                    {
+                        name: visible
+                        for name, visible in frontier_state["visible"].items()
+                        if name in result_names
+                    },
                 )
-            )
+            else:
+                voxel_route_problem = (
+                    build_unknown_voxel_visibility_bitsets(
+                        occupancy_latest_path,
+                        candidate_results,
+                    )
+                )
             reachable_entropy_bits = voxel_route_problem[
                 "reachable_entropy_bits"
             ]
@@ -6356,6 +6570,52 @@ def run_nbv_capture_sequence_with_arm(
             elapsed_excl_render_s=elapsed_pair()[1],
             log_prefix=log_prefix,
         )
+        if frontier_map is not None:
+            predicted = frontier_state["visible"].get(selected_pose_name)
+            frontier_integrate(next_frame_id)
+            resolved_ratio = None
+            if predicted is not None and len(predicted):
+                still_unknown = int(np.count_nonzero(
+                    ~frontier_map.observed.reshape(-1)[predicted]
+                ))
+                resolved_ratio = 1.0 - still_unknown / len(predicted)
+            frontier_state["last_resolved"] = resolved_ratio
+            remaining_names = [
+                name for name in remaining_pose_rotations
+                if name in (precomputed_joint_targets or {})
+                and name in candidate_object_world_matrices
+                and (
+                    name in mandatory_name_set
+                    or camera_direction_in_object_frame(
+                        candidate_object_world_matrices[name],
+                        camera_world_matrix,
+                        reference_local_point=nbv_view_reference_local_point,
+                    )[2] + 1e-12 >= imsi_min_view_direction_local_z
+                )
+            ]
+            _, remaining_visible = frontier_visible_for(remaining_names)
+            ranked_gain = sorted(
+                ((len(visible), name) for name, visible in remaining_visible.items()),
+                reverse=True,
+            )
+            best_gain = ranked_gain[0][0] if ranked_gain else 0
+            threshold = frontier_threshold()
+            frontier_state["best"] = best_gain
+            frontier_state["best_name"] = ranked_gain[0][1] if ranked_gain else None
+            frontier_state["done"] = best_gain < threshold
+            print(
+                log_prefix, "[IMSI][FRONTIER] 남은 후보 최대 가시 frontier",
+                f"{best_gain} ({frontier_state['best_name']}),",
+                "다음: " + ", ".join(f"{name}={gain}" for gain, name in ranked_gain[1:4]) + ",",
+                f"stop < {threshold:.0f} -> {'종료' if frontier_state['done'] else '계속'}",
+                (
+                    f"| 이번 뷰 예측 frontier {len(predicted)}개 중 "
+                    f"{resolved_ratio * 100:.0f}% 관측"
+                    if resolved_ratio is not None else ""
+                ),
+                f"| GT top={coverage_result['groups']['top(+Z)']['fraction'] * 100:.1f}%"
+                f" side={coverage_result['groups']['side']['fraction'] * 100:.1f}%",
+            )
         if imsi_quality_enabled:
             quality_before = quality_coverage_fractions(
                 surface_model, quality_group_masks
@@ -6467,7 +6727,23 @@ def run_nbv_capture_sequence_with_arm(
             if face_now + 1e-12 < imsi_face_deficit_min_coverage:
                 face_failed.add(face_focus)
         if (
-            imsi_route_order_tsp
+            frontier_map is not None
+            and imsi_route_order_tsp
+            and committed_route_names
+            and frontier_state["last_resolved"] is not None
+            and frontier_state["last_resolved"] < imsi_frontier_replan_min_resolved
+        ):
+            print(
+                log_prefix,
+                "[IMSI][FRONTIER] 예측 frontier의",
+                f"{frontier_state['last_resolved'] * 100:.0f}%만 관측 (<",
+                f"{imsi_frontier_replan_min_resolved * 100:.0f}%) - 커밋 경로 폐기 후 재계획:",
+                " -> ".join(committed_route_names),
+            )
+            committed_route_names = []
+        if (
+            frontier_map is None
+            and imsi_route_order_tsp
             and committed_route_names
             and deficient_group_gains
             and max(deficient_group_gains) < imsi_route_replan_min_gain
@@ -6599,7 +6875,12 @@ def run_nbv_capture_sequence_with_arm(
         if imsi_stop_at_coverage:
             mandatory_pending = []
             quality_pending = False
-        if surface_targets_reached(coverage_result) and mandatory_pending:
+        stop_reached = (
+            frontier_state["done"]
+            if frontier_map is not None
+            else surface_targets_reached(coverage_result)
+        )
+        if stop_reached and mandatory_pending:
             if not mandatory_finish_active:
                 print(
                     log_prefix,
@@ -6609,7 +6890,7 @@ def run_nbv_capture_sequence_with_arm(
                 )
             mandatory_finish_active = True
             committed_route_names = []
-        elif surface_targets_reached(coverage_result) and quality_pending:
+        elif stop_reached and quality_pending:
             if not quality_phase_active:
                 print(
                     log_prefix,
@@ -6623,7 +6904,19 @@ def run_nbv_capture_sequence_with_arm(
                 )
             quality_phase_active = True
             committed_route_names = []
-        elif surface_targets_reached(coverage_result):
+        elif stop_reached and frontier_map is not None:
+            if imsi_quality_enabled:
+                quality_report("종료 시점")
+            print(
+                log_prefix,
+                "[IMSI][FRONTIER] 남은 후보의 최대 가시 frontier",
+                f"{frontier_state['best']} < {frontier_threshold():.0f} - 시퀀스 종료",
+                f"(GT top={coverage_result['groups']['top(+Z)']['fraction'] * 100:.1f}%,",
+                f"side={coverage_result['groups']['side']['fraction'] * 100:.1f}%)",
+            )
+            status = "frontier_exhausted"
+            break
+        elif stop_reached:
             if imsi_quality_enabled:
                 quality_report("종료 시점")
             print(
@@ -6795,6 +7088,14 @@ def run_nbv_capture_sequence_with_arm(
                 )
                 + ","
                 if imsi_mandatory_names
+                else ""
+            ),
+            (
+                f"decision=frontier(best remaining {frontier_state['best']}, "
+                f"stop<{frontier_threshold():.0f}, frontier "
+                f"{(frontier_state['stats'] or {}).get('frontier')}/"
+                f"{frontier_state['initial']}),"
+                if frontier_map is not None
                 else ""
             ),
             "사전 계산 이후 render 제외="

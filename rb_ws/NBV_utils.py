@@ -730,9 +730,14 @@ def score_directional_surfels(
     top_mask = normals[:, 2] >= 0.5
     bottom_mask = normals[:, 2] <= -0.5
     side_mask = ~(top_mask | bottom_mask)
+    excluded = surface_model.get("coverage_excluded")
+    if excluded is not None:  # legs' outer faces and reachable top only
+        top_mask &= ~np.asarray(excluded, dtype=bool)
+        side_mask &= ~np.asarray(excluded, dtype=bool)
     surfel_weights = np.full(len(points), side_weight, dtype=np.float64)
     surfel_weights[top_mask] = top_weight
     surfel_weights[bottom_mask] = bottom_weight
+    surfel_weights[~(top_mask | bottom_mask | side_mask)] = 0.0
 
     return {
         "visible_count": int(np.count_nonzero(visible_mask)),
